@@ -1,4 +1,5 @@
 Files in this folder are scripts used to annotate 33 algal genomes using BRAKER2. Run in the following order:
 
-run_Braker.sh - this runs the annotation
+run_Braker.sh - this runs the annotation 
+
 add_prefix.sh - this adds a prefix to the Braker output file names and headers within those files. These can them be used in Orthofinder to find single copy orthologous groups
