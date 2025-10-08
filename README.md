@@ -34,7 +34,7 @@ Before running, update:
 
 ### 3. Prepare BRAKER protein files for OrthoFinder
 
-`scripts/3-prepare_braker_for_orthofinder.sh`
+`scripts/3-prepare_braker_for_orthofinder.sh`  
 Collects all braker.aa protein files from selected BRAKER output directories, renames them by species, and edits FASTA headers to include the species name as a prefix (e.g., >species|gene_id). The standardized files are placed together for OrthoFinder input.
 
 **Inputs:** 
@@ -43,7 +43,7 @@ Collects all braker.aa protein files from selected BRAKER output directories, re
 **Outputs:** 
 - Renamed and header-edited FASTA files in the specified OUTPUT_DIR, ready for OrthoFinder analysis
 
-Before running, update:
+Before running, update:  
 -`BRAKER_DIR` and `OUTPUT_DIR` 
 - `--mail-user` with your email
 - Adjust the `INCLUDE_SUBDIRS` list to match your dataset
@@ -53,12 +53,12 @@ Before running, update:
 `scripts/4-run_orthofinder.sh`
 Runs OrthoFinder on the set of protein FASTA files prepared in the previous step to infer orthogroups
 
-**Inputs:**
+**Inputs:**  
 - Directory of Protein FASTA files generated from the previous step
 
-**Outputs:**
+**Outputs:**  
 -OrthoFinder results directory
 
-Before running, update:
+Before running, update:  
 -`INPUT_DIR`
 - `--mail-user` with your email
