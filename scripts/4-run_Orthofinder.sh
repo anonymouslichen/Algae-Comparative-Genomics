@@ -11,7 +11,7 @@
 # Load OrthoFinder module 
 module load orthofinder
 
-# Define working directory 
+# Define input directory 
 INPUT_DIR=/path/to/inputdir #Directory with output from step 3
 
 # Run OrthoFinder
