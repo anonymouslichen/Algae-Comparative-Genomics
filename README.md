@@ -47,3 +47,30 @@ Before running, update:
 -`BRAKER_DIR` and `OUTPUT_DIR` 
 - `--mail-user` with your email
 - Adjust the `INCLUDE_SUBDIRS` list to match your dataset
+
+### 4. Run OrthoFinder
+
+`scripts/4-run_orthofinder.sh`
+Runs OrthoFinder on the set of protein FASTA files prepared in the previous step to infer orthogroups
+
+**Inputs:**
+- Protein FASTA files (*_braker.fa) located in Orthofinder/
+(each file corresponds to one species)
+
+Outputs:
+
+OrthoFinder results directory (e.g., Orthofinder/Results_Oct06/) containing:
+
+Orthogroups.csv
+
+Orthogroups_SingleCopyOrthologues.txt
+
+Gene and species trees
+
+Summary statistics
+
+Before running:
+
+Ensure Orthofinder/ contains all renamed FASTA files
+
+Update the WORKDIR path to your working directory
