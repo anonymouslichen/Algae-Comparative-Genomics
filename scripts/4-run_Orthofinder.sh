@@ -12,8 +12,7 @@
 module load orthofinder
 
 # Define working directory 
-WORKDIR=/home/stan0477/meye2099/Algae_Evolution/Trebouxiophyceae
-ORTHO_INPUT=${WORKDIR}/Orthofinder
+WORKDIR=/path/to/workingdir
 
 # Create a results directory if it doesn’t exist
 mkdir -p ${ORTHO_INPUT}
