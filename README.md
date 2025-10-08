@@ -31,3 +31,19 @@ Before running, update:
 - `GENOMES_DIR`, `OUTPUT_DIR`, and `AUGUSTUS_CONFIG_PATH`
 - `--array=0-##` to match the number of genomes
 - `--mail-user` with your email
+
+### 3. Prepare BRAKER protein files for OrthoFinder
+
+`scripts/3-prepare_braker_for_orthofinder.sh`
+Collects all braker.aa protein files from selected BRAKER output directories, renames them by species, and edits FASTA headers to include the species name as a prefix (e.g., >species|gene_id). The standardized files are placed together for OrthoFinder input.
+
+**Inputs:** 
+- Per-genome BRAKER output directories (e.g., processed_*, each containing a braker.aa file)
+
+**Outputs:** 
+- Renamed and header-edited FASTA files in the specified OUTPUT_DIR, ready for OrthoFinder analysis
+
+Before running, update:
+-`BRAKER_DIR` and `OUTPUT_DIR` 
+- `--mail-user` with your email
+- Adjust the `INCLUDE_SUBDIRS` list to match your dataset
