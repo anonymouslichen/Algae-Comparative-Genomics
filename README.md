@@ -44,7 +44,7 @@ Collects all braker.aa protein files from selected BRAKER output directories, re
 - Renamed and header-edited FASTA files in the specified OUTPUT_DIR, ready for OrthoFinder analysis
 
 Before running, update:  
--`BRAKER_DIR` and `OUTPUT_DIR` 
+- `BRAKER_DIR` and `OUTPUT_DIR` 
 - `--mail-user` with your email
 - Adjust the `INCLUDE_SUBDIRS` list to match your dataset
 
@@ -57,8 +57,32 @@ Runs OrthoFinder on the set of protein FASTA files prepared in the previous step
 - Directory of Protein FASTA files generated from the previous step
 
 **Outputs:**  
--OrthoFinder results directory
+- OrthoFinder results directory
 
 Before running, update:  
--`INPUT_DIR`
+- `INPUT_DIR`
 - `--mail-user` with your email
+
+### 5a. Convert BRAKER protein FASTAs to CDS FASTAs
+
+`scripts/5a-convert_braker_protein_to_cds.py`  
+Converts BRAKER protein FASTA files (`*.fa`) into corresponding CDS FASTA files by locating the matching sequences in each species directory’s `braker.codingseq` file.
+
+**Inputs:**  
+- Directory of Orthogroups of BRAKER annotated protein sequences (headers must follow `species|geneID` format)  
+- Directory of corresponding BRAKER outputs with CDS files
+
+**Outputs:**  
+- Direcotry of `_cds.fa` files ready for script 5b
+
+**Before running:**  
+- Install Biopython
+- Confirm your BRAKER outputs are organized as processed_species/braker.codingseq.
+
+Example command:
+python scripts/5-convert_braker_protein_to_cds.py \
+    --input_dir path/to/orthogroups \
+    --output_dir path/to/outputdir \
+    --braker_base_dir path/to/brakerdir
+
+
