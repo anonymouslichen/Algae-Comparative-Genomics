@@ -12,7 +12,7 @@
 module load orthofinder
 
 # Define input directory 
-INPUT_DIR=/path/to/inputdir #Directory with output from step 3
+INPUT_DIR=/path/to/inputdir/ #Directory with output from step 3
 
 # Run OrthoFinder
 orthofinder -f ${INPUT_DIR} -t ${SLURM_CPUS_PER_TASK}
