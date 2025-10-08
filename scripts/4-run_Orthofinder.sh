@@ -12,13 +12,7 @@
 module load orthofinder
 
 # Define working directory 
-WORKDIR=/path/to/workingdir
-
-# Create a results directory if it doesn’t exist
-mkdir -p ${ORTHO_INPUT}
-
-# Move into working directory
-cd ${WORKDIR}
+INPUT_DIR=/path/to/inputdir #Directory with output from step 3
 
 # Run OrthoFinder
-orthofinder -f ${ORTHO_INPUT} -t ${SLURM_CPUS_PER_TASK}
+orthofinder -f ${INPUT_DIR} -t ${SLURM_CPUS_PER_TASK}
