@@ -85,7 +85,7 @@ python scripts/5a-convert_braker_protein_to_cds.py \
     --input_dir path/to/orthogroups \
     --output_dir path/to/outputdir \
     --braker_base_dir path/to/brakerdir
-
+```
 
 ### 5b. Rewrite FASTA files to single-line format
 
@@ -103,10 +103,11 @@ Ensures each FASTA sequence is written on a single line, improving compatibility
 python scripts/5b-rewrite_CDS_one_line.py \
     --input_dir path/to/CDSdir \
     --output_dir path/to/outputdir
+```
 
-### 7. Protein and CDS Alignment Pipeline
+### 5c. Protein and CDS Alignment Pipeline
 
-`scripts/7-align_protein_and_cds.py`  
+`scripts/5c-CDS_alignment_with_pal2nal.py`  
 This script aligns protein sequences using **MUSCLE**, reorders sequences alphabetically for consistency, and uses **PAL2NAL** to produce codon-based alignments using the corresponding CDS files.
 
 **Inputs:**
@@ -123,7 +124,7 @@ This script aligns protein sequences using **MUSCLE**, reorders sequences alphab
 
 **Example command:**
 ```bash
-python scripts/7-align_protein_and_cds.py \
+python scripts/5c-CDS_alignment_with_pal2nal.py \
     --protein_dir path/to/proteindir\ 
     --cds_dir path/to/CDSdir \
     --muscle_alignment_dir path/to/muscle/outputdir \
