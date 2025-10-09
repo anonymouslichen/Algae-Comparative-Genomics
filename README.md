@@ -79,7 +79,8 @@ Converts BRAKER protein FASTA files (`*.fa`) into corresponding CDS FASTA files 
 - Install Biopython
 - Confirm your BRAKER outputs are organized as processed_species/braker.codingseq.
 
-Example command:
+**Example command:**
+```bash
 python scripts/5a-convert_braker_protein_to_cds.py \
     --input_dir path/to/orthogroups \
     --output_dir path/to/outputdir \
@@ -97,7 +98,8 @@ Ensures each FASTA sequence is written on a single line, improving compatibility
 **Outputs:**  
 - Direcotry of FASTA files with one line per sequence, ready for script 5c
 
-Example command:
+**Example command:**
+```bash
 python scripts/5b-rewrite_CDS_one_line.py \
     --input_dir path/to/CDSdir \
     --output_dir path/to/outputdir
