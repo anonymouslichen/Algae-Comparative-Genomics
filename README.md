@@ -86,7 +86,7 @@ python scripts/5a-convert_braker_protein_to_cds.py \
     --braker_base_dir path/to/brakerdir
 
 
-### 6. Rewrite FASTA files to single-line format
+### 5b. Rewrite FASTA files to single-line format
 
 `scripts/5b-rewrite_CDS_one_line.py`  
 Ensures each FASTA sequence is written on a single line, improving compatibility with downstream tools that require this format.
