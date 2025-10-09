@@ -118,7 +118,7 @@ This script aligns protein sequences using **MUSCLE**, reorders sequences alphab
 - MUSCLE-aligned protein sequences
 - PAL2NAL codon alignments in FASTA format
 
-**Requirements:**
+**Dependencies:**
 - MUSCLE 
 - PAL2NAL
 
@@ -134,7 +134,7 @@ python scripts/5c-CDS_alignment_with_pal2nal.py \
 
 ### 5d. Remove Gaps and Format Alignments for Downstream Analyses
 
-`scripts/5d-trim_alignments_with_TrimAI.py`
+`scripts/5d-trim_alignments_with_trimAl.py`
 
 This script uses **trimAl** to remove gaps and prepare alignment files for different downstream analyses (PAML, HYPHY, or MK tests).  
 It also cleans FASTA headers for tools that require simplified sequence names.
@@ -149,23 +149,44 @@ It also cleans FASTA headers for tools that require simplified sequence names.
 **Example commands:**
 ```bash
 # Prepare alignments for PAML
-python scripts/5d-trim_alignments_with_TrimAI.py \
+python scripts/5d-trim_alignments_with_trimAl.py \
     --input_dir path/to/pal2naldir \
     --output_dir path/to/trimmedalignmentdir \
     --mode paml \
-    --trimal_path path/to/trimai
+    --trimal_path path/to/trimal
 
 # Prepare alignments for HyPhy
-python scripts/5d-trim_alignments_with_TrimAI.py \
+python scripts/5d-trim_alignments_with_trimAl.py \
     --input_dir path/to/pal2naldir \
     --output_dir path/to/trimmedalignmentdir \
     --mode hyphy \
-    --trimal_path path/to/trimai
+    --trimal_path path/to/trimal
 
 # Prepare alignments for MK test
-python scripts/5d-trim_alignments_with_TrimAI.py \
+python scripts/5d-trim_alignments_with_trimAl.py \
     --input_dir path/to/pal2naldir \
     --output_dir path/to/trimmedalignmentdir \
     --mode mk \
-    --trimal_path path/to/trimai
+    --trimal_path path/to/trimal
 ```
+### 6. Generate Protein Gene Trees with IQ-TREE
+
+`scripts/6-run_iqtree.sh`  
+Cleans alignment headers, trims gappy regions with **trimAl**, and builds maximum-likelihood gene trees with **IQ-TREE**.
+
+**Inputs:**  
+- Protein alignments (`*.fa`)
+
+**Outputs:**  
+- Gene trees (`*.treefile`)
+
+**Dependencies:**  
+- `iqtree2`  
+- `trimAl` (path set via `TRIMAL_PATH` variable)  
+
+**Before running:**  
+- Edit the following paths in the script:  
+  - `ALIGNMENT_DIR`  
+  - `OUTPUT_DIR`  
+  - `TMP_DIR`  
+  - `TRIMAL_PATH`  
