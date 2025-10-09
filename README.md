@@ -130,3 +130,42 @@ python scripts/5c-CDS_alignment_with_pal2nal.py \
     --muscle_alignment_dir path/to/muscle/outputdir \
     --pal2nal_output_dir path/to/pal2nal/outputdir \
     --pal2nal_path path/to/pal2nal.pl
+```
+
+### 5d. Remove Gaps and Format Alignments for Downstream Analyses
+
+`scripts/5d-trim_alignments_with_TrimAI.py`
+
+This script uses **trimAl** to remove gaps and prepare alignment files for different downstream analyses (PAML, HYPHY, or MK tests).  
+It also cleans FASTA headers for tools that require simplified sequence names.
+
+**Modes:**
+| Mode  | Description | Output format | trimAl parameters |
+|--------|--------------|----------------|--------------------|
+| `paml` | Codon-based phylogenetic analyses (e.g. codeml) | PHYLIP | `-gappyout -phylip_paml_m10` |
+| `hyphy` | Selection analyses in HyPhy | FASTA | `-gappyout -fasta` |
+| `mk` | McDonald–Kreitman-style analyses | FASTA | `-nogaps -fasta` |
+
+**Example commands:**
+```bash
+# Prepare alignments for PAML
+python scripts/8-trimal_cleanup.py \
+    --input_dir path/to/pal2naldir \
+    --output_dir path/to/trimmedalignmentdir \
+    --mode paml \
+    --trimal_path path/to/trimai
+
+# Prepare alignments for HyPhy
+python scripts/8-trimal_cleanup.py \
+    --input_dir path/to/pal2naldir \
+    --output_dir path/to/trimmedalignmentdir \
+    --mode hyphy \
+    --trimal_path path/to/trimai
+
+# Prepare alignments for MK test
+python scripts/8-trimal_cleanup.py \
+    --input_dir path/to/pal2naldir \
+    --output_dir path/to/trimmedalignmentdir \
+    --mode mk \
+    --trimal_path path/to/trimai
+```
