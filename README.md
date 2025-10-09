@@ -149,21 +149,21 @@ It also cleans FASTA headers for tools that require simplified sequence names.
 **Example commands:**
 ```bash
 # Prepare alignments for PAML
-python scripts/8-trimal_cleanup.py \
+python scripts/5d-trim_alignments_with_TrimAI.py \
     --input_dir path/to/pal2naldir \
     --output_dir path/to/trimmedalignmentdir \
     --mode paml \
     --trimal_path path/to/trimai
 
 # Prepare alignments for HyPhy
-python scripts/8-trimal_cleanup.py \
+python scripts/5d-trim_alignments_with_TrimAI.py \
     --input_dir path/to/pal2naldir \
     --output_dir path/to/trimmedalignmentdir \
     --mode hyphy \
     --trimal_path path/to/trimai
 
 # Prepare alignments for MK test
-python scripts/8-trimal_cleanup.py \
+python scripts/5d-trim_alignments_with_TrimAI.py \
     --input_dir path/to/pal2naldir \
     --output_dir path/to/trimmedalignmentdir \
     --mode mk \
