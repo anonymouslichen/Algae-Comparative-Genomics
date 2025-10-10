@@ -184,9 +184,23 @@ Cleans alignment headers, trims gappy regions with **trimAl**, and builds maximu
 - `iqtree2`  
 - `trimAl` (path set via `TRIMAL_PATH` variable)  
 
-**Before running:**  
-- Edit the following paths in the script:  
-  - `ALIGNMENT_DIR`  
-  - `OUTPUT_DIR`  
-  - `TMP_DIR`  
-  - `TRIMAL_PATH`  
+Before running, update:  
+- `ALIGNMENT_DIR`  
+- `OUTPUT_DIR`  
+- `TMP_DIR`  
+- `TRIMAL_PATH`  
+
+## 7. Labelling Gene Trees for PAML (codeml)
+
+`scripts/7-prepare_gene_trees_for_PAML.py`  
+Converts IQ-TREE `.treefile` outputs into codeml-compatible trees by removing branch lengths, renaming taxa with numeric identifiers and adding labels for specific models
+
+**Inputs:**  
+- Directory containing `.treefile` outputs from IQ-TREE
+
+**Outputs:**  
+- Labelled gene trees in a sepcified output directory
+
+Before running, update:  
+- `tree_dir`
+- `processed_dir`
