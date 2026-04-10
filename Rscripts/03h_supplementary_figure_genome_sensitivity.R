@@ -1,0 +1,346 @@
+################################################################################
+# Supplementary Figure: Alternative Genome Choice Sensitivity Analysis
+#
+# Purpose: Forest plot showing robustness of dN, dS, and omega contrasts
+#          (lichen-forming vs. free-living) across alternative genome choices
+#          for Asterochloris and Trebouxia.
+#
+# For each alternative genome, the pipeline:
+#   1. Filters to M4 model, tip branches 1–7
+#   2. Adds Condition (Lichen-forming / Free-living) and TaxonPair metadata
+#   3. Removes SOGs where ANY branch has dS <= 0.01, dS > 3, dN > 2, omega >= 10
+#   4. Duplicates Myrmecia bisecta rows for both TaxonPair comparisons
+#   5. Fits lmer(response ~ Condition * TaxonPair + (1 | SOG))
+#   6. Extracts pairwise emmeans contrast (Lichen-forming − Free-living)
+#      for the focal TaxonPair only
+#
+# Primary genomes in the main analysis (visually distinguished):
+#   Asterochloris: Ast_eri  (A. erici)
+#   Trebouxia:     Tre_spC0010 (T. sp. C0010)
+#
+# Output:
+#   figures/Supp_Fig_genome_sensitivity.pdf  (~7 x 5 inches)
+#   figures/Supp_Fig_genome_sensitivity.png
+################################################################################
+
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(lme4)
+library(lmerTest)
+library(emmeans)
+library(ggplot2)
+library(patchwork)
+
+setwd("~/Desktop/Claude")
+
+################################################################################
+# 1. GENOME METADATA LOOKUP
+################################################################################
+
+genome_meta <- tibble(
+  genome_id    = c("Ast_eri",               "Ast_glo",
+                   "Tre_spC0010",           "Tre_spA1-2",
+                   "Tre_spC0006",           "Tre_lyn",
+                   "Tre_spTZW2008"),
+  display_name = c("A. erici (primary)",    "A. glomerata",
+                   "T. sp. C0010 (primary)","T. sp. A1-2",
+                   "T. sp. C0006",          "T. lynnae",
+                   "T. sp. TZW2008"),
+  genus        = c("Asterochloris",         "Asterochloris",
+                   "Trebouxia",             "Trebouxia",
+                   "Trebouxia",             "Trebouxia",
+                   "Trebouxia"),
+  focal_pair   = c("Asterochloris_vs_Myrmecia", "Asterochloris_vs_Myrmecia",
+                   "Trebouxia_vs_Myrmecia",      "Trebouxia_vs_Myrmecia",
+                   "Trebouxia_vs_Myrmecia",      "Trebouxia_vs_Myrmecia",
+                   "Trebouxia_vs_Myrmecia"),
+  is_primary   = c(TRUE, FALSE, TRUE, FALSE, FALSE, FALSE, FALSE)
+)
+
+genome_files <- c(
+  "Ast_eri"       = "data/compiled_results_Ast_eri.csv",
+  "Ast_glo"       = "data/compiled_results_Ast_glo.csv",
+  "Tre_spC0010"   = "data/compiled_results_Tre_spC0010.csv",
+  "Tre_spA1-2"    = "data/compiled_results_Tre_spA1-2.csv",
+  "Tre_spC0006"   = "data/compiled_results_Tre_spC0006.csv",
+  "Tre_lyn"       = "data/compiled_results_Tre_lyn.csv",
+  "Tre_spTZW2008" = "data/compiled_results_Tre_spTZW2008.csv"
+)
+
+################################################################################
+# 2. TAXA METADATA HELPER
+################################################################################
+
+# Condition set as factor with Lichen-forming first so emmeans pairwise gives
+# Lichen-forming − Free-living (positive = higher in lichen-forming).
+# TaxonPair uses first-match logic in case_when; Myrmecia (Tip 4) initially
+# maps to Asterochloris_vs_Myrmecia and is later duplicated for Trebouxia.
+
+add_taxa_metadata <- function(df) {
+  df %>%
+    mutate(
+      Taxa = case_when(
+        Tip == "1" ~ "Asterochloris",
+        Tip == "2" ~ "Coccomyxa subellipsoidea",
+        Tip == "3" ~ "Coccomyxa viridis",
+        Tip == "4" ~ "Myrmecia bisecta",
+        Tip == "5" ~ "Symbiochloris irregularis",
+        Tip == "6" ~ "Symbiochloris reticulata",
+        Tip == "7" ~ "Trebouxia"
+      ),
+      Condition = factor(
+        case_when(
+          Tip == "1" ~ "Lichen-forming",
+          Tip == "2" ~ "Free-living",
+          Tip == "3" ~ "Lichen-forming",
+          Tip == "4" ~ "Free-living",
+          Tip == "5" ~ "Free-living",
+          Tip == "6" ~ "Lichen-forming",
+          Tip == "7" ~ "Lichen-forming"
+        ),
+        levels = c("Lichen-forming", "Free-living")
+      ),
+      TaxonPair = case_when(
+        Tip %in% c("1", "4") ~ "Asterochloris_vs_Myrmecia",
+        Tip %in% c("2", "3") ~ "Coccomyxa",
+        Tip %in% c("5", "6") ~ "Symbiochloris",
+        Tip %in% c("4", "7") ~ "Trebouxia_vs_Myrmecia"
+      )
+    )
+}
+
+################################################################################
+# 3. GENOME PROCESSING PIPELINE
+################################################################################
+
+process_genome <- function(genome_id, file_path, focal_pair) {
+
+  message("Processing: ", genome_id)
+
+  raw <- read.csv(file_path)
+
+  # Parse "Node..Tip" branch format into separate columns
+  raw <- raw %>%
+    separate(branch, into = c("Node", "Tip"), sep = "\\.\\.", remove = FALSE)
+
+  # Filter to M4 model, tip branches 1–7 only
+  m4 <- raw %>%
+    filter(Model == "M4", Tip %in% as.character(1:7)) %>%
+    add_taxa_metadata()
+
+  # Gene-level quality filter: remove any SOG where at least one branch fails
+  failing_SOGs <- m4 %>%
+    filter(dS <= 0.01 | dS > 3 | omega >= 10) %>%
+    pull(SOG) %>%
+    unique()
+
+  m4_filtered <- m4 %>%
+    filter(!(SOG %in% failing_SOGs))
+
+  n_genes <- n_distinct(m4_filtered$SOG)
+  message("  SOGs retained after filtering: ", n_genes)
+
+  # Duplicate Myrmecia bisecta for both TaxonPair comparisons
+  myr <- m4_filtered %>% filter(Taxa == "Myrmecia bisecta")
+
+  m4_model <- m4_filtered %>%
+    filter(Taxa != "Myrmecia bisecta") %>%
+    bind_rows(
+      myr %>% mutate(TaxonPair = "Asterochloris_vs_Myrmecia"),
+      myr %>% mutate(TaxonPair = "Trebouxia_vs_Myrmecia")
+    )
+
+  # Fit lmer and extract focal contrast for each response variable
+  results <- lapply(c("dN", "dS", "omega"), function(resp) {
+
+    f <- as.formula(paste0(resp, " ~ Condition * TaxonPair + (1 | SOG)"))
+
+    model <- tryCatch(
+      suppressMessages(lmer(f, data = m4_model)),
+      error = function(e) {
+        message("  lmer failed for ", resp, ": ", conditionMessage(e))
+        NULL
+      }
+    )
+    if (is.null(model)) return(NULL)
+
+    emm   <- emmeans(model, ~ Condition | TaxonPair)
+    contr <- as.data.frame(contrast(emm, method = "pairwise", adjust = "none"))
+
+    # Retain only the relevant taxon-pair contrast
+    contr %>%
+      filter(TaxonPair == focal_pair) %>%
+      mutate(
+        response  = resp,
+        genome_id = genome_id,
+        n_genes   = n_genes
+      )
+  })
+
+  bind_rows(results)
+}
+
+################################################################################
+# 4. RUN ALL GENOMES
+################################################################################
+
+all_results <- mapply(
+  FUN        = process_genome,
+  genome_id  = names(genome_files),
+  file_path  = unname(genome_files),
+  focal_pair = genome_meta$focal_pair[match(names(genome_files), genome_meta$genome_id)],
+  SIMPLIFY   = FALSE
+) %>%
+  bind_rows()
+
+# Verify contrast direction (should be "Lichen-forming - Free-living")
+cat("\nContrast labels in emmeans output:\n")
+print(unique(all_results$contrast))
+cat("Positive estimate = higher in lichen-forming.\n\n")
+
+# Gene retention per genome
+cat("SOGs retained per genome:\n")
+print(
+  all_results %>%
+    distinct(genome_id, n_genes) %>%
+    left_join(select(genome_meta, genome_id, display_name), by = "genome_id")
+)
+
+################################################################################
+# 5. PREPARE PLOT DATA
+################################################################################
+
+plot_data <- all_results %>%
+  left_join(genome_meta, by = "genome_id") %>%
+  mutate(
+    ci_lo = estimate - 1.96 * SE,
+    ci_hi = estimate + 1.96 * SE,
+    sig = case_when(
+      p.value < 0.001 ~ "***",
+      p.value < 0.01  ~ "**",
+      p.value < 0.05  ~ "*",
+      TRUE             ~ ""
+    ),
+    response_label = factor(
+      response,
+      levels = c("dN",    "dS",    "omega"),
+      labels = c("\u0394dN", "\u0394dS", "\u0394\u03c9")
+    )
+  )
+
+# Y-axis factor: levels ordered bottom-to-top within each genus group
+# Primary genome sits at the top of each group
+y_levels <- c(
+  # Trebouxia group (bottom, read bottom-to-top)
+  "T. sp. TZW2008", "T. lynnae", "T. sp. C0006",
+  "T. sp. A1-2",    "T. sp. C0010 (primary)",
+  # Asterochloris group (top, read bottom-to-top)
+  "A. glomerata",   "A. erici (primary)"
+)
+
+plot_data <- plot_data %>%
+  mutate(
+    display_name = factor(display_name, levels = y_levels),
+    genus        = factor(genus, levels = c("Asterochloris", "Trebouxia"))
+  )
+
+################################################################################
+# 6. BUILD FOREST PLOT
+################################################################################
+
+genus_colors <- c("Asterochloris" = "#D55E00", "Trebouxia" = "#0072B2")
+
+forest_plot <- ggplot(
+  plot_data,
+  aes(x = estimate, y = display_name, color = genus)
+) +
+  # Reference line
+  geom_vline(
+    xintercept = 0, linetype = "dashed",
+    color = "grey45", linewidth = 0.45
+  ) +
+  # 95% CI error bars
+  geom_errorbarh(
+    aes(xmin = ci_lo, xmax = ci_hi),
+    height = 0.3, linewidth = 0.65
+  ) +
+  # Alternatives: open circles
+  geom_point(
+    data  = filter(plot_data, !is_primary),
+    shape = 21, size = 3.0, stroke = 1.0,
+    fill  = "white"
+  ) +
+  # Primary genomes: filled circles (slightly larger)
+  geom_point(
+    data  = filter(plot_data, is_primary),
+    shape = 16, size = 3.6
+  ) +
+  # Significance stars (right of CI upper bound)
+  geom_text(
+    aes(x = ci_hi, label = sig),
+    hjust = -0.3, vjust = 0.5,
+    size  = 3.5, color = "black",
+    show.legend = FALSE
+  ) +
+  scale_color_manual(
+    values = genus_colors,
+    guide  = "none"
+  ) +
+  # Facet: column = response variable, row = genus group
+  # space = "free_y" proportionally sizes rows to n_genomes per genus
+  facet_grid(
+    genus ~ response_label,
+    scales = "free",
+    space  = "free_y",
+    switch = "y"
+  ) +
+  labs(
+    x = "Estimated difference (Lichen-forming \u2212 Free-living)",
+    y = NULL
+  ) +
+  theme_bw(base_size = 11) +
+  theme(
+    # Facet strips
+    strip.background   = element_rect(fill = "grey94", color = "grey70"),
+    strip.text.x       = element_text(face = "bold",        size = 11),
+    strip.text.y.left  = element_text(face = "bold.italic", size = 9, angle = 90),
+    strip.placement    = "outside",
+    # Grid
+    panel.grid.minor   = element_blank(),
+    panel.grid.major.y = element_blank(),
+    # Axes
+    axis.text.y        = element_text(size = 9, face = "italic"),
+    axis.title.x       = element_text(size = 10, margin = margin(t = 6)),
+    # Extra right margin so significance stars don't clip
+    plot.margin        = margin(6, 18, 6, 6)
+  )
+
+
+print(forest_plot)
+
+################################################################################
+# 7. SAVE OUTPUT
+################################################################################
+
+dir.create("figures", showWarnings = FALSE)
+
+ggsave(
+  "figures/FigureS4_genome_sensitivity.pdf",
+  forest_plot,
+  width  = 7,
+  height = 5,
+  device = cairo_pdf
+)
+
+ggsave(
+  "figures/FigureS4_genome_sensitivity.png",
+  forest_plot,
+  width  = 7,
+  height = 5,
+  dpi    = 300
+)
+
+cat("\nDone. Figure saved to:\n")
+cat("  figures/Supp_Fig_genome_sensitivity.pdf\n")
+cat("  figures/Supp_Fig_genome_sensitivity.png\n")

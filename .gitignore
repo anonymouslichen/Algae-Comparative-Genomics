@@ -1,0 +1,21 @@
+# Large data files
+*.fastq*
+*.fasta*
+*.fa
+*.bam
+*.sam
+*.vcf
+*.gz
+*.tar
+*.zip
+
+# R artifacts
+.Rhistory
+.RData
+!Rscripts/*.RData
+.Rproj.user/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
