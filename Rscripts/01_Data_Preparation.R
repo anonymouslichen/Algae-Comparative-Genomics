@@ -3,13 +3,13 @@
 ################################################################################
 
 # Load required libraries
-library(dplyr)
+library(dplyr) 
 library(tidyr)
 library(stringr)
 library(readr)
 
 # Set working directory (adjust as needed)
-setwd("~/Desktop/Claude")
+setwd("~/Desktop/Algae-Comparative-Genomics/")
 
 ################################################################################
 # 1. LOAD AND PREPARE CODEML DATA
@@ -241,7 +241,7 @@ load_relax_results <- function(filepath, lichen_species) {
   df <- bind_rows(focal, nonfocal) %>%
     mutate(
       Result = case_when(
-        padj < 0.05 & Relaxation.Parameter..K. > 1 ~ "Strengthened",
+        padj < 0.05 & Relaxation.Parameter..K. > 1 ~ "Intensified",
         padj < 0.05 & Relaxation.Parameter..K. < 1 ~ "Relaxed",
         TRUE ~ "Not Significant"
       ),
@@ -292,41 +292,18 @@ relax_focal <- relax_all %>%
     )
   )
 
-
-# Apply Tukey outlier filtering (3x IQR)
-relax_focal_filtered <- relax_focal %>%
-  group_by(Pair) %>%
-  mutate(
-    q1 = quantile(Relaxation.Parameter..K., 0.25, na.rm = TRUE),
-    q3 = quantile(Relaxation.Parameter..K., 0.75, na.rm = TRUE),
-    iqr = q3 - q1,
-    lower = q1 - 3 * iqr,
-    upper = q3 + 3 * iqr,
-    is_outlier = Relaxation.Parameter..K. < lower | Relaxation.Parameter..K. > upper
-  ) %>%
-  ungroup()
-
-# Report outliers
-outlier_summary <- relax_focal_filtered %>%
-  group_by(Pair) %>%
-  summarise(
-    total = n(),
-    outliers = sum(is_outlier),
-    pct_removed = round(100 * outliers / total, 2)
-  )
-
-print(outlier_summary)
-
-# Remove outliers
-relax_focal_filtered <- relax_focal_filtered %>%
-  filter(!is_outlier) %>%
-  dplyr::select(-lower, -upper, -is_outlier)
+# Apply natural log transformation to K parameter
+relax_focal <- relax_focal %>%
+  mutate(ln_K = log(Relaxation.Parameter..K.))
 
 # Set factor levels
-relax_focal_filtered$Pair <- factor(
-  relax_focal_filtered$Pair,
+relax_focal$Pair <- factor(
+  relax_focal$Pair,
   levels = c("Coccomyxa", "Symbiochloris", "Trebouxia", "Asterochloris")
 )
+
+relax_focal_filtered <- relax_focal %>%
+  filter(is.finite(ln_K), abs(ln_K) < 10)
 
 ################################################################################
 # 6. LOAD MCDONALD-KREITMAN DATA
@@ -387,6 +364,6 @@ save(
   annotations,
   gene2GO_list,
   taxa_order,
-  file = "~/Desktop/Claude/Rscripts/prepared_data.RData"
+  file = "~/Desktop/Algae-Comparative-Genomics//Rscripts/prepared_data.RData"
 )
 

@@ -13,12 +13,12 @@ library(purrr)
 library(ggResidpanel)
 
 # Load prepared data
-load("/Users/Abigail/Desktop/Claude/Rscripts/prepared_data.RData")
+load("/Users/Abigail/Desktop/Algae-Comparative-Genomics/Rscripts/prepared_data.RData")
 
 # Load phylogenetic tree
 library(ape)
 
-tree <- read.tree("/Users/Abigail/Desktop/Claude/data/consensus_tree.newick.txt")
+tree <- read.tree("/Users/Abigail/Desktop/Algae-Comparative-Genomics/data/consensus_tree.newick.txt")
 print(tree$tip.label)
 
 
@@ -214,13 +214,13 @@ relax_summary <- relax_focal_filtered %>%
   group_by(Pair) %>%
   summarise(
     n_genes = n(),
-    median_K = median(Relaxation.Parameter..K., na.rm = TRUE),
-    mean_K = mean(Relaxation.Parameter..K., na.rm = TRUE),
-    sd_K = sd(Relaxation.Parameter..K., na.rm = TRUE),
-    n_strengthened = sum(Result == "Strengthened"),
+    median_K = median(ln_K, na.rm = TRUE),
+    mean_K = mean(ln_K, na.rm = TRUE),
+    sd_K = sd(ln_K, na.rm = TRUE),
+    n_intensified = sum(Result == "Intensified"),
     n_relaxed = sum(Result == "Relaxed"),
     n_ns = sum(Result == "Not Significant"),
-    pct_strengthened = round(100 * n_strengthened / n_genes, 1),
+    pct_intensified = round(100 * n_intensified / n_genes, 1),
     pct_relaxed = round(100 * n_relaxed / n_genes, 1),
     pct_ns = round(100 * n_ns / n_genes, 1),
     .groups = "drop"
@@ -228,21 +228,6 @@ relax_summary <- relax_focal_filtered %>%
 
 print(relax_summary)
 write.csv(relax_summary, "/Users/Abigail/Desktop/Claude/analysis_results/relax_summary.csv", row.names = FALSE)
-
-# Test if K differs from 1 for each lineage (Wilcoxon signed-rank test)
-k_tests <- relax_focal_filtered %>%
-  group_by(Pair) %>%
-  summarise(
-    n = n(),
-    median_K = median(Relaxation.Parameter..K.),
-    IQR_low = quantile(Relaxation.Parameter..K., 0.25),
-    IQR_high = quantile(Relaxation.Parameter..K., 0.75),
-    p_value = wilcox.test(Relaxation.Parameter..K., mu = 1)$p.value,
-    .groups = "drop"
-  )
-
-print(k_tests)
-write.csv(k_tests, "/Users/Abigail/Desktop/Claude/analysis_results/relax_k_tests.csv", row.names = FALSE)
 
 
 ################################################################################
@@ -368,14 +353,14 @@ gene_consistency <- genes_all_lineages %>%
   summarise(
     n_analyses = n(),
     n_relaxed = sum(Result == "Relaxed"),
-    n_strengthened = sum(Result == "Strengthened"),
+    n_intensified = sum(Result == "Intensified"),
     n_ns = sum(Result == "Not Significant"),
     pattern = case_when(
       n_relaxed == 4 ~ "Consistently Relaxed",
-      n_strengthened == 4 ~ "Consistently Strengthened",
+      n_intensified == 4 ~ "Consistently Intensified",
       n_ns == 4 ~ "Consistently NS",
       n_relaxed == 3 ~ "Mostly Relaxed",
-      n_strengthened == 3 ~ "Mostly Strengthened",
+      n_intensified == 3 ~ "Mostly Intensified",
       TRUE ~ "Mixed/Variable"
     ),
     .groups = "drop"
@@ -388,21 +373,21 @@ consistency_summary <- gene_consistency %>%
   arrange(desc(n_genes))
 
 # Genes with consistent patterns
-consistently_strengthened <- gene_consistency %>%
-  filter(pattern == "Consistently Strengthened") %>%
+consistently_intensified <- gene_consistency %>%
+  filter(pattern == "Consistently Intensified") %>%
   pull(SOG)
 
 consistently_relaxed <- gene_consistency %>%
   filter(pattern == "Consistently Relaxed") %>%
   pull(SOG)
 
-# ── GO annotation table for consistently/mostly strengthened genes ──────────
-strengthened_focal <- gene_consistency %>%
-  filter(pattern %in% c("Consistently Strengthened", "Mostly Strengthened"))
+# ── GO annotation table for consistently/mostly Intensified genes ──────────
+intensified_focal <- gene_consistency %>%
+  filter(pattern %in% c("Consistently Intensified", "Mostly Intensified"))
 
 # Per-lineage K values (wide format)
 k_wide <- relax_focal_filtered %>%
-  filter(SOG %in% strengthened_focal$SOG) %>%
+  filter(SOG %in% intensified_focal$SOG) %>%
   dplyr::select(SOG, Pair, Result, Relaxation.Parameter..K.) %>%
   mutate(K_label = sprintf("%.3f (%s)", Relaxation.Parameter..K., Result)) %>%
   dplyr::select(SOG, Pair, K_label) %>%
@@ -410,14 +395,14 @@ k_wide <- relax_focal_filtered %>%
 
 # Best annotation per gene: prefer rows with InterPro description
 go_annot <- annotations %>%
-  filter(SOG %in% strengthened_focal$SOG) %>%
+  filter(SOG %in% intensified_focal$SOG) %>%
   group_by(SOG) %>%
   arrange(!is.na(InterPro_description), !is.na(GO_annotation)) %>%
   dplyr::slice(1) %>%
   ungroup() %>%
   dplyr::select(SOG, InterPro_accession, InterPro_description, GO_annotation)
 
-strengthened_table <- strengthened_focal %>%
+intensified_table <- intensified_focal %>%
   dplyr::select(SOG, pattern) %>%
   left_join(go_annot, by = "SOG") %>%
   left_join(k_wide, by = "SOG") %>%
@@ -426,9 +411,44 @@ strengthened_table <- strengthened_focal %>%
          Protein_function = InterPro_description,
          GO_term = GO_annotation)
 
-print(strengthened_table)
-write.csv(strengthened_table,
-          "/Users/Abigail/Desktop/Claude/analysis_results/strengthened_genes_GO_table.csv",
+print(intensified_table)
+write.csv(intensified_table,
+          "/Users/Abigail/Desktop/Claude/analysis_results/intensified_genes_GO_table.csv",
+          row.names = FALSE)
+
+# ── GO annotation table for consistently/mostly relaxed genes ──────────
+relaxed_focal <- gene_consistency %>%
+  filter(pattern %in% c("Consistently Relaxed", "Mostly Relaxed"))
+
+# Per-lineage K values (wide format)
+k_wide <- relax_focal_filtered %>%
+  filter(SOG %in% relaxed_focal$SOG) %>%
+  dplyr::select(SOG, Pair, Result, Relaxation.Parameter..K.) %>%
+  mutate(K_label = sprintf("%.3f (%s)", Relaxation.Parameter..K., Result)) %>%
+  dplyr::select(SOG, Pair, K_label) %>%
+  tidyr::pivot_wider(names_from = Pair, values_from = K_label)
+
+# Best annotation per gene: prefer rows with InterPro description
+go_annot <- annotations %>%
+  filter(SOG %in% relaxed_focal$SOG) %>%
+  group_by(SOG) %>%
+  arrange(!is.na(InterPro_description), !is.na(GO_annotation)) %>%
+  dplyr::slice(1) %>%
+  ungroup() %>%
+  dplyr::select(SOG, InterPro_accession, InterPro_description, GO_annotation)
+
+relaxed_table <- relaxed_focal %>%
+  dplyr::select(SOG, pattern) %>%
+  left_join(go_annot, by = "SOG") %>%
+  left_join(k_wide, by = "SOG") %>%
+  dplyr::rename(Gene = SOG, Pattern = pattern,
+                InterPro_ID = InterPro_accession,
+                Protein_function = InterPro_description,
+                GO_term = GO_annotation)
+
+print(relaxed_table)
+write.csv(relaxed_table,
+          "/Users/Abigail/Desktop/Claude/analysis_results/relaxed_genes_GO_table.csv",
           row.names = FALSE)
 
 ################################################################################
@@ -456,7 +476,6 @@ save(
   phydist_vs_dS,
   dnds_results,
   relax_summary,
-  k_tests,
   codon_results,
   mk_summary,
   gene_consistency,

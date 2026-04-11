@@ -2,106 +2,96 @@ library(ggplot2)
 library(dplyr)
 library(tidyr)
 library(patchwork)
-library(ggalluvial)
 
-setwd("~/Desktop/Claude")
+setwd("~/Desktop/Algae-Comparative-Genomics/")
 load("Rscripts/analysis_complete.RData")
 load("Rscripts/prepared_data.RData")
 
 # Colors
-color_pair <- c(
-  "Coccomyxa" = "#E69F00",
-  "Symbiochloris" = "#56B4E9",
-  "Trebouxia" = "#009E73",
-  "Asterochloris" = "#CC79A7"
-)
-
 color_result <- c(
-  "Strengthened" = "#e74c3c",
+  "Intensified" = "#e74c3c",
   "Relaxed" = "#3498db",
   "Not Significant" = "#95a5a6"
 )
 
-################################################################################
-# PANEL A: K parameter distributions by lineage
-################################################################################
-
-y_max_K <- quantile(relax_focal_filtered$Relaxation.Parameter..K., 0.995) * 1.1
-
-p4a <- ggplot(relax_focal_filtered,
-              aes(x = Pair, y = Relaxation.Parameter..K., fill = Pair)) +
-  geom_hline(yintercept = 1, linetype = "dashed", color = "red", linewidth = 0.8) +
-  geom_boxplot(width = 0.35, outlier.shape = NA, linewidth = 0.5,
-               alpha = 0.6, color = "gray30") +
-  scale_fill_manual(values = color_pair) +
-  coord_cartesian(ylim = c(0, y_max_K)) +
-  annotate("text", x = 0.55, y = 0.8, label = "K = 1",
-           size = 2.8, color = "red", hjust = 0) +
-  labs(
-    title = "K Parameter Distribution by Lineage",
-    x = NULL, y = "K Parameter"
-  ) +
-  theme_minimal(base_size = 11) +
-  theme(
-    legend.position = "none",
-    axis.text.x = element_text(face = "italic", size = 10),
-    panel.grid.minor = element_blank(),
-    panel.grid.major.x = element_blank(),
-    plot.title = element_text(size = 12, face = "bold"),
-    plot.margin = margin(5, 8, 5, 5)
-  )
-
-p4a
+pair_labels <- c(
+  "Coccomyxa"      = "Coccomyxa viridis",
+  "Symbiochloris"  = "Symbiochloris reticulata",
+  "Trebouxia"      = "Trebouxia sp.C0010",
+  "Asterochloris"  = "Asterochloris erici"
+)
 
 ################################################################################
-# PANEL B: Alluvial diagram of gene trajectories
+# FIGURE 4: Volcano plots (ln(K) vs -log10(padj)) for each taxa test
 ################################################################################
 
-# Genes present in all 4 lineages
-genes_all4 <- relax_focal_filtered %>%
-  group_by(SOG) %>%
-  filter(n_distinct(Pair) == 4) %>%
-  ungroup() %>%
-  dplyr::select(SOG, Pair, Result) %>%
-  mutate(Result = factor(Result,
-    levels = c("Strengthened", "Not Significant", "Relaxed")))
+make_volcano <- function(pair_name, df, colors) {
+  dat <- df %>%
+    filter(Pair == pair_name) %>%
+    mutate(
+      neg_log10_padj = -log10(padj),
+      Result = factor(Result, levels = c("Intensified", "Not Significant", "Relaxed"))
+    )
 
-n_genes_all4 <- n_distinct(genes_all4$SOG)
+  n_sig <- sum(dat$Result != "Not Significant", na.rm = TRUE)
 
-p4b <- ggplot(genes_all4,
-              aes(x = Pair, stratum = Result, alluvium = SOG, fill = Result)) +
-  geom_flow(alpha = 0.4) +
-  geom_stratum(alpha = 0.8, width = 0.35) +
-  geom_text(stat = "stratum", aes(label = after_stat(count)),
-            size = 3.5, fontface = "bold", color = "white") +
-  scale_fill_manual(values = color_result, name = "Selection Change") +
-  labs(
-    title = paste0("Gene Trajectories Across Lineages"),
-    x = NULL, y = "Number of Genes"
-  ) +
-  theme_minimal(base_size = 11) +
-  theme(
-    axis.text.x = element_text(face = "italic", size = 10),
-    legend.position = "bottom",
-    panel.grid = element_blank(),
-    plot.title = element_text(size = 12, face = "bold"),
-    plot.margin = margin(5, 8, 5, 5)
-  )
+  ggplot(dat, aes(x = ln_K, y = neg_log10_padj, color = Result)) +
+    geom_point(alpha = 0.5, size = 0.8) +
+    geom_vline(xintercept = 0, linetype = "dashed", color = "gray40", linewidth = 0.6) +
+    geom_hline(yintercept = -log10(0.05), linetype = "dashed",
+               color = "gray40", linewidth = 0.6) +
+    scale_color_manual(values = colors, name = "Selection Change") +
+    labs(
+      title = pair_labels[pair_name],
+      x = "ln(K)",
+      y = expression(-log[10](p[adj]))
+    ) +
+    theme_minimal(base_size = 11) +
+    theme(
+      plot.title = element_text(size = 11, face = "bold.italic"),
+      legend.position = "none",
+      panel.grid.minor = element_blank(),
+      plot.margin = margin(5, 8, 5, 5)
+    )
+}
 
-p4b
+p_coc <- make_volcano("Coccomyxa",     relax_focal_filtered, color_result)
+p_sym <- make_volcano("Symbiochloris", relax_focal_filtered, color_result)
+p_tre <- make_volcano("Trebouxia",     relax_focal_filtered, color_result)
+p_ast <- make_volcano("Asterochloris", relax_focal_filtered, color_result)
 
-################################################################################
-# Combine into Figure 4
-################################################################################
+# Shared legend
+legend_plot <- ggplot(
+  data.frame(Result = factor(c("Intensified", "Not Significant", "Relaxed"),
+                             levels = c("Intensified", "Not Significant", "Relaxed"))),
+  aes(x = 1, y = 1, color = Result)
+) +
+  geom_point() +
+  scale_color_manual(values = color_result, name = "Selection Change") +
+  theme_void() +
+  theme(legend.position = "right",
+        legend.title = element_text(size = 10, face = "bold"),
+        legend.text = element_text(size = 9))
 
-fig4 <- (p4a | p4b) +
-  plot_layout(widths = c(1, 1.8)) +
+shared_legend <- cowplot::get_legend(legend_plot)
+
+# Combine into 2x2 grid
+fig4 <- (p_coc | p_sym) / (p_tre | p_ast) +
   plot_annotation(tag_levels = "A")
 
-ggsave("figures/Figure4_new.png", fig4,
-       width = 15, height = 8, dpi = 600)
-ggsave("figures/Figure4_new.pdf", fig4,
-       width = 15, height = 8)
+p_coc
+fig4
 
+# Add shared legend
+library(cowplot)
+fig4_with_legend <- plot_grid(
+  fig4, shared_legend,
+  ncol = 2, rel_widths = c(1, 0.12)
+)
 
+fig4_with_legend
 
+ggsave("figures/Figure4_new.png", fig4_with_legend,
+       width = 14, height = 10, dpi = 600)
+ggsave("figures/Figure4_new.pdf", fig4_with_legend,
+       width = 14, height = 10)
