@@ -378,74 +378,54 @@ consistently_relaxed <- gene_consistency %>%
   filter(pattern == "Consistently Relaxed") %>%
   pull(SOG)
 
-# ── GO annotation table for consistently/mostly Intensified genes ──────────
-intensified_focal <- gene_consistency %>%
-  filter(pattern %in% c("Consistently Intensified", "Mostly Intensified"))
-
-# Per-lineage K values (wide format)
-k_wide <- relax_focal_filtered %>%
-  filter(SOG %in% intensified_focal$SOG) %>%
-  dplyr::select(SOG, Pair, Result, Relaxation.Parameter..K.) %>%
-  mutate(K_label = sprintf("%.3f (%s)", Relaxation.Parameter..K., Result)) %>%
-  dplyr::select(SOG, Pair, K_label) %>%
-  tidyr::pivot_wider(names_from = Pair, values_from = K_label)
+# ── GO annotation table for intensified genes ──────────
+intensified <- relax_focal_filtered %>%
+  filter(Result == "Intensified")
 
 # Best annotation per gene: prefer rows with InterPro description
 go_annot <- annotations %>%
-  filter(SOG %in% intensified_focal$SOG) %>%
+  filter(SOG %in% intensified$SOG) %>%
   group_by(SOG) %>%
   arrange(!is.na(InterPro_description), !is.na(GO_annotation)) %>%
   dplyr::slice(1) %>%
   ungroup() %>%
   dplyr::select(SOG, InterPro_accession, InterPro_description, GO_annotation)
 
-intensified_table <- intensified_focal %>%
-  dplyr::select(SOG, pattern) %>%
+intensified_table <- intensified %>%
   left_join(go_annot, by = "SOG") %>%
-  left_join(k_wide, by = "SOG") %>%
-  dplyr::rename(Gene = SOG, Pattern = pattern,
+  dplyr::rename(Gene = SOG,
          InterPro_ID = InterPro_accession,
          Protein_function = InterPro_description,
          GO_term = GO_annotation)
 
 print(intensified_table)
 write.csv(intensified_table,
-          "/Users/Abigail/Desktop/Claude/analysis_results/intensified_genes_GO_table.csv",
+          "/Users/Abigail/Desktop/Algae-Comparative-Genomics/analysis_results/intensified_genes_GO_table.csv",
           row.names = FALSE)
 
 # ── GO annotation table for consistently/mostly relaxed genes ──────────
-relaxed_focal <- gene_consistency %>%
-  filter(pattern %in% c("Consistently Relaxed", "Mostly Relaxed"))
-
-# Per-lineage K values (wide format)
-k_wide <- relax_focal_filtered %>%
-  filter(SOG %in% relaxed_focal$SOG) %>%
-  dplyr::select(SOG, Pair, Result, Relaxation.Parameter..K.) %>%
-  mutate(K_label = sprintf("%.3f (%s)", Relaxation.Parameter..K., Result)) %>%
-  dplyr::select(SOG, Pair, K_label) %>%
-  tidyr::pivot_wider(names_from = Pair, values_from = K_label)
+relaxed <- relax_focal_filtered %>%
+  filter(Result == "Relaxed")
 
 # Best annotation per gene: prefer rows with InterPro description
 go_annot <- annotations %>%
-  filter(SOG %in% relaxed_focal$SOG) %>%
+  filter(SOG %in% relaxed$SOG) %>%
   group_by(SOG) %>%
   arrange(!is.na(InterPro_description), !is.na(GO_annotation)) %>%
   dplyr::slice(1) %>%
   ungroup() %>%
   dplyr::select(SOG, InterPro_accession, InterPro_description, GO_annotation)
 
-relaxed_table <- relaxed_focal %>%
-  dplyr::select(SOG, pattern) %>%
+relaxed_table <- relaxed %>%
   left_join(go_annot, by = "SOG") %>%
-  left_join(k_wide, by = "SOG") %>%
-  dplyr::rename(Gene = SOG, Pattern = pattern,
+  dplyr::rename(Gene = SOG,
                 InterPro_ID = InterPro_accession,
                 Protein_function = InterPro_description,
                 GO_term = GO_annotation)
 
 print(relaxed_table)
 write.csv(relaxed_table,
-          "/Users/Abigail/Desktop/Claude/analysis_results/relaxed_genes_GO_table.csv",
+          "/Users/Abigail/Desktop/Algae-Comparative-Genomics/analysis_results/relaxed_genes_GO_table.csv",
           row.names = FALSE)
 
 ################################################################################
