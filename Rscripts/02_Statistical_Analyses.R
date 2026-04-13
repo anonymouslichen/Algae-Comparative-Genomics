@@ -214,9 +214,6 @@ relax_summary <- relax_focal_filtered %>%
   group_by(Pair) %>%
   summarise(
     n_genes = n(),
-    median_K = median(ln_K, na.rm = TRUE),
-    mean_K = mean(ln_K, na.rm = TRUE),
-    sd_K = sd(ln_K, na.rm = TRUE),
     n_intensified = sum(Result == "Intensified"),
     n_relaxed = sum(Result == "Relaxed"),
     n_ns = sum(Result == "Not Significant"),
