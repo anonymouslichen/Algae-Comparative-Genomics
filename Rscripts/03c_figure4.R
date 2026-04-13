@@ -36,7 +36,7 @@ make_volcano <- function(pair_name, df, colors) {
   n_sig <- sum(dat$Result != "Not Significant", na.rm = TRUE)
 
   ggplot(dat, aes(x = ln_K, y = neg_log10_padj, color = Result)) +
-    geom_point(alpha = 0.5, size = 0.8) +
+    geom_point(alpha = 0.6, size = 1.2) +
     geom_vline(xintercept = 0, linetype = "dashed", color = "gray40", linewidth = 0.6) +
     geom_hline(yintercept = -log10(0.05), linetype = "dashed",
                color = "gray40", linewidth = 0.6) +
@@ -95,3 +95,4 @@ ggsave("figures/Figure4_new.png", fig4_with_legend,
        width = 14, height = 10, dpi = 600)
 ggsave("figures/Figure4_new.pdf", fig4_with_legend,
        width = 14, height = 10)
+
