@@ -2,6 +2,7 @@ library(ggplot2)
 library(dplyr)
 library(tidyr)
 library(patchwork)
+library(cowplot)
 
 setwd("~/Desktop/Algae-Comparative-Genomics/")
 load("Rscripts/analysis_complete.RData")
@@ -49,7 +50,6 @@ make_volcano <- function(pair_name, df, colors) {
     theme_minimal(base_size = 11) +
     theme(
       plot.title = element_text(size = 11, face = "bold.italic"),
-      legend.position = "none",
       panel.grid.minor = element_blank(),
       plot.margin = margin(5, 8, 5, 5)
     )
@@ -60,34 +60,13 @@ p_sym <- make_volcano("Symbiochloris", relax_focal_filtered, color_result)
 p_tre <- make_volcano("Trebouxia",     relax_focal_filtered, color_result)
 p_ast <- make_volcano("Asterochloris", relax_focal_filtered, color_result)
 
-# Shared legend
-legend_plot <- ggplot(
-  data.frame(Result = factor(c("Intensified", "Not Significant", "Relaxed"),
-                             levels = c("Intensified", "Not Significant", "Relaxed"))),
-  aes(x = 1, y = 1, color = Result)
-) +
-  geom_point() +
-  scale_color_manual(values = color_result, name = "Selection Change") +
-  theme_void() +
-  theme(legend.position = "right",
+# Combine into 2x2 grid with shared legend
+fig4_with_legend <- (p_coc | p_sym) / (p_tre | p_ast) +
+  plot_layout(guides = "collect") +
+  plot_annotation(tag_levels = "A") &
+  theme(legend.position = "bottom",
         legend.title = element_text(size = 10, face = "bold"),
         legend.text = element_text(size = 9))
-
-shared_legend <- cowplot::get_legend(legend_plot)
-
-# Combine into 2x2 grid
-fig4 <- (p_coc | p_sym) / (p_tre | p_ast) +
-  plot_annotation(tag_levels = "A")
-
-p_coc
-fig4
-
-# Add shared legend
-library(cowplot)
-fig4_with_legend <- plot_grid(
-  fig4, shared_legend,
-  ncol = 2, rel_widths = c(1, 0.12)
-)
 
 fig4_with_legend
 
