@@ -403,7 +403,7 @@ write.csv(intensified_table,
           "/Users/Abigail/Desktop/Algae-Comparative-Genomics/analysis_results/intensified_genes_GO_table.csv",
           row.names = FALSE)
 
-# ── GO annotation table for consistently/mostly relaxed genes ──────────
+# ── GO annotation table for relaxed genes ──────────
 relaxed <- relax_focal_filtered %>%
   filter(Result == "Relaxed")
 

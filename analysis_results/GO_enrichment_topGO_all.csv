@@ -1,0 +1,1487 @@
+"GO.ID","Term","Annotated","Significant","Expected","weight01","Fisher_p","padj","Lineage","Condition","Ontology","N_focal","N_universe"
+"GO:0044281","small molecule metabolic process",29,1,0.16,"0.16",0.16,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0009987","cellular process",170,1,0.96,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0008150","biological_process",176,1,0.99,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0008152","metabolic process",144,1,0.81,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0000375","RNA splicing, via transesterification reactions",5,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0000377","RNA splicing, via transesterification reactions with bulged adenosine as nucleophile",5,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0000398","mRNA splicing, via spliceosome",5,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0005975","carbohydrate metabolic process",12,0,0.07,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0005996","monosaccharide metabolic process",5,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006082","organic acid metabolic process",14,0,0.08,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006139","nucleobase-containing compound metabolic process",58,0,0.33,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006163","purine nucleotide metabolic process",6,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006259","DNA metabolic process",18,0,0.1,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006260","DNA replication",6,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006281","DNA repair",10,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006351","DNA-templated transcription",13,0,0.07,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006355","regulation of DNA-templated transcription",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006396","RNA processing",12,0,0.07,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006397","mRNA processing",7,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006399","tRNA metabolic process",5,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006412","translation",31,0,0.17,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006457","protein folding",7,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006508","proteolysis",7,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006520","amino acid metabolic process",13,0,0.07,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006753","nucleoside phosphate metabolic process",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006793","phosphorus metabolic process",12,0,0.07,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006796","phosphate-containing compound metabolic process",12,0,0.07,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006810","transport",15,0,0.08,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006950","response to stress",13,0,0.07,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006974","DNA damage response",11,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0006996","organelle organization",10,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0007049","cell cycle",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0008104","protein localization",11,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0008380","RNA splicing",5,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0008652","amino acid biosynthetic process",6,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0009056","catabolic process",7,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0009058","biosynthetic process",96,0,0.54,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0009059","macromolecule biosynthetic process",71,0,0.4,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0009117","nucleotide metabolic process",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0009150","purine ribonucleotide metabolic process",5,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0009165","nucleotide biosynthetic process",6,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0009259","ribonucleotide metabolic process",5,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0009889","regulation of biosynthetic process",9,0,0.05,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0010467","gene expression",68,0,0.38,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0010468","regulation of gene expression",9,0,0.05,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0010556","regulation of macromolecule biosynthetic process",9,0,0.05,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0015031","protein transport",7,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0016043","cellular component organization",19,0,0.11,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0016053","organic acid biosynthetic process",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0016070","RNA metabolic process",33,0,0.19,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0016071","mRNA metabolic process",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0019219","regulation of nucleobase-containing compound metabolic process",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0019222","regulation of metabolic process",11,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0019538","protein metabolic process",54,0,0.3,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0019637","organophosphate metabolic process",9,0,0.05,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0019693","ribose phosphate metabolic process",5,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0019752","carboxylic acid metabolic process",13,0,0.07,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0022402","cell cycle process",7,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0022607","cellular component assembly",7,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0032774","RNA biosynthetic process",26,0,0.15,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0033036","macromolecule localization",12,0,0.07,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0033554","cellular response to stress",11,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0034654","nucleobase-containing compound biosynthetic process",33,0,0.19,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0036211","protein modification process",7,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0043170","macromolecule metabolic process",102,0,0.57,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0043412","macromolecule modification",10,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0043436","oxoacid metabolic process",14,0,0.08,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0043933","protein-containing complex organization",6,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0044085","cellular component biogenesis",9,0,0.05,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0044238","primary metabolic process",130,0,0.73,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0044283","small molecule biosynthetic process",11,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0045184","establishment of protein localization",10,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0046394","carboxylic acid biosynthetic process",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0050789","regulation of biological process",13,0,0.07,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0050794","regulation of cellular process",13,0,0.07,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0050896","response to stimulus",13,0,0.07,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0051179","localization",19,0,0.11,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0051234","establishment of localization",18,0,0.1,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0051252","regulation of RNA metabolic process",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0051276","chromosome organization",6,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0051604","protein maturation",10,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0051641","cellular localization",13,0,0.07,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0051716","cellular response to stimulus",11,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0055086","nucleobase-containing small molecule metabolic process",9,0,0.05,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0060255","regulation of macromolecule metabolic process",10,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0065003","protein-containing complex assembly",5,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0065007","biological regulation",15,0,0.08,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0070727","cellular macromolecule localization",11,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0071705","nitrogen compound transport",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0071840","cellular component organization or biogenesis",21,0,0.12,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0072521","purine-containing compound metabolic process",7,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0072522","purine-containing compound biosynthetic process",5,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0080090","regulation of primary metabolic process",9,0,0.05,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0090304","nucleic acid metabolic process",49,0,0.28,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0090407","organophosphate biosynthetic process",7,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0141187","nucleic acid biosynthetic process",26,0,0.15,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0170033","L-amino acid metabolic process",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0170034","L-amino acid biosynthetic process",6,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0170038","proteinogenic amino acid biosynthetic process",6,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0170039","proteinogenic amino acid metabolic process",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:1901135","carbohydrate derivative metabolic process",10,0,0.06,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:1901137","carbohydrate derivative biosynthetic process",7,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:1901293","nucleoside phosphate biosynthetic process",6,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:1901605","alpha-amino acid metabolic process",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:1901607","alpha-amino acid biosynthetic process",6,0,0.03,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:2001141","regulation of RNA biosynthetic process",8,0,0.04,"1.00",1,1,"Coccomyxa","Intensified","BP",5,244
+"GO:0005996","monosaccharide metabolic process",5,2,0.23,"0.017",0.017,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006508","proteolysis",7,2,0.32,"0.034",0.034,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0022402","cell cycle process",7,1,0.32,"0.282",0.282,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0009056","catabolic process",7,1,0.32,"0.282",0.282,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0022607","cellular component assembly",7,1,0.32,"0.282",0.282,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0051604","protein maturation",8,1,0.36,"0.316",0.316,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006996","organelle organization",10,1,0.45,"0.380",0.38,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0045184","establishment of protein localization",10,1,0.45,"0.380",0.38,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0044283","small molecule biosynthetic process",10,1,0.45,"0.380",0.38,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006974","DNA damage response",11,1,0.5,"0.410",0.41,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0044238","primary metabolic process",128,6,5.82,"0.439",0.439,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0050794","regulation of cellular process",13,1,0.59,"0.466",0.466,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006351","DNA-templated transcription",13,1,0.59,"0.466",0.466,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0016070","RNA metabolic process",34,1,1.55,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0007049","cell cycle",8,1,0.36,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0050896","response to stimulus",13,1,0.59,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0009987","cellular process",168,8,7.64,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0090304","nucleic acid metabolic process",50,1,2.27,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006139","nucleobase-containing compound metabolic process",59,1,2.68,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0051641","cellular localization",13,1,0.59,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0051716","cellular response to stimulus",11,1,0.5,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0032774","RNA biosynthetic process",27,1,1.23,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0033554","cellular response to stress",11,1,0.5,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0044085","cellular component biogenesis",9,1,0.41,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0043170","macromolecule metabolic process",101,3,4.59,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0005975","carbohydrate metabolic process",12,2,0.55,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0065007","biological regulation",15,1,0.68,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0008104","protein localization",11,1,0.5,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006950","response to stress",13,1,0.59,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0141187","nucleic acid biosynthetic process",27,1,1.23,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0010467","gene expression",67,2,3.05,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0008150","biological_process",174,8,7.91,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0050789","regulation of biological process",13,1,0.59,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0008152","metabolic process",142,6,6.45,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0044281","small molecule metabolic process",28,2,1.27,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0051179","localization",19,1,0.86,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0033036","macromolecule localization",12,1,0.55,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0051234","establishment of localization",18,1,0.82,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0019538","protein metabolic process",52,2,2.36,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0009058","biosynthetic process",94,3,4.27,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0009059","macromolecule biosynthetic process",70,2,3.18,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0070727","cellular macromolecule localization",11,1,0.5,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0071840","cellular component organization or biogenesis",21,1,0.95,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0034654","nucleobase-containing compound biosynthetic process",34,1,1.55,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0016043","cellular component organization",19,1,0.86,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0000375","RNA splicing, via transesterification reactions",6,0,0.27,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0000377","RNA splicing, via transesterification reactions with bulged adenosine as nucleophile",6,0,0.27,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0000398","mRNA splicing, via spliceosome",6,0,0.27,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006082","organic acid metabolic process",13,0,0.59,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006163","purine nucleotide metabolic process",6,0,0.27,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006259","DNA metabolic process",18,0,0.82,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006260","DNA replication",6,0,0.27,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006281","DNA repair",10,0,0.45,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006355","regulation of DNA-templated transcription",8,0,0.36,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006396","RNA processing",13,0,0.59,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006397","mRNA processing",8,0,0.36,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006399","tRNA metabolic process",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006412","translation",31,0,1.41,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006457","protein folding",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006520","amino acid metabolic process",12,0,0.55,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006753","nucleoside phosphate metabolic process",8,0,0.36,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006793","phosphorus metabolic process",12,0,0.55,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006796","phosphate-containing compound metabolic process",12,0,0.55,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0006810","transport",15,0,0.68,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0008380","RNA splicing",6,0,0.27,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0008652","amino acid biosynthetic process",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0009117","nucleotide metabolic process",8,0,0.36,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0009150","purine ribonucleotide metabolic process",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0009165","nucleotide biosynthetic process",6,0,0.27,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0009259","ribonucleotide metabolic process",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0009889","regulation of biosynthetic process",9,0,0.41,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0010468","regulation of gene expression",9,0,0.41,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0010556","regulation of macromolecule biosynthetic process",9,0,0.41,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0015031","protein transport",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0016053","organic acid biosynthetic process",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0016071","mRNA metabolic process",9,0,0.41,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0019219","regulation of nucleobase-containing compound metabolic process",8,0,0.36,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0019222","regulation of metabolic process",11,0,0.5,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0019637","organophosphate metabolic process",9,0,0.41,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0019693","ribose phosphate metabolic process",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0019752","carboxylic acid metabolic process",12,0,0.55,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0036211","protein modification process",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0043412","macromolecule modification",10,0,0.45,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0043436","oxoacid metabolic process",13,0,0.59,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0043933","protein-containing complex organization",6,0,0.27,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0046394","carboxylic acid biosynthetic process",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0051252","regulation of RNA metabolic process",8,0,0.36,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0051276","chromosome organization",6,0,0.27,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0055086","nucleobase-containing small molecule metabolic process",9,0,0.41,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0060255","regulation of macromolecule metabolic process",10,0,0.45,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0065003","protein-containing complex assembly",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0071705","nitrogen compound transport",8,0,0.36,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0072521","purine-containing compound metabolic process",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0072522","purine-containing compound biosynthetic process",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0080090","regulation of primary metabolic process",9,0,0.41,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0090407","organophosphate biosynthetic process",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0170033","L-amino acid metabolic process",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0170034","L-amino acid biosynthetic process",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0170038","proteinogenic amino acid biosynthetic process",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0170039","proteinogenic amino acid metabolic process",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:1901135","carbohydrate derivative metabolic process",10,0,0.45,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:1901137","carbohydrate derivative biosynthetic process",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:1901293","nucleoside phosphate biosynthetic process",6,0,0.27,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:1901605","alpha-amino acid metabolic process",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:1901607","alpha-amino acid biosynthetic process",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:2001141","regulation of RNA biosynthetic process",8,0,0.36,"1.000",1,1,"Symbiochloris","Intensified","BP",36,244
+"GO:0016070","RNA metabolic process",34,7,4.39,"0.035",0.035,1,"Trebouxia","Intensified","BP",105,245
+"GO:0043412","macromolecule modification",10,3,1.29,"0.040",0.04,1,"Trebouxia","Intensified","BP",105,245
+"GO:0043170","macromolecule metabolic process",104,16,13.44,"0.093",0.093,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006396","RNA processing",13,3,1.68,"0.116",0.116,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006399","tRNA metabolic process",5,2,0.65,"0.116",0.116,1,"Trebouxia","Intensified","BP",105,245
+"GO:0090407","organophosphate biosynthetic process",7,2,0.9,"0.122",0.122,1,"Trebouxia","Intensified","BP",105,245
+"GO:0170034","L-amino acid biosynthetic process",6,2,0.78,"0.161",0.161,1,"Trebouxia","Intensified","BP",105,245
+"GO:0170038","proteinogenic amino acid biosynthetic process",6,2,0.78,"0.161",0.161,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006412","translation",33,5,4.26,"0.386",0.386,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006796","phosphate-containing compound metabolic process",12,2,1.55,"0.413",0.413,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006520","amino acid metabolic process",13,3,1.68,"0.469",0.469,1,"Trebouxia","Intensified","BP",105,245
+"GO:0009058","biosynthetic process",99,15,12.79,"0.508",0.508,1,"Trebouxia","Intensified","BP",105,245
+"GO:0019538","protein metabolic process",56,8,7.24,"0.534",0.534,1,"Trebouxia","Intensified","BP",105,245
+"GO:0009165","nucleotide biosynthetic process",6,1,0.78,"0.552",0.552,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006260","DNA replication",6,1,0.78,"0.552",0.552,1,"Trebouxia","Intensified","BP",105,245
+"GO:0000398","mRNA splicing, via spliceosome",6,1,0.78,"0.552",0.552,1,"Trebouxia","Intensified","BP",105,245
+"GO:0009056","catabolic process",7,1,0.9,"0.610",0.61,1,"Trebouxia","Intensified","BP",105,245
+"GO:0036211","protein modification process",7,1,0.9,"0.610",0.61,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006457","protein folding",7,1,0.9,"0.610",0.61,1,"Trebouxia","Intensified","BP",105,245
+"GO:0080090","regulation of primary metabolic process",9,1,1.16,"0.704",0.704,1,"Trebouxia","Intensified","BP",105,245
+"GO:0060255","regulation of macromolecule metabolic process",10,1,1.29,"0.742",0.742,1,"Trebouxia","Intensified","BP",105,245
+"GO:0005975","carbohydrate metabolic process",12,1,1.55,"0.806",0.806,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006351","DNA-templated transcription",13,1,1.68,"0.831",0.831,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006810","transport",15,1,1.94,"0.873",0.873,1,"Trebouxia","Intensified","BP",105,245
+"GO:0009987","cellular process",170,21,21.97,"0.940",0.94,1,"Trebouxia","Intensified","BP",105,245
+"GO:0170033","L-amino acid metabolic process",8,2,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0055086","nucleobase-containing small molecule metabolic process",9,1,1.16,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0019752","carboxylic acid metabolic process",13,2,1.68,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:1901605","alpha-amino acid metabolic process",8,2,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0170039","proteinogenic amino acid metabolic process",8,2,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:1901607","alpha-amino acid biosynthetic process",6,2,0.78,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0008652","amino acid biosynthetic process",6,2,0.78,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0044281","small molecule metabolic process",29,3,3.75,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0016071","mRNA metabolic process",9,1,1.16,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0044283","small molecule biosynthetic process",11,2,1.42,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0141187","nucleic acid biosynthetic process",27,4,3.49,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0032774","RNA biosynthetic process",27,4,3.49,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0065007","biological regulation",14,1,1.81,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0050794","regulation of cellular process",12,1,1.55,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0043436","oxoacid metabolic process",14,2,1.81,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0000375","RNA splicing, via transesterification reactions",6,1,0.78,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0090304","nucleic acid metabolic process",49,8,6.33,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0000377","RNA splicing, via transesterification reactions with bulged adenosine as nucleophile",6,1,0.78,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006139","nucleobase-containing compound metabolic process",58,9,7.49,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:1901293","nucleoside phosphate biosynthetic process",6,1,0.78,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0009059","macromolecule biosynthetic process",74,10,9.56,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0044238","primary metabolic process",132,19,17.06,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0046394","carboxylic acid biosynthetic process",8,2,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0050789","regulation of biological process",12,1,1.55,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0016053","organic acid biosynthetic process",8,2,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0051179","localization",19,1,2.46,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0051234","establishment of localization",18,1,2.33,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006082","organic acid metabolic process",14,2,1.81,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006397","mRNA processing",8,1,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0051604","protein maturation",10,1,1.29,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0019222","regulation of metabolic process",11,1,1.42,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0008150","biological_process",176,22,22.74,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0009117","nucleotide metabolic process",8,1,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0008152","metabolic process",146,20,18.87,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0019637","organophosphate metabolic process",9,2,1.16,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006793","phosphorus metabolic process",12,2,1.55,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0008380","RNA splicing",6,1,0.78,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0010467","gene expression",71,10,9.17,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006753","nucleoside phosphate metabolic process",8,1,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0034654","nucleobase-containing compound biosynthetic process",34,5,4.39,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006259","DNA metabolic process",17,1,2.2,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0005996","monosaccharide metabolic process",5,0,0.65,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006163","purine nucleotide metabolic process",6,0,0.78,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006281","DNA repair",10,0,1.29,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006355","regulation of DNA-templated transcription",8,0,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006508","proteolysis",7,0,0.9,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006950","response to stress",12,0,1.55,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006974","DNA damage response",10,0,1.29,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0006996","organelle organization",10,0,1.29,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0007049","cell cycle",7,0,0.9,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0008104","protein localization",11,0,1.42,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0009150","purine ribonucleotide metabolic process",5,0,0.65,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0009259","ribonucleotide metabolic process",5,0,0.65,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0009889","regulation of biosynthetic process",9,0,1.16,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0010468","regulation of gene expression",9,0,1.16,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0010556","regulation of macromolecule biosynthetic process",9,0,1.16,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0015031","protein transport",7,0,0.9,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0016043","cellular component organization",18,0,2.33,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0019219","regulation of nucleobase-containing compound metabolic process",8,0,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0019693","ribose phosphate metabolic process",5,0,0.65,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0022402","cell cycle process",6,0,0.78,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0022607","cellular component assembly",6,0,0.78,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0033036","macromolecule localization",12,0,1.55,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0033554","cellular response to stress",10,0,1.29,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0043933","protein-containing complex organization",5,0,0.65,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0044085","cellular component biogenesis",8,0,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0045184","establishment of protein localization",10,0,1.29,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0050896","response to stimulus",12,0,1.55,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0051252","regulation of RNA metabolic process",8,0,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0051276","chromosome organization",6,0,0.78,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0051641","cellular localization",13,0,1.68,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0051716","cellular response to stimulus",10,0,1.29,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0070727","cellular macromolecule localization",11,0,1.42,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0071705","nitrogen compound transport",8,0,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0071840","cellular component organization or biogenesis",20,0,2.58,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0072521","purine-containing compound metabolic process",7,0,0.9,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0072522","purine-containing compound biosynthetic process",5,0,0.65,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:1901135","carbohydrate derivative metabolic process",10,0,1.29,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:1901137","carbohydrate derivative biosynthetic process",7,0,0.9,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:2001141","regulation of RNA biosynthetic process",8,0,1.03,"1.000",1,1,"Trebouxia","Intensified","BP",105,245
+"GO:0009165","nucleotide biosynthetic process",6,1,0.1,"0.097",0.097,1,"Asterochloris","Intensified","BP",12,248
+"GO:0071705","nitrogen compound transport",8,1,0.13,"0.127",0.127,1,"Asterochloris","Intensified","BP",12,248
+"GO:0033036","macromolecule localization",12,1,0.2,"0.187",0.187,1,"Asterochloris","Intensified","BP",12,248
+"GO:0051641","cellular localization",13,1,0.22,"0.201",0.201,1,"Asterochloris","Intensified","BP",12,248
+"GO:0010467","gene expression",71,2,1.18,"0.449",0.449,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006412","translation",33,1,0.55,"0.455",0.455,1,"Asterochloris","Intensified","BP",12,248
+"GO:1901293","nucleoside phosphate biosynthetic process",6,1,0.1,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0009058","biosynthetic process",99,3,1.64,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0051179","localization",19,1,0.31,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0051234","establishment of localization",18,1,0.3,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0009059","macromolecule biosynthetic process",74,2,1.23,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0034654","nucleobase-containing compound biosynthetic process",34,1,0.56,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0044238","primary metabolic process",133,2,2.2,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006753","nucleoside phosphate metabolic process",8,1,0.13,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0090407","organophosphate biosynthetic process",7,1,0.12,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006810","transport",15,1,0.25,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006793","phosphorus metabolic process",12,1,0.2,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0009117","nucleotide metabolic process",8,1,0.13,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0019538","protein metabolic process",56,1,0.93,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006796","phosphate-containing compound metabolic process",12,1,0.2,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006139","nucleobase-containing compound metabolic process",59,1,0.98,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0009987","cellular process",173,3,2.87,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0008150","biological_process",179,3,2.97,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0008152","metabolic process",147,3,2.44,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0044281","small molecule metabolic process",29,1,0.48,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0019637","organophosphate metabolic process",9,1,0.15,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0043170","macromolecule metabolic process",105,2,1.74,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0055086","nucleobase-containing small molecule metabolic process",9,1,0.15,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0000375","RNA splicing, via transesterification reactions",6,0,0.1,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0000377","RNA splicing, via transesterification reactions with bulged adenosine as nucleophile",6,0,0.1,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0000398","mRNA splicing, via spliceosome",6,0,0.1,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0005975","carbohydrate metabolic process",12,0,0.2,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0005996","monosaccharide metabolic process",5,0,0.08,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006082","organic acid metabolic process",14,0,0.23,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006163","purine nucleotide metabolic process",6,0,0.1,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006259","DNA metabolic process",18,0,0.3,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006260","DNA replication",6,0,0.1,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006281","DNA repair",10,0,0.17,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006351","DNA-templated transcription",13,0,0.22,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006355","regulation of DNA-templated transcription",8,0,0.13,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006396","RNA processing",13,0,0.22,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006397","mRNA processing",8,0,0.13,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006399","tRNA metabolic process",5,0,0.08,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006457","protein folding",7,0,0.12,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006508","proteolysis",7,0,0.12,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006520","amino acid metabolic process",13,0,0.22,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006950","response to stress",13,0,0.22,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006974","DNA damage response",11,0,0.18,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0006996","organelle organization",10,0,0.17,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0007049","cell cycle",8,0,0.13,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0008104","protein localization",11,0,0.18,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0008380","RNA splicing",6,0,0.1,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0008652","amino acid biosynthetic process",6,0,0.1,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0009056","catabolic process",7,0,0.12,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0009150","purine ribonucleotide metabolic process",5,0,0.08,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0009259","ribonucleotide metabolic process",5,0,0.08,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0009889","regulation of biosynthetic process",9,0,0.15,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0010468","regulation of gene expression",9,0,0.15,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0010556","regulation of macromolecule biosynthetic process",9,0,0.15,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0015031","protein transport",7,0,0.12,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0016043","cellular component organization",19,0,0.31,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0016053","organic acid biosynthetic process",8,0,0.13,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0016070","RNA metabolic process",34,0,0.56,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0016071","mRNA metabolic process",9,0,0.15,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0019219","regulation of nucleobase-containing compound metabolic process",8,0,0.13,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0019222","regulation of metabolic process",11,0,0.18,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0019693","ribose phosphate metabolic process",5,0,0.08,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0019752","carboxylic acid metabolic process",13,0,0.22,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0022402","cell cycle process",7,0,0.12,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0022607","cellular component assembly",7,0,0.12,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0032774","RNA biosynthetic process",27,0,0.45,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0033554","cellular response to stress",11,0,0.18,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0036211","protein modification process",7,0,0.12,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0043412","macromolecule modification",10,0,0.17,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0043436","oxoacid metabolic process",14,0,0.23,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0043933","protein-containing complex organization",6,0,0.1,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0044085","cellular component biogenesis",9,0,0.15,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0044283","small molecule biosynthetic process",11,0,0.18,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0045184","establishment of protein localization",10,0,0.17,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0046394","carboxylic acid biosynthetic process",8,0,0.13,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0050789","regulation of biological process",13,0,0.22,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0050794","regulation of cellular process",13,0,0.22,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0050896","response to stimulus",13,0,0.22,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0051252","regulation of RNA metabolic process",8,0,0.13,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0051276","chromosome organization",6,0,0.1,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0051604","protein maturation",10,0,0.17,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0051716","cellular response to stimulus",11,0,0.18,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0060255","regulation of macromolecule metabolic process",10,0,0.17,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0065003","protein-containing complex assembly",5,0,0.08,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0065007","biological regulation",15,0,0.25,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0070727","cellular macromolecule localization",11,0,0.18,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0071840","cellular component organization or biogenesis",21,0,0.35,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0072521","purine-containing compound metabolic process",7,0,0.12,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0072522","purine-containing compound biosynthetic process",5,0,0.08,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0080090","regulation of primary metabolic process",9,0,0.15,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0090304","nucleic acid metabolic process",50,0,0.83,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0141187","nucleic acid biosynthetic process",27,0,0.45,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0170033","L-amino acid metabolic process",8,0,0.13,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0170034","L-amino acid biosynthetic process",6,0,0.1,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0170038","proteinogenic amino acid biosynthetic process",6,0,0.1,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0170039","proteinogenic amino acid metabolic process",8,0,0.13,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:1901135","carbohydrate derivative metabolic process",10,0,0.17,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:1901137","carbohydrate derivative biosynthetic process",7,0,0.12,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:1901605","alpha-amino acid metabolic process",8,0,0.13,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:1901607","alpha-amino acid biosynthetic process",6,0,0.1,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:2001141","regulation of RNA biosynthetic process",8,0,0.13,"1.000",1,1,"Asterochloris","Intensified","BP",12,248
+"GO:0051276","chromosome organization",6,1,0.03,"0.034",0.034,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006281","DNA repair",10,1,0.06,"0.056",0.056,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006950","response to stress",13,1,0.07,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006139","nucleobase-containing compound metabolic process",58,1,0.33,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006996","organelle organization",10,1,0.06,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0016043","cellular component organization",19,1,0.11,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0090304","nucleic acid metabolic process",49,1,0.28,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0043170","macromolecule metabolic process",102,1,0.57,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006974","DNA damage response",11,1,0.06,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0071840","cellular component organization or biogenesis",21,1,0.12,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0051716","cellular response to stimulus",11,1,0.06,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006259","DNA metabolic process",18,1,0.1,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0009987","cellular process",170,1,0.96,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0050896","response to stimulus",13,1,0.07,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0033554","cellular response to stress",11,1,0.06,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0044238","primary metabolic process",130,1,0.73,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0008150","biological_process",176,1,0.99,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0008152","metabolic process",144,1,0.81,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0000375","RNA splicing, via transesterification reactions",5,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0000377","RNA splicing, via transesterification reactions with bulged adenosine as nucleophile",5,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0000398","mRNA splicing, via spliceosome",5,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0005975","carbohydrate metabolic process",12,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0005996","monosaccharide metabolic process",5,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006082","organic acid metabolic process",14,0,0.08,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006163","purine nucleotide metabolic process",6,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006260","DNA replication",6,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006351","DNA-templated transcription",13,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006355","regulation of DNA-templated transcription",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006396","RNA processing",12,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006397","mRNA processing",7,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006399","tRNA metabolic process",5,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006412","translation",31,0,0.17,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006457","protein folding",7,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006508","proteolysis",7,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006520","amino acid metabolic process",13,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006753","nucleoside phosphate metabolic process",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006793","phosphorus metabolic process",12,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006796","phosphate-containing compound metabolic process",12,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0006810","transport",15,0,0.08,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0007049","cell cycle",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0008104","protein localization",11,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0008380","RNA splicing",5,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0008652","amino acid biosynthetic process",6,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0009056","catabolic process",7,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0009058","biosynthetic process",96,0,0.54,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0009059","macromolecule biosynthetic process",71,0,0.4,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0009117","nucleotide metabolic process",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0009150","purine ribonucleotide metabolic process",5,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0009165","nucleotide biosynthetic process",6,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0009259","ribonucleotide metabolic process",5,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0009889","regulation of biosynthetic process",9,0,0.05,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0010467","gene expression",68,0,0.38,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0010468","regulation of gene expression",9,0,0.05,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0010556","regulation of macromolecule biosynthetic process",9,0,0.05,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0015031","protein transport",7,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0016053","organic acid biosynthetic process",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0016070","RNA metabolic process",33,0,0.19,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0016071","mRNA metabolic process",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0019219","regulation of nucleobase-containing compound metabolic process",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0019222","regulation of metabolic process",11,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0019538","protein metabolic process",54,0,0.3,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0019637","organophosphate metabolic process",9,0,0.05,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0019693","ribose phosphate metabolic process",5,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0019752","carboxylic acid metabolic process",13,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0022402","cell cycle process",7,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0022607","cellular component assembly",7,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0032774","RNA biosynthetic process",26,0,0.15,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0033036","macromolecule localization",12,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0034654","nucleobase-containing compound biosynthetic process",33,0,0.19,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0036211","protein modification process",7,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0043412","macromolecule modification",10,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0043436","oxoacid metabolic process",14,0,0.08,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0043933","protein-containing complex organization",6,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0044085","cellular component biogenesis",9,0,0.05,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0044281","small molecule metabolic process",29,0,0.16,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0044283","small molecule biosynthetic process",11,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0045184","establishment of protein localization",10,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0046394","carboxylic acid biosynthetic process",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0050789","regulation of biological process",13,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0050794","regulation of cellular process",13,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0051179","localization",19,0,0.11,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0051234","establishment of localization",18,0,0.1,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0051252","regulation of RNA metabolic process",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0051604","protein maturation",10,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0051641","cellular localization",13,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0055086","nucleobase-containing small molecule metabolic process",9,0,0.05,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0060255","regulation of macromolecule metabolic process",10,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0065003","protein-containing complex assembly",5,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0065007","biological regulation",15,0,0.08,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0070727","cellular macromolecule localization",11,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0071705","nitrogen compound transport",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0072521","purine-containing compound metabolic process",7,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0072522","purine-containing compound biosynthetic process",5,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0080090","regulation of primary metabolic process",9,0,0.05,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0090407","organophosphate biosynthetic process",7,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0141187","nucleic acid biosynthetic process",26,0,0.15,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0170033","L-amino acid metabolic process",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0170034","L-amino acid biosynthetic process",6,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0170038","proteinogenic amino acid biosynthetic process",6,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0170039","proteinogenic amino acid metabolic process",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:1901135","carbohydrate derivative metabolic process",10,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:1901137","carbohydrate derivative biosynthetic process",7,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:1901293","nucleoside phosphate biosynthetic process",6,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:1901605","alpha-amino acid metabolic process",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:1901607","alpha-amino acid biosynthetic process",6,0,0.03,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:2001141","regulation of RNA biosynthetic process",8,0,0.04,"1.000",1,1,"Coccomyxa","Relaxed","BP",14,244
+"GO:0019752","carboxylic acid metabolic process",12,2,0.41,"0.088",0.088,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0009059","macromolecule biosynthetic process",70,2,2.39,"0.133",0.133,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006520","amino acid metabolic process",12,2,0.41,"0.141",0.141,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0170034","L-amino acid biosynthetic process",5,1,0.17,"0.161",0.161,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006399","tRNA metabolic process",5,1,0.17,"0.161",0.161,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0170038","proteinogenic amino acid biosynthetic process",5,1,0.17,"0.161",0.161,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0009150","purine ribonucleotide metabolic process",5,1,0.17,"0.161",0.161,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:1901137","carbohydrate derivative biosynthetic process",7,1,0.24,"0.219",0.219,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0036211","protein modification process",7,1,0.24,"0.219",0.219,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0009056","catabolic process",7,1,0.24,"0.219",0.219,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0009058","biosynthetic process",94,4,3.2,"0.295",0.295,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0005975","carbohydrate metabolic process",12,1,0.41,"0.350",0.35,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0065007","biological regulation",15,1,0.51,"0.419",0.419,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006412","translation",31,1,1.06,"0.693",0.693,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0016070","RNA metabolic process",34,1,1.16,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:1901605","alpha-amino acid metabolic process",7,1,0.24,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0072521","purine-containing compound metabolic process",7,1,0.24,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:1901607","alpha-amino acid biosynthetic process",5,1,0.17,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006753","nucleoside phosphate metabolic process",8,1,0.27,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0043412","macromolecule modification",10,1,0.34,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0009987","cellular process",168,5,5.73,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0090304","nucleic acid metabolic process",50,1,1.7,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006139","nucleobase-containing compound metabolic process",59,2,2.01,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0170033","L-amino acid metabolic process",7,1,0.24,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0170039","proteinogenic amino acid metabolic process",7,1,0.24,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0008652","amino acid biosynthetic process",5,1,0.17,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0043170","macromolecule metabolic process",101,2,3.44,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0009259","ribonucleotide metabolic process",5,1,0.17,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0016053","organic acid biosynthetic process",7,1,0.24,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0044238","primary metabolic process",128,4,4.36,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:1901135","carbohydrate derivative metabolic process",10,2,0.34,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0019693","ribose phosphate metabolic process",5,1,0.17,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0010467","gene expression",67,1,2.28,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0009117","nucleotide metabolic process",8,1,0.27,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0008150","biological_process",174,6,5.93,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0008152","metabolic process",142,5,4.84,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0055086","nucleobase-containing small molecule metabolic process",9,1,0.31,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0019637","organophosphate metabolic process",9,1,0.31,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0044281","small molecule metabolic process",28,2,0.95,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0043436","oxoacid metabolic process",13,2,0.44,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0044283","small molecule biosynthetic process",10,1,0.34,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006793","phosphorus metabolic process",12,1,0.41,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0019538","protein metabolic process",52,2,1.77,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006796","phosphate-containing compound metabolic process",12,1,0.41,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006082","organic acid metabolic process",13,2,0.44,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006163","purine nucleotide metabolic process",6,1,0.2,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0046394","carboxylic acid biosynthetic process",7,1,0.24,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0000375","RNA splicing, via transesterification reactions",6,0,0.2,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0000377","RNA splicing, via transesterification reactions with bulged adenosine as nucleophile",6,0,0.2,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0000398","mRNA splicing, via spliceosome",6,0,0.2,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0005996","monosaccharide metabolic process",5,0,0.17,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006259","DNA metabolic process",18,0,0.61,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006260","DNA replication",6,0,0.2,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006281","DNA repair",10,0,0.34,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006351","DNA-templated transcription",13,0,0.44,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006355","regulation of DNA-templated transcription",8,0,0.27,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006396","RNA processing",13,0,0.44,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006397","mRNA processing",8,0,0.27,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006457","protein folding",5,0,0.17,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006508","proteolysis",7,0,0.24,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006810","transport",15,0,0.51,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006950","response to stress",13,0,0.44,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006974","DNA damage response",11,0,0.38,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006996","organelle organization",10,0,0.34,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0007049","cell cycle",8,0,0.27,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0008104","protein localization",11,0,0.38,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0008380","RNA splicing",6,0,0.2,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0009165","nucleotide biosynthetic process",6,0,0.2,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0009889","regulation of biosynthetic process",9,0,0.31,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0010468","regulation of gene expression",9,0,0.31,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0010556","regulation of macromolecule biosynthetic process",9,0,0.31,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0015031","protein transport",7,0,0.24,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0016043","cellular component organization",19,0,0.65,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0016071","mRNA metabolic process",9,0,0.31,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0019219","regulation of nucleobase-containing compound metabolic process",8,0,0.27,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0019222","regulation of metabolic process",11,0,0.38,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0022402","cell cycle process",7,0,0.24,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0022607","cellular component assembly",7,0,0.24,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0032774","RNA biosynthetic process",27,0,0.92,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0033036","macromolecule localization",12,0,0.41,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0033554","cellular response to stress",11,0,0.38,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0034654","nucleobase-containing compound biosynthetic process",34,0,1.16,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0043933","protein-containing complex organization",6,0,0.2,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0044085","cellular component biogenesis",9,0,0.31,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0045184","establishment of protein localization",10,0,0.34,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0050789","regulation of biological process",13,0,0.44,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0050794","regulation of cellular process",13,0,0.44,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0050896","response to stimulus",13,0,0.44,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0051179","localization",19,0,0.65,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0051234","establishment of localization",18,0,0.61,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0051252","regulation of RNA metabolic process",8,0,0.27,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0051276","chromosome organization",6,0,0.2,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0051604","protein maturation",8,0,0.27,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0051641","cellular localization",13,0,0.44,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0051716","cellular response to stimulus",11,0,0.38,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0060255","regulation of macromolecule metabolic process",10,0,0.34,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0065003","protein-containing complex assembly",5,0,0.17,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0070727","cellular macromolecule localization",11,0,0.38,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0071705","nitrogen compound transport",8,0,0.27,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0071840","cellular component organization or biogenesis",21,0,0.72,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0072522","purine-containing compound biosynthetic process",5,0,0.17,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0080090","regulation of primary metabolic process",9,0,0.31,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0090407","organophosphate biosynthetic process",7,0,0.24,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0141187","nucleic acid biosynthetic process",27,0,0.92,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:1901293","nucleoside phosphate biosynthetic process",6,0,0.2,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:2001141","regulation of RNA biosynthetic process",8,0,0.27,"1.000",1,1,"Symbiochloris","Relaxed","BP",16,244
+"GO:0006412","translation",33,1,0.19,"0.19",0.19,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0019538","protein metabolic process",56,1,0.31,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0043170","macromolecule metabolic process",104,1,0.58,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0009058","biosynthetic process",99,1,0.56,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0009059","macromolecule biosynthetic process",74,1,0.42,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0009987","cellular process",170,1,0.96,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0010467","gene expression",71,1,0.4,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0044238","primary metabolic process",132,1,0.74,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0008150","biological_process",176,1,0.99,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0008152","metabolic process",146,1,0.82,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0000375","RNA splicing, via transesterification reactions",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0000377","RNA splicing, via transesterification reactions with bulged adenosine as nucleophile",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0000398","mRNA splicing, via spliceosome",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0005975","carbohydrate metabolic process",12,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0005996","monosaccharide metabolic process",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006082","organic acid metabolic process",14,0,0.08,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006139","nucleobase-containing compound metabolic process",58,0,0.33,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006163","purine nucleotide metabolic process",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006259","DNA metabolic process",17,0,0.1,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006260","DNA replication",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006281","DNA repair",10,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006351","DNA-templated transcription",13,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006355","regulation of DNA-templated transcription",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006396","RNA processing",13,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006397","mRNA processing",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006399","tRNA metabolic process",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006457","protein folding",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006508","proteolysis",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006520","amino acid metabolic process",13,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006753","nucleoside phosphate metabolic process",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006793","phosphorus metabolic process",12,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006796","phosphate-containing compound metabolic process",12,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006810","transport",15,0,0.08,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006950","response to stress",12,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006974","DNA damage response",10,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0006996","organelle organization",10,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0007049","cell cycle",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0008104","protein localization",11,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0008380","RNA splicing",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0008652","amino acid biosynthetic process",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0009056","catabolic process",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0009117","nucleotide metabolic process",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0009150","purine ribonucleotide metabolic process",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0009165","nucleotide biosynthetic process",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0009259","ribonucleotide metabolic process",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0009889","regulation of biosynthetic process",9,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0010468","regulation of gene expression",9,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0010556","regulation of macromolecule biosynthetic process",9,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0015031","protein transport",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0016043","cellular component organization",18,0,0.1,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0016053","organic acid biosynthetic process",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0016070","RNA metabolic process",34,0,0.19,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0016071","mRNA metabolic process",9,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0019219","regulation of nucleobase-containing compound metabolic process",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0019222","regulation of metabolic process",11,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0019637","organophosphate metabolic process",9,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0019693","ribose phosphate metabolic process",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0019752","carboxylic acid metabolic process",13,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0022402","cell cycle process",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0022607","cellular component assembly",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0032774","RNA biosynthetic process",27,0,0.15,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0033036","macromolecule localization",12,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0033554","cellular response to stress",10,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0034654","nucleobase-containing compound biosynthetic process",34,0,0.19,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0036211","protein modification process",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0043412","macromolecule modification",10,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0043436","oxoacid metabolic process",14,0,0.08,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0043933","protein-containing complex organization",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0044085","cellular component biogenesis",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0044281","small molecule metabolic process",29,0,0.16,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0044283","small molecule biosynthetic process",11,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0045184","establishment of protein localization",10,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0046394","carboxylic acid biosynthetic process",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0050789","regulation of biological process",12,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0050794","regulation of cellular process",12,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0050896","response to stimulus",12,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0051179","localization",19,0,0.11,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0051234","establishment of localization",18,0,0.1,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0051252","regulation of RNA metabolic process",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0051276","chromosome organization",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0051604","protein maturation",10,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0051641","cellular localization",13,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0051716","cellular response to stimulus",10,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0055086","nucleobase-containing small molecule metabolic process",9,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0060255","regulation of macromolecule metabolic process",10,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0065007","biological regulation",14,0,0.08,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0070727","cellular macromolecule localization",11,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0071705","nitrogen compound transport",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0071840","cellular component organization or biogenesis",20,0,0.11,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0072521","purine-containing compound metabolic process",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0072522","purine-containing compound biosynthetic process",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0080090","regulation of primary metabolic process",9,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0090304","nucleic acid metabolic process",49,0,0.28,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0090407","organophosphate biosynthetic process",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0141187","nucleic acid biosynthetic process",27,0,0.15,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0170033","L-amino acid metabolic process",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0170034","L-amino acid biosynthetic process",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0170038","proteinogenic amino acid biosynthetic process",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0170039","proteinogenic amino acid metabolic process",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:1901135","carbohydrate derivative metabolic process",10,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:1901137","carbohydrate derivative biosynthetic process",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:1901293","nucleoside phosphate biosynthetic process",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:1901605","alpha-amino acid metabolic process",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:1901607","alpha-amino acid biosynthetic process",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:2001141","regulation of RNA biosynthetic process",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","BP",7,245
+"GO:0009058","biosynthetic process",99,5,2.73,"0.089",0.089,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006355","regulation of DNA-templated transcription",8,1,0.22,"0.204",0.204,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006412","translation",33,2,0.91,"0.225",0.225,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0044283","small molecule biosynthetic process",11,1,0.3,"0.272",0.272,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0065007","biological regulation",15,1,0.41,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:2001141","regulation of RNA biosynthetic process",8,1,0.22,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0032774","RNA biosynthetic process",27,1,0.75,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0050794","regulation of cellular process",13,1,0.36,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0060255","regulation of macromolecule metabolic process",10,1,0.28,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0010467","gene expression",71,3,1.96,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0009889","regulation of biosynthetic process",9,1,0.25,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0010556","regulation of macromolecule biosynthetic process",9,1,0.25,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0010468","regulation of gene expression",9,1,0.25,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0080090","regulation of primary metabolic process",9,1,0.25,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0009059","macromolecule biosynthetic process",74,3,2.04,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0034654","nucleobase-containing compound biosynthetic process",34,1,0.94,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0044238","primary metabolic process",133,3,3.67,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0051252","regulation of RNA metabolic process",8,1,0.22,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0019538","protein metabolic process",56,2,1.55,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0050789","regulation of biological process",13,1,0.36,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006139","nucleobase-containing compound metabolic process",59,1,1.63,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0009987","cellular process",173,5,4.78,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0008150","biological_process",179,5,4.94,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0019219","regulation of nucleobase-containing compound metabolic process",8,1,0.22,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0008152","metabolic process",147,5,4.06,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0044281","small molecule metabolic process",29,1,0.8,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0016070","RNA metabolic process",34,1,0.94,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0043170","macromolecule metabolic process",105,3,2.9,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0141187","nucleic acid biosynthetic process",27,1,0.75,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0090304","nucleic acid metabolic process",50,1,1.38,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006351","DNA-templated transcription",13,1,0.36,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0019222","regulation of metabolic process",11,1,0.3,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0000375","RNA splicing, via transesterification reactions",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0000377","RNA splicing, via transesterification reactions with bulged adenosine as nucleophile",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0000398","mRNA splicing, via spliceosome",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0005975","carbohydrate metabolic process",12,0,0.33,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0005996","monosaccharide metabolic process",5,0,0.14,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006082","organic acid metabolic process",14,0,0.39,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006163","purine nucleotide metabolic process",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006259","DNA metabolic process",18,0,0.5,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006260","DNA replication",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006281","DNA repair",10,0,0.28,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006396","RNA processing",13,0,0.36,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006397","mRNA processing",8,0,0.22,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006399","tRNA metabolic process",5,0,0.14,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006457","protein folding",7,0,0.19,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006508","proteolysis",7,0,0.19,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006520","amino acid metabolic process",13,0,0.36,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006753","nucleoside phosphate metabolic process",8,0,0.22,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006793","phosphorus metabolic process",12,0,0.33,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006796","phosphate-containing compound metabolic process",12,0,0.33,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006810","transport",15,0,0.41,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006950","response to stress",13,0,0.36,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006974","DNA damage response",11,0,0.3,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0006996","organelle organization",10,0,0.28,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0007049","cell cycle",8,0,0.22,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0008104","protein localization",11,0,0.3,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0008380","RNA splicing",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0008652","amino acid biosynthetic process",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0009056","catabolic process",7,0,0.19,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0009117","nucleotide metabolic process",8,0,0.22,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0009150","purine ribonucleotide metabolic process",5,0,0.14,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0009165","nucleotide biosynthetic process",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0009259","ribonucleotide metabolic process",5,0,0.14,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0015031","protein transport",7,0,0.19,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0016043","cellular component organization",19,0,0.52,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0016053","organic acid biosynthetic process",8,0,0.22,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0016071","mRNA metabolic process",9,0,0.25,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0019637","organophosphate metabolic process",9,0,0.25,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0019693","ribose phosphate metabolic process",5,0,0.14,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0019752","carboxylic acid metabolic process",13,0,0.36,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0022402","cell cycle process",7,0,0.19,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0022607","cellular component assembly",7,0,0.19,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0033036","macromolecule localization",12,0,0.33,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0033554","cellular response to stress",11,0,0.3,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0036211","protein modification process",7,0,0.19,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0043412","macromolecule modification",10,0,0.28,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0043436","oxoacid metabolic process",14,0,0.39,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0043933","protein-containing complex organization",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0044085","cellular component biogenesis",9,0,0.25,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0045184","establishment of protein localization",10,0,0.28,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0046394","carboxylic acid biosynthetic process",8,0,0.22,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0050896","response to stimulus",13,0,0.36,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0051179","localization",19,0,0.52,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0051234","establishment of localization",18,0,0.5,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0051276","chromosome organization",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0051604","protein maturation",10,0,0.28,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0051641","cellular localization",13,0,0.36,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0051716","cellular response to stimulus",11,0,0.3,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0055086","nucleobase-containing small molecule metabolic process",9,0,0.25,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0065003","protein-containing complex assembly",5,0,0.14,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0070727","cellular macromolecule localization",11,0,0.3,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0071705","nitrogen compound transport",8,0,0.22,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0071840","cellular component organization or biogenesis",21,0,0.58,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0072521","purine-containing compound metabolic process",7,0,0.19,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0072522","purine-containing compound biosynthetic process",5,0,0.14,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0090407","organophosphate biosynthetic process",7,0,0.19,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0170033","L-amino acid metabolic process",8,0,0.22,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0170034","L-amino acid biosynthetic process",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0170038","proteinogenic amino acid biosynthetic process",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0170039","proteinogenic amino acid metabolic process",8,0,0.22,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:1901135","carbohydrate derivative metabolic process",10,0,0.28,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:1901137","carbohydrate derivative biosynthetic process",7,0,0.19,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:1901293","nucleoside phosphate biosynthetic process",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:1901605","alpha-amino acid metabolic process",8,0,0.22,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:1901607","alpha-amino acid biosynthetic process",6,0,0.17,"1.000",1,1,"Asterochloris","Relaxed","BP",19,248
+"GO:0016491","oxidoreductase activity",17,2,0.19,"0.0087",0.0087,0.4785,"Coccomyxa","Intensified","MF",5,244
+"GO:0140096","catalytic activity, acting on a protein",15,1,0.17,"0.1628",0.1628,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0003674","molecular_function",173,2,1.95,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0003824","catalytic activity",93,2,1.05,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0000166","nucleotide binding",25,0,0.28,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0003676","nucleic acid binding",18,0,0.2,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0003677","DNA binding",8,0,0.09,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0003723","RNA binding",9,0,0.1,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0003735","structural constituent of ribosome",23,0,0.26,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0003743","translation initiation factor activity",7,0,0.08,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0005198","structural molecule activity",23,0,0.26,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0005215","transporter activity",9,0,0.1,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0005488","binding",64,0,0.72,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0005515","protein binding",17,0,0.19,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0005524","ATP binding",22,0,0.25,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0008135","translation factor activity, RNA binding",10,0,0.11,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0008168","methyltransferase activity",7,0,0.08,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0008233","peptidase activity",7,0,0.08,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0008324","monoatomic cation transmembrane transporter activity",5,0,0.06,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0015075","monoatomic ion transmembrane transporter activity",5,0,0.06,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0015318","inorganic molecular entity transmembrane transporter activity",6,0,0.07,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0016301","kinase activity",5,0,0.06,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0016740","transferase activity",31,0,0.35,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0016741","transferase activity, transferring one-carbon groups",7,0,0.08,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0016757","glycosyltransferase activity",5,0,0.06,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0016772","transferase activity, transferring phosphorus-containing groups",11,0,0.12,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0016773","phosphotransferase activity, alcohol group as acceptor",6,0,0.07,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0016787","hydrolase activity",20,0,0.23,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0016788","hydrolase activity, acting on ester bonds",7,0,0.08,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0016829","lyase activity",6,0,0.07,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0016853","isomerase activity",5,0,0.06,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0016874","ligase activity",12,0,0.14,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0016879","ligase activity, forming carbon-nitrogen bonds",7,0,0.08,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0017076","purine nucleotide binding",25,0,0.28,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0022804","active transmembrane transporter activity",5,0,0.06,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0022857","transmembrane transporter activity",9,0,0.1,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0022890","inorganic cation transmembrane transporter activity",5,0,0.06,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0030554","adenyl nucleotide binding",23,0,0.26,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0032553","ribonucleotide binding",24,0,0.27,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0032555","purine ribonucleotide binding",24,0,0.27,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0032559","adenyl ribonucleotide binding",22,0,0.25,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0035639","purine ribonucleoside triphosphate binding",24,0,0.27,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0036094","small molecule binding",34,0,0.38,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0043167","ion binding",31,0,0.35,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0043168","anion binding",25,0,0.28,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0043169","cation binding",7,0,0.08,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0046872","metal ion binding",7,0,0.08,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0051082","unfolded protein binding",7,0,0.08,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0097367","carbohydrate derivative binding",26,0,0.29,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0140098","catalytic activity, acting on RNA",10,0,0.11,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0140640","catalytic activity, acting on a nucleic acid",11,0,0.12,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0140657","ATP-dependent activity",6,0,0.07,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0180051","translation factor activity",10,0,0.11,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:1901265","nucleoside phosphate binding",25,0,0.28,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:1901363","heterocyclic compound binding",28,0,0.32,"1.0000",1,1,"Coccomyxa","Intensified","MF",5,244
+"GO:0016788","hydrolase activity, acting on ester bonds",7,3,0.32,"0.002",0.002,0.11,"Symbiochloris","Intensified","MF",36,244
+"GO:0008233","peptidase activity",7,2,0.32,"0.034",0.034,0.935,"Symbiochloris","Intensified","MF",36,244
+"GO:0016772","transferase activity, transferring phosphorus-containing groups",11,2,0.5,"0.158",0.158,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0016301","kinase activity",5,1,0.23,"0.211",0.211,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0016773","phosphotransferase activity, alcohol group as acceptor",6,1,0.27,"0.248",0.248,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0003743","translation initiation factor activity",7,1,0.32,"0.284",0.284,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0003677","DNA binding",8,1,0.37,"0.318",0.318,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0140098","catalytic activity, acting on RNA",10,1,0.46,"0.382",0.382,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0003674","molecular_function",171,8,7.82,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0140096","catalytic activity, acting on a protein",15,2,0.69,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0140640","catalytic activity, acting on a nucleic acid",11,1,0.5,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0003676","nucleic acid binding",19,1,0.87,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0005488","binding",63,1,2.88,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0008135","translation factor activity, RNA binding",10,1,0.46,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0180051","translation factor activity",10,1,0.46,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0016740","transferase activity",30,2,1.37,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0016787","hydrolase activity",20,5,0.91,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0003824","catalytic activity",92,7,4.21,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0000166","nucleotide binding",23,0,1.05,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0003723","RNA binding",10,0,0.46,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0003735","structural constituent of ribosome",23,0,1.05,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0005198","structural molecule activity",23,0,1.05,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0005215","transporter activity",9,0,0.41,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0005515","protein binding",15,0,0.69,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0005524","ATP binding",20,0,0.91,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0008168","methyltransferase activity",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0008324","monoatomic cation transmembrane transporter activity",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0015075","monoatomic ion transmembrane transporter activity",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0015318","inorganic molecular entity transmembrane transporter activity",6,0,0.27,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0016491","oxidoreductase activity",17,0,0.78,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0016741","transferase activity, transferring one-carbon groups",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0016757","glycosyltransferase activity",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0016829","lyase activity",6,0,0.27,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0016853","isomerase activity",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0016874","ligase activity",12,0,0.55,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0016879","ligase activity, forming carbon-nitrogen bonds",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0017076","purine nucleotide binding",23,0,1.05,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0022804","active transmembrane transporter activity",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0022857","transmembrane transporter activity",9,0,0.41,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0022890","inorganic cation transmembrane transporter activity",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0030554","adenyl nucleotide binding",21,0,0.96,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0032553","ribonucleotide binding",22,0,1.01,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0032555","purine ribonucleotide binding",22,0,1.01,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0032559","adenyl ribonucleotide binding",20,0,0.91,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0035639","purine ribonucleoside triphosphate binding",22,0,1.01,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0036094","small molecule binding",32,0,1.46,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0043167","ion binding",29,0,1.33,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0043168","anion binding",23,0,1.05,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0043169","cation binding",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0046872","metal ion binding",7,0,0.32,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0051082","unfolded protein binding",5,0,0.23,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0097367","carbohydrate derivative binding",24,0,1.1,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0140657","ATP-dependent activity",6,0,0.27,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:1901265","nucleoside phosphate binding",23,0,1.05,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:1901363","heterocyclic compound binding",26,0,1.19,"1.000",1,1,"Symbiochloris","Intensified","MF",36,244
+"GO:0140098","catalytic activity, acting on RNA",10,5,1.56,"0.008",0.008,0.44,"Trebouxia","Intensified","MF",105,245
+"GO:0003723","RNA binding",10,4,1.56,"0.046",0.046,1,"Trebouxia","Intensified","MF",105,245
+"GO:0030554","adenyl nucleotide binding",23,5,3.6,"0.146",0.146,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016874","ligase activity",12,4,1.88,"0.154",0.154,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016853","isomerase activity",5,2,0.78,"0.164",0.164,1,"Trebouxia","Intensified","MF",105,245
+"GO:0005515","protein binding",17,4,2.66,"0.178",0.178,1,"Trebouxia","Intensified","MF",105,245
+"GO:0140657","ATP-dependent activity",6,2,0.94,"0.224",0.224,1,"Trebouxia","Intensified","MF",105,245
+"GO:0003743","translation initiation factor activity",6,2,0.94,"0.224",0.224,1,"Trebouxia","Intensified","MF",105,245
+"GO:0035639","purine ribonucleoside triphosphate binding",24,5,3.75,"0.272",0.272,1,"Trebouxia","Intensified","MF",105,245
+"GO:0032555","purine ribonucleotide binding",24,5,3.75,"0.272",0.272,1,"Trebouxia","Intensified","MF",105,245
+"GO:0008233","peptidase activity",7,2,1.09,"0.285",0.285,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016879","ligase activity, forming carbon-nitrogen bonds",7,2,1.09,"0.285",0.285,1,"Trebouxia","Intensified","MF",105,245
+"GO:0008135","translation factor activity, RNA binding",9,3,1.41,"0.376",0.376,1,"Trebouxia","Intensified","MF",105,245
+"GO:0005524","ATP binding",22,4,3.44,"0.432",0.432,1,"Trebouxia","Intensified","MF",105,245
+"GO:0005488","binding",65,12,10.17,"0.446",0.446,1,"Trebouxia","Intensified","MF",105,245
+"GO:0022857","transmembrane transporter activity",9,2,1.41,"0.480",0.48,1,"Trebouxia","Intensified","MF",105,245
+"GO:0022804","active transmembrane transporter activity",5,1,0.78,"0.563",0.563,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016787","hydrolase activity",20,4,3.13,"0.617",0.617,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016788","hydrolase activity, acting on ester bonds",7,1,1.09,"0.688",0.688,1,"Trebouxia","Intensified","MF",105,245
+"GO:0051082","unfolded protein binding",7,1,1.09,"0.688",0.688,1,"Trebouxia","Intensified","MF",105,245
+"GO:0008168","methyltransferase activity",7,1,1.09,"0.688",0.688,1,"Trebouxia","Intensified","MF",105,245
+"GO:0140096","catalytic activity, acting on a protein",15,3,2.35,"0.723",0.723,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016491","oxidoreductase activity",17,2,2.66,"0.765",0.765,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016772","transferase activity, transferring phosphorus-containing groups",11,1,1.72,"0.844",0.844,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016740","transferase activity",31,3,4.85,"0.899",0.899,1,"Trebouxia","Intensified","MF",105,245
+"GO:0003735","structural constituent of ribosome",25,2,3.91,"0.924",0.924,1,"Trebouxia","Intensified","MF",105,245
+"GO:0032559","adenyl ribonucleotide binding",22,4,3.44,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:1901265","nucleoside phosphate binding",25,6,3.91,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0043167","ion binding",31,5,4.85,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0017076","purine nucleotide binding",25,6,3.91,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0043168","anion binding",25,5,3.91,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:1901363","heterocyclic compound binding",28,6,4.38,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0003674","molecular_function",175,27,27.37,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0003676","nucleic acid binding",19,4,2.97,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0180051","translation factor activity",9,3,1.41,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016741","transferase activity, transferring one-carbon groups",7,1,1.09,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0097367","carbohydrate derivative binding",26,5,4.07,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0005215","transporter activity",9,2,1.41,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0140640","catalytic activity, acting on a nucleic acid",11,5,1.72,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0000166","nucleotide binding",25,6,3.91,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0003824","catalytic activity",93,15,14.55,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0036094","small molecule binding",34,6,5.32,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0005198","structural molecule activity",25,2,3.91,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0032553","ribonucleotide binding",24,5,3.75,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0003677","DNA binding",8,0,1.25,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0008324","monoatomic cation transmembrane transporter activity",5,0,0.78,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0015075","monoatomic ion transmembrane transporter activity",5,0,0.78,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0015318","inorganic molecular entity transmembrane transporter activity",6,0,0.94,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016301","kinase activity",5,0,0.78,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016757","glycosyltransferase activity",5,0,0.78,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016773","phosphotransferase activity, alcohol group as acceptor",6,0,0.94,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016829","lyase activity",6,0,0.94,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0022890","inorganic cation transmembrane transporter activity",5,0,0.78,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0043169","cation binding",7,0,1.09,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0046872","metal ion binding",7,0,1.09,"1.000",1,1,"Trebouxia","Intensified","MF",105,245
+"GO:0016879","ligase activity, forming carbon-nitrogen bonds",7,1,0.12,"0.11",0.11,1,"Asterochloris","Intensified","MF",12,248
+"GO:0016787","hydrolase activity",20,1,0.34,"0.30",0.3,1,"Asterochloris","Intensified","MF",12,248
+"GO:0003735","structural constituent of ribosome",25,1,0.42,"0.36",0.36,1,"Asterochloris","Intensified","MF",12,248
+"GO:0003674","molecular_function",175,3,2.93,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0016874","ligase activity",12,1,0.2,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0005198","structural molecule activity",25,1,0.42,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0003824","catalytic activity",92,2,1.54,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0000166","nucleotide binding",25,0,0.42,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0003676","nucleic acid binding",19,0,0.32,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0003677","DNA binding",8,0,0.13,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0003723","RNA binding",10,0,0.17,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0003743","translation initiation factor activity",7,0,0.12,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0005215","transporter activity",9,0,0.15,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0005488","binding",65,0,1.09,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0005515","protein binding",17,0,0.28,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0005524","ATP binding",22,0,0.37,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0008135","translation factor activity, RNA binding",10,0,0.17,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0008168","methyltransferase activity",7,0,0.12,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0008233","peptidase activity",7,0,0.12,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0008324","monoatomic cation transmembrane transporter activity",5,0,0.08,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0015075","monoatomic ion transmembrane transporter activity",5,0,0.08,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0015318","inorganic molecular entity transmembrane transporter activity",6,0,0.1,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0016301","kinase activity",5,0,0.08,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0016491","oxidoreductase activity",16,0,0.27,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0016740","transferase activity",31,0,0.52,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0016741","transferase activity, transferring one-carbon groups",7,0,0.12,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0016757","glycosyltransferase activity",5,0,0.08,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0016772","transferase activity, transferring phosphorus-containing groups",11,0,0.18,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0016773","phosphotransferase activity, alcohol group as acceptor",6,0,0.1,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0016788","hydrolase activity, acting on ester bonds",7,0,0.12,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0016829","lyase activity",6,0,0.1,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0016853","isomerase activity",5,0,0.08,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0017076","purine nucleotide binding",25,0,0.42,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0022804","active transmembrane transporter activity",5,0,0.08,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0022857","transmembrane transporter activity",9,0,0.15,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0022890","inorganic cation transmembrane transporter activity",5,0,0.08,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0030554","adenyl nucleotide binding",23,0,0.39,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0032553","ribonucleotide binding",24,0,0.4,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0032555","purine ribonucleotide binding",24,0,0.4,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0032559","adenyl ribonucleotide binding",22,0,0.37,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0035639","purine ribonucleoside triphosphate binding",24,0,0.4,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0036094","small molecule binding",34,0,0.57,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0043167","ion binding",31,0,0.52,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0043168","anion binding",25,0,0.42,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0043169","cation binding",7,0,0.12,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0046872","metal ion binding",7,0,0.12,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0051082","unfolded protein binding",7,0,0.12,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0097367","carbohydrate derivative binding",26,0,0.44,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0140096","catalytic activity, acting on a protein",15,0,0.25,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0140098","catalytic activity, acting on RNA",10,0,0.17,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0140640","catalytic activity, acting on a nucleic acid",11,0,0.18,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0140657","ATP-dependent activity",6,0,0.1,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0180051","translation factor activity",10,0,0.17,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:1901265","nucleoside phosphate binding",25,0,0.42,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:1901363","heterocyclic compound binding",28,0,0.47,"1.00",1,1,"Asterochloris","Intensified","MF",12,248
+"GO:0003677","DNA binding",8,1,0.09,"0.089",0.089,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0005524","ATP binding",22,1,0.25,"0.234",0.234,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0003674","molecular_function",173,2,1.95,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0003676","nucleic acid binding",18,1,0.2,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0005488","binding",64,2,0.72,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:1901265","nucleoside phosphate binding",25,1,0.28,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0000166","nucleotide binding",25,1,0.28,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0032553","ribonucleotide binding",24,1,0.27,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0097367","carbohydrate derivative binding",26,1,0.29,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0032555","purine ribonucleotide binding",24,1,0.27,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0035639","purine ribonucleoside triphosphate binding",24,1,0.27,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0032559","adenyl ribonucleotide binding",22,1,0.25,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0017076","purine nucleotide binding",25,1,0.28,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0043167","ion binding",31,1,0.35,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:1901363","heterocyclic compound binding",28,1,0.32,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0036094","small molecule binding",34,1,0.38,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0043168","anion binding",25,1,0.28,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0030554","adenyl nucleotide binding",23,1,0.26,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0003723","RNA binding",9,0,0.1,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0003735","structural constituent of ribosome",23,0,0.26,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0003743","translation initiation factor activity",7,0,0.08,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0003824","catalytic activity",93,0,1.05,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0005198","structural molecule activity",23,0,0.26,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0005215","transporter activity",9,0,0.1,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0005515","protein binding",17,0,0.19,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0008135","translation factor activity, RNA binding",10,0,0.11,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0008168","methyltransferase activity",7,0,0.08,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0008233","peptidase activity",7,0,0.08,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0008324","monoatomic cation transmembrane transporter activity",5,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0015075","monoatomic ion transmembrane transporter activity",5,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0015318","inorganic molecular entity transmembrane transporter activity",6,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016301","kinase activity",5,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016491","oxidoreductase activity",17,0,0.19,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016740","transferase activity",31,0,0.35,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016741","transferase activity, transferring one-carbon groups",7,0,0.08,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016757","glycosyltransferase activity",5,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016772","transferase activity, transferring phosphorus-containing groups",11,0,0.12,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016773","phosphotransferase activity, alcohol group as acceptor",6,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016787","hydrolase activity",20,0,0.23,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016788","hydrolase activity, acting on ester bonds",7,0,0.08,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016829","lyase activity",6,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016853","isomerase activity",5,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016874","ligase activity",12,0,0.14,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016879","ligase activity, forming carbon-nitrogen bonds",7,0,0.08,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0022804","active transmembrane transporter activity",5,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0022857","transmembrane transporter activity",9,0,0.1,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0022890","inorganic cation transmembrane transporter activity",5,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0043169","cation binding",7,0,0.08,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0046872","metal ion binding",7,0,0.08,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0051082","unfolded protein binding",7,0,0.08,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0140096","catalytic activity, acting on a protein",15,0,0.17,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0140098","catalytic activity, acting on RNA",10,0,0.11,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0140640","catalytic activity, acting on a nucleic acid",11,0,0.12,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0140657","ATP-dependent activity",6,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0180051","translation factor activity",10,0,0.11,"1.000",1,1,"Coccomyxa","Relaxed","MF",14,244
+"GO:0016874","ligase activity",12,2,0.55,"0.19",0.19,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0016757","glycosyltransferase activity",5,1,0.23,"0.21",0.21,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0005524","ATP binding",20,2,0.91,"0.23",0.23,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0016773","phosphotransferase activity, alcohol group as acceptor",6,1,0.27,"0.25",0.25,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0016879","ligase activity, forming carbon-nitrogen bonds",7,1,0.32,"0.28",0.28,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0046872","metal ion binding",7,1,0.32,"0.28",0.28,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0140098","catalytic activity, acting on RNA",10,1,0.46,"0.38",0.38,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0003723","RNA binding",10,1,0.46,"0.38",0.38,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0016740","transferase activity",30,3,1.37,"0.43",0.43,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0016491","oxidoreductase activity",17,1,0.78,"0.57",0.57,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0016787","hydrolase activity",20,1,0.91,"0.63",0.63,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0003824","catalytic activity",92,7,4.21,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0097367","carbohydrate derivative binding",24,2,1.1,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0140640","catalytic activity, acting on a nucleic acid",11,1,0.5,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0003674","molecular_function",171,8,7.82,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0003676","nucleic acid binding",19,1,0.87,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:1901265","nucleoside phosphate binding",23,2,1.05,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:1901363","heterocyclic compound binding",26,2,1.19,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0000166","nucleotide binding",23,2,1.05,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0043167","ion binding",29,3,1.33,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0043168","anion binding",23,2,1.05,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0043169","cation binding",7,1,0.32,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0032553","ribonucleotide binding",22,2,1.01,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0032555","purine ribonucleotide binding",22,2,1.01,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0035639","purine ribonucleoside triphosphate binding",22,2,1.01,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0005488","binding",63,4,2.88,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0017076","purine nucleotide binding",23,2,1.05,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0032559","adenyl ribonucleotide binding",20,2,0.91,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0030554","adenyl nucleotide binding",21,2,0.96,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0016772","transferase activity, transferring phosphorus-containing groups",11,1,0.5,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0036094","small molecule binding",32,3,1.46,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0003677","DNA binding",8,0,0.37,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0003735","structural constituent of ribosome",23,0,1.05,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0003743","translation initiation factor activity",7,0,0.32,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0005198","structural molecule activity",23,0,1.05,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0005215","transporter activity",9,0,0.41,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0005515","protein binding",15,0,0.69,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0008135","translation factor activity, RNA binding",10,0,0.46,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0008168","methyltransferase activity",7,0,0.32,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0008233","peptidase activity",7,0,0.32,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0008324","monoatomic cation transmembrane transporter activity",5,0,0.23,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0015075","monoatomic ion transmembrane transporter activity",5,0,0.23,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0015318","inorganic molecular entity transmembrane transporter activity",6,0,0.27,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0016301","kinase activity",5,0,0.23,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0016741","transferase activity, transferring one-carbon groups",7,0,0.32,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0016788","hydrolase activity, acting on ester bonds",7,0,0.32,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0016829","lyase activity",6,0,0.27,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0016853","isomerase activity",5,0,0.23,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0022804","active transmembrane transporter activity",5,0,0.23,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0022857","transmembrane transporter activity",9,0,0.41,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0022890","inorganic cation transmembrane transporter activity",5,0,0.23,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0051082","unfolded protein binding",5,0,0.23,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0140096","catalytic activity, acting on a protein",15,0,0.69,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0140657","ATP-dependent activity",6,0,0.27,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0180051","translation factor activity",10,0,0.46,"1.00",1,1,"Symbiochloris","Relaxed","MF",16,244
+"GO:0003735","structural constituent of ribosome",25,1,0.14,"0.14",0.14,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0003674","molecular_function",175,1,0.98,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0005198","structural molecule activity",25,1,0.14,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0000166","nucleotide binding",25,0,0.14,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0003676","nucleic acid binding",19,0,0.11,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0003677","DNA binding",8,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0003723","RNA binding",10,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0003743","translation initiation factor activity",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0003824","catalytic activity",93,0,0.52,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0005215","transporter activity",9,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0005488","binding",65,0,0.36,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0005515","protein binding",17,0,0.09,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0005524","ATP binding",22,0,0.12,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0008135","translation factor activity, RNA binding",9,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0008168","methyltransferase activity",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0008233","peptidase activity",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0008324","monoatomic cation transmembrane transporter activity",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0015075","monoatomic ion transmembrane transporter activity",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0015318","inorganic molecular entity transmembrane transporter activity",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016301","kinase activity",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016491","oxidoreductase activity",17,0,0.09,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016740","transferase activity",31,0,0.17,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016741","transferase activity, transferring one-carbon groups",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016757","glycosyltransferase activity",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016772","transferase activity, transferring phosphorus-containing groups",11,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016773","phosphotransferase activity, alcohol group as acceptor",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016787","hydrolase activity",20,0,0.11,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016788","hydrolase activity, acting on ester bonds",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016829","lyase activity",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016853","isomerase activity",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016874","ligase activity",12,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016879","ligase activity, forming carbon-nitrogen bonds",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0017076","purine nucleotide binding",25,0,0.14,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0022804","active transmembrane transporter activity",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0022857","transmembrane transporter activity",9,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0022890","inorganic cation transmembrane transporter activity",5,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0030554","adenyl nucleotide binding",23,0,0.13,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0032553","ribonucleotide binding",24,0,0.13,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0032555","purine ribonucleotide binding",24,0,0.13,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0032559","adenyl ribonucleotide binding",22,0,0.12,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0035639","purine ribonucleoside triphosphate binding",24,0,0.13,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0036094","small molecule binding",34,0,0.19,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0043167","ion binding",31,0,0.17,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0043168","anion binding",25,0,0.14,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0043169","cation binding",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0046872","metal ion binding",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0051082","unfolded protein binding",7,0,0.04,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0097367","carbohydrate derivative binding",26,0,0.15,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0140096","catalytic activity, acting on a protein",15,0,0.08,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0140098","catalytic activity, acting on RNA",10,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0140640","catalytic activity, acting on a nucleic acid",11,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0140657","ATP-dependent activity",6,0,0.03,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0180051","translation factor activity",9,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:1901265","nucleoside phosphate binding",25,0,0.14,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:1901363","heterocyclic compound binding",28,0,0.16,"1.00",1,1,"Trebouxia","Relaxed","MF",7,245
+"GO:0016879","ligase activity, forming carbon-nitrogen bonds",7,1,0.2,"0.18",0.18,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0008135","translation factor activity, RNA binding",10,1,0.28,"0.25",0.25,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0016491","oxidoreductase activity",16,1,0.45,"0.38",0.38,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0003735","structural constituent of ribosome",25,1,0.7,"0.53",0.53,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0003824","catalytic activity",92,3,2.57,"0.81",0.81,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0003674","molecular_function",175,5,4.89,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0016874","ligase activity",12,1,0.34,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0005198","structural molecule activity",25,1,0.7,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0180051","translation factor activity",10,1,0.28,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0000166","nucleotide binding",25,0,0.7,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0003676","nucleic acid binding",19,0,0.53,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0003677","DNA binding",8,0,0.22,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0003723","RNA binding",10,0,0.28,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0003743","translation initiation factor activity",7,0,0.2,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0005215","transporter activity",9,0,0.25,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0005488","binding",65,0,1.82,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0005515","protein binding",17,0,0.47,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0005524","ATP binding",22,0,0.61,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0008168","methyltransferase activity",7,0,0.2,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0008233","peptidase activity",7,0,0.2,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0008324","monoatomic cation transmembrane transporter activity",5,0,0.14,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0015075","monoatomic ion transmembrane transporter activity",5,0,0.14,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0015318","inorganic molecular entity transmembrane transporter activity",6,0,0.17,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0016301","kinase activity",5,0,0.14,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0016740","transferase activity",31,0,0.87,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0016741","transferase activity, transferring one-carbon groups",7,0,0.2,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0016757","glycosyltransferase activity",5,0,0.14,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0016772","transferase activity, transferring phosphorus-containing groups",11,0,0.31,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0016773","phosphotransferase activity, alcohol group as acceptor",6,0,0.17,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0016787","hydrolase activity",20,0,0.56,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0016788","hydrolase activity, acting on ester bonds",7,0,0.2,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0016829","lyase activity",6,0,0.17,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0016853","isomerase activity",5,0,0.14,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0017076","purine nucleotide binding",25,0,0.7,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0022804","active transmembrane transporter activity",5,0,0.14,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0022857","transmembrane transporter activity",9,0,0.25,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0022890","inorganic cation transmembrane transporter activity",5,0,0.14,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0030554","adenyl nucleotide binding",23,0,0.64,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0032553","ribonucleotide binding",24,0,0.67,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0032555","purine ribonucleotide binding",24,0,0.67,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0032559","adenyl ribonucleotide binding",22,0,0.61,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0035639","purine ribonucleoside triphosphate binding",24,0,0.67,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0036094","small molecule binding",34,0,0.95,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0043167","ion binding",31,0,0.87,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0043168","anion binding",25,0,0.7,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0043169","cation binding",7,0,0.2,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0046872","metal ion binding",7,0,0.2,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0051082","unfolded protein binding",7,0,0.2,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0097367","carbohydrate derivative binding",26,0,0.73,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0140096","catalytic activity, acting on a protein",15,0,0.42,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0140098","catalytic activity, acting on RNA",10,0,0.28,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0140640","catalytic activity, acting on a nucleic acid",11,0,0.31,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0140657","ATP-dependent activity",6,0,0.17,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:1901265","nucleoside phosphate binding",25,0,0.7,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:1901363","heterocyclic compound binding",28,0,0.78,"1.00",1,1,"Asterochloris","Relaxed","MF",19,248
+"GO:0005575","cellular_component",101,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0005622","intracellular anatomical structure",91,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0005634","nucleus",28,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0005694","chromosome",11,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0005737","cytoplasm",25,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0005840","ribosome",23,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0005852","eukaryotic translation initiation factor 3 complex",5,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0012505","endomembrane system",7,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0016020","membrane",15,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0031974","membrane-enclosed lumen",5,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0032991","protein-containing complex",38,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0043226","organelle",72,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0043227","membrane-bounded organelle",41,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0043228","membraneless organelle",37,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0043229","intracellular organelle",72,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0043231","intracellular membrane-bounded organelle",41,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0043232","intracellular membraneless organelle",37,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0043233","organelle lumen",5,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0070013","intracellular organelle lumen",5,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0110165","cellular anatomical structure",101,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0140513","nuclear protein-containing complex",8,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0140535","intracellular protein-containing complex",7,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:1902494","catalytic complex",12,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:1990234","transferase complex",6,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:1990904","ribonucleoprotein complex",5,0,0,"1",1,1,"Coccomyxa","Intensified","CC",5,244
+"GO:0070013","intracellular organelle lumen",5,3,0.19,"0.00022",0.00022,0.00572,"Symbiochloris","Intensified","CC",36,244
+"GO:0140513","nuclear protein-containing complex",8,2,0.31,"0.02950",0.0295,0.3835,"Symbiochloris","Intensified","CC",36,244
+"GO:0005852","eukaryotic translation initiation factor 3 complex",5,1,0.19,"0.18298",0.18298,1,"Symbiochloris","Intensified","CC",36,244
+"GO:1990234","transferase complex",6,1,0.23,"0.21633",0.21633,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0140535","intracellular protein-containing complex",8,1,0.31,"0.27995",0.27995,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0043231","intracellular membrane-bounded organelle",42,3,1.63,"0.34054",0.34054,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0005694","chromosome",11,1,0.43,"0.36802",0.36802,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0005737","cytoplasm",25,2,0.97,"0.49982",0.49982,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0005622","intracellular anatomical structure",91,4,3.53,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0110165","cellular anatomical structure",102,4,3.96,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:1902494","catalytic complex",12,1,0.47,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0043232","intracellular membraneless organelle",37,1,1.44,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0043233","organelle lumen",5,3,0.19,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0032991","protein-containing complex",39,3,1.51,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0031974","membrane-enclosed lumen",5,3,0.19,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0005575","cellular_component",103,4,4,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0005634","nucleus",28,2,1.09,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0043226","organelle",73,3,2.83,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0043227","membrane-bounded organelle",42,3,1.63,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0043228","membraneless organelle",37,1,1.44,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0043229","intracellular organelle",73,3,2.83,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0005783","endoplasmic reticulum",5,0,0.19,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0005840","ribosome",23,0,0.89,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0012505","endomembrane system",8,0,0.31,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0016020","membrane",16,0,0.62,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:1990904","ribonucleoprotein complex",5,0,0.19,"1.00000",1,1,"Symbiochloris","Intensified","CC",36,244
+"GO:0005852","eukaryotic translation initiation factor 3 complex",5,2,0.53,"0.086",0.086,1,"Trebouxia","Intensified","CC",105,245
+"GO:0005622","intracellular anatomical structure",92,11,9.73,"0.368",0.368,1,"Trebouxia","Intensified","CC",105,245
+"GO:0005737","cytoplasm",26,5,2.75,"0.410",0.41,1,"Trebouxia","Intensified","CC",105,245
+"GO:0005783","endoplasmic reticulum",5,1,0.53,"0.435",0.435,1,"Trebouxia","Intensified","CC",105,245
+"GO:1990234","transferase complex",6,1,0.63,"0.498",0.498,1,"Trebouxia","Intensified","CC",105,245
+"GO:0140513","nuclear protein-containing complex",7,1,0.74,"0.554",0.554,1,"Trebouxia","Intensified","CC",105,245
+"GO:0140535","intracellular protein-containing complex",8,1,0.85,"0.605",0.605,1,"Trebouxia","Intensified","CC",105,245
+"GO:0043231","intracellular membrane-bounded organelle",40,5,4.23,"0.619",0.619,1,"Trebouxia","Intensified","CC",105,245
+"GO:0005634","nucleus",26,3,2.75,"0.624",0.624,1,"Trebouxia","Intensified","CC",105,245
+"GO:0005694","chromosome",10,1,1.06,"0.690",0.69,1,"Trebouxia","Intensified","CC",105,245
+"GO:0005840","ribosome",25,2,2.64,"0.798",0.798,1,"Trebouxia","Intensified","CC",105,245
+"GO:0032991","protein-containing complex",38,4,4.02,"0.802",0.802,1,"Trebouxia","Intensified","CC",105,245
+"GO:0110165","cellular anatomical structure",103,11,10.89,"1.000",1,1,"Trebouxia","Intensified","CC",105,245
+"GO:1902494","catalytic complex",12,1,1.27,"1.000",1,1,"Trebouxia","Intensified","CC",105,245
+"GO:0043232","intracellular membraneless organelle",38,3,4.02,"1.000",1,1,"Trebouxia","Intensified","CC",105,245
+"GO:0005575","cellular_component",104,11,11,"1.000",1,1,"Trebouxia","Intensified","CC",105,245
+"GO:0012505","endomembrane system",8,1,0.85,"1.000",1,1,"Trebouxia","Intensified","CC",105,245
+"GO:0043226","organelle",73,7,7.72,"1.000",1,1,"Trebouxia","Intensified","CC",105,245
+"GO:0043227","membrane-bounded organelle",40,5,4.23,"1.000",1,1,"Trebouxia","Intensified","CC",105,245
+"GO:0043228","membraneless organelle",38,3,4.02,"1.000",1,1,"Trebouxia","Intensified","CC",105,245
+"GO:0043229","intracellular organelle",73,7,7.72,"1.000",1,1,"Trebouxia","Intensified","CC",105,245
+"GO:0016020","membrane",16,0,1.69,"1.000",1,1,"Trebouxia","Intensified","CC",105,245
+"GO:1990904","ribonucleoprotein complex",5,0,0.53,"1.000",1,1,"Trebouxia","Intensified","CC",105,245
+"GO:0012505","endomembrane system",8,1,0.15,"0.15",0.15,1,"Asterochloris","Intensified","CC",12,248
+"GO:0140513","nuclear protein-containing complex",8,1,0.15,"0.15",0.15,1,"Asterochloris","Intensified","CC",12,248
+"GO:0005840","ribosome",25,1,0.47,"0.42",0.42,1,"Asterochloris","Intensified","CC",12,248
+"GO:0005622","intracellular anatomical structure",94,2,1.77,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0110165","cellular anatomical structure",105,2,1.98,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0043231","intracellular membrane-bounded organelle",42,1,0.79,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0043232","intracellular membraneless organelle",39,1,0.74,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0032991","protein-containing complex",39,1,0.74,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0005575","cellular_component",106,2,2,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0005634","nucleus",28,1,0.53,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0043226","organelle",75,2,1.42,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0043227","membrane-bounded organelle",42,1,0.79,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0043228","membraneless organelle",39,1,0.74,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0043229","intracellular organelle",75,2,1.42,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0005694","chromosome",11,0,0.21,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0005737","cytoplasm",26,0,0.49,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0005783","endoplasmic reticulum",5,0,0.09,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0005852","eukaryotic translation initiation factor 3 complex",5,0,0.09,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0016020","membrane",16,0,0.3,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0031974","membrane-enclosed lumen",5,0,0.09,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0043233","organelle lumen",5,0,0.09,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0070013","intracellular organelle lumen",5,0,0.09,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0140535","intracellular protein-containing complex",8,0,0.15,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:1902494","catalytic complex",12,0,0.23,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:1990234","transferase complex",6,0,0.11,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:1990904","ribonucleoprotein complex",5,0,0.09,"1.00",1,1,"Asterochloris","Intensified","CC",12,248
+"GO:0140513","nuclear protein-containing complex",8,1,0.08,"0.079",0.079,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0005622","intracellular anatomical structure",91,1,0.9,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0110165","cellular anatomical structure",101,1,1,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0043231","intracellular membrane-bounded organelle",41,1,0.41,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0032991","protein-containing complex",38,1,0.38,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0005575","cellular_component",101,1,1,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0005634","nucleus",28,1,0.28,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0043226","organelle",72,1,0.71,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0043227","membrane-bounded organelle",41,1,0.41,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0043229","intracellular organelle",72,1,0.71,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0005694","chromosome",11,0,0.11,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0005737","cytoplasm",25,0,0.25,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0005840","ribosome",23,0,0.23,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0005852","eukaryotic translation initiation factor 3 complex",5,0,0.05,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0012505","endomembrane system",7,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0016020","membrane",15,0,0.15,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0031974","membrane-enclosed lumen",5,0,0.05,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0043228","membraneless organelle",37,0,0.37,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0043232","intracellular membraneless organelle",37,0,0.37,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0043233","organelle lumen",5,0,0.05,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0070013","intracellular organelle lumen",5,0,0.05,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0140535","intracellular protein-containing complex",7,0,0.07,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:1902494","catalytic complex",12,0,0.12,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:1990234","transferase complex",6,0,0.06,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:1990904","ribonucleoprotein complex",5,0,0.05,"1.000",1,1,"Coccomyxa","Relaxed","CC",14,244
+"GO:0005783","endoplasmic reticulum",5,1,0.1,"0.095",0.095,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0005737","cytoplasm",25,2,0.49,"0.204",0.204,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0005622","intracellular anatomical structure",91,2,1.77,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0110165","cellular anatomical structure",102,2,1.98,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0043231","intracellular membrane-bounded organelle",42,1,0.82,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0005575","cellular_component",103,2,2,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0012505","endomembrane system",8,1,0.16,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0043226","organelle",73,1,1.42,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0043227","membrane-bounded organelle",42,1,0.82,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0043229","intracellular organelle",73,1,1.42,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0005634","nucleus",28,0,0.54,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0005694","chromosome",11,0,0.21,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0005840","ribosome",23,0,0.45,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0005852","eukaryotic translation initiation factor 3 complex",5,0,0.1,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0016020","membrane",16,0,0.31,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0031974","membrane-enclosed lumen",5,0,0.1,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0032991","protein-containing complex",39,0,0.76,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0043228","membraneless organelle",37,0,0.72,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0043232","intracellular membraneless organelle",37,0,0.72,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0043233","organelle lumen",5,0,0.1,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0070013","intracellular organelle lumen",5,0,0.1,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0140513","nuclear protein-containing complex",8,0,0.16,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0140535","intracellular protein-containing complex",8,0,0.16,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:1902494","catalytic complex",12,0,0.23,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:1990234","transferase complex",6,0,0.12,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:1990904","ribonucleoprotein complex",5,0,0.1,"1.000",1,1,"Symbiochloris","Relaxed","CC",16,244
+"GO:0005840","ribosome",25,1,0.24,"0.24",0.24,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0005622","intracellular anatomical structure",92,1,0.88,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0110165","cellular anatomical structure",103,1,0.99,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0043232","intracellular membraneless organelle",38,1,0.37,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0005575","cellular_component",104,1,1,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0043226","organelle",73,1,0.7,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0043228","membraneless organelle",38,1,0.37,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0043229","intracellular organelle",73,1,0.7,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0005634","nucleus",26,0,0.25,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0005694","chromosome",10,0,0.1,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0005737","cytoplasm",26,0,0.25,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0005783","endoplasmic reticulum",5,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0005852","eukaryotic translation initiation factor 3 complex",5,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0012505","endomembrane system",8,0,0.08,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0016020","membrane",16,0,0.15,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0032991","protein-containing complex",38,0,0.37,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0043227","membrane-bounded organelle",40,0,0.38,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0043231","intracellular membrane-bounded organelle",40,0,0.38,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0140513","nuclear protein-containing complex",7,0,0.07,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0140535","intracellular protein-containing complex",8,0,0.08,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:1902494","catalytic complex",12,0,0.12,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:1990234","transferase complex",6,0,0.06,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:1990904","ribonucleoprotein complex",5,0,0.05,"1.00",1,1,"Trebouxia","Relaxed","CC",7,245
+"GO:0005840","ribosome",25,1,0.47,"0.42",0.42,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0005622","intracellular anatomical structure",94,2,1.77,"0.61",0.61,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0110165","cellular anatomical structure",105,2,1.98,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0043232","intracellular membraneless organelle",39,1,0.74,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0005575","cellular_component",106,2,2,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0043226","organelle",75,1,1.42,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0043228","membraneless organelle",39,1,0.74,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0043229","intracellular organelle",75,1,1.42,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0005634","nucleus",28,0,0.53,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0005694","chromosome",11,0,0.21,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0005737","cytoplasm",26,0,0.49,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0005783","endoplasmic reticulum",5,0,0.09,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0005852","eukaryotic translation initiation factor 3 complex",5,0,0.09,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0012505","endomembrane system",8,0,0.15,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0016020","membrane",16,0,0.3,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0031974","membrane-enclosed lumen",5,0,0.09,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0032991","protein-containing complex",39,0,0.74,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0043227","membrane-bounded organelle",42,0,0.79,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0043231","intracellular membrane-bounded organelle",42,0,0.79,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0043233","organelle lumen",5,0,0.09,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0070013","intracellular organelle lumen",5,0,0.09,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0140513","nuclear protein-containing complex",8,0,0.15,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:0140535","intracellular protein-containing complex",8,0,0.15,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:1902494","catalytic complex",12,0,0.23,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:1990234","transferase complex",6,0,0.11,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
+"GO:1990904","ribonucleoprotein complex",5,0,0.09,"1.00",1,1,"Asterochloris","Relaxed","CC",19,248
