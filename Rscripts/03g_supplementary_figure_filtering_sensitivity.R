@@ -237,7 +237,7 @@ forest_plot <- ggplot(sensitivity_results,
     legend.box         = "vertical",
     panel.grid.minor   = element_blank(),
     panel.grid.major.y = element_blank(),
-    plot.title         = element_text(face = "bold", size = 14),
+    plot.title         = element_text(face = "bold", size = 14)
   )
 
 print(forest_plot)

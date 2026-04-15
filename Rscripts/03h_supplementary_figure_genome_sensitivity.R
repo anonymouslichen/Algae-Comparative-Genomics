@@ -43,8 +43,8 @@ genome_meta <- tibble(
                    "Tre_spC0010",           "Tre_spA1-2",
                    "Tre_spC0006",           "Tre_lyn",
                    "Tre_spTZW2008"),
-  display_name = c("A. erici (primary)",    "A. glomerata",
-                   "T. sp. C0010 (primary)","T. sp. A1-2",
+  display_name = c("A. erici",    "A. glomerata",
+                   "T. sp. C0010","T. sp. A1-2",
                    "T. sp. C0006",          "T. lynnae",
                    "T. sp. TZW2008"),
   genus        = c("Asterochloris",         "Asterochloris",
@@ -231,9 +231,9 @@ plot_data <- all_results %>%
 y_levels <- c(
   # Trebouxia group (bottom, read bottom-to-top)
   "T. sp. TZW2008", "T. lynnae", "T. sp. C0006",
-  "T. sp. A1-2",    "T. sp. C0010 (primary)",
+  "T. sp. A1-2",    "T. sp. C0010",
   # Asterochloris group (top, read bottom-to-top)
-  "A. glomerata",   "A. erici (primary)"
+  "A. glomerata",   "A. erici"
 )
 
 plot_data <- plot_data %>%
@@ -293,23 +293,21 @@ forest_plot <- ggplot(
     space  = "free_y"
   ) +
   labs(
+    title = "Sensitivity Analysis: Trebouxia and Asterochloris genome choice",
     x = "Estimated difference (Lichen-forming \u2212 Free-living)",
     y = NULL
   ) +
   theme_bw(base_size = 11) +
   theme(
-    # Facet strips
     strip.background   = element_rect(fill = "grey94", color = "grey70"),
     strip.text.x       = element_text(face = "bold",        size = 11),
     strip.text.y.right = element_text(face = "bold.italic", size = 9, angle = 270),
-    # Grid
     panel.grid.minor   = element_blank(),
     panel.grid.major.y = element_blank(),
-    # Axes
     axis.text.y        = element_text(size = 9, face = "italic"),
     axis.title.x       = element_text(size = 10, margin = margin(t = 6)),
-    # Extra right margin so significance stars don't clip
-    plot.margin        = margin(6, 18, 6, 6)
+    plot.margin        = margin(6, 18, 6, 6),
+    plot.title         = element_text(face = "bold", size = 14)
   )
 
 
@@ -322,7 +320,7 @@ print(forest_plot)
 ggsave(
   "figures/FigureS4_genome_sensitivity.pdf",
   forest_plot,
-  width  = 7,
+  width  = 10,
   height = 5,
   device = cairo_pdf
 )
@@ -330,7 +328,7 @@ ggsave(
 ggsave(
   "figures/FigureS4_genome_sensitivity.png",
   forest_plot,
-  width  = 7,
+  width  = 10,
   height = 5,
   dpi    = 300
 )
