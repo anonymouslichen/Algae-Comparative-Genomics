@@ -226,6 +226,17 @@ relax_summary <- relax_focal_filtered %>%
 print(relax_summary)
 write.csv(relax_summary, "/Users/Abigail/Desktop/Claude/analysis_results/relax_summary.csv", row.names = FALSE)
 
+# Fishers exact test on intensified/relaxed contingency table
+
+p_vals <- nrow(relax_summary)
+for (i in 1:nrow(relax_summary)) {
+  p_vals[i] <- binom.test(relax_summary$n_intensified[i], 
+                          relax_summary$n_intensified[i] + relax_summary$n_relaxed[i])$p.value
+}
+
+relax_summary$binom_p <- p_vals
+relax_summary$binom_p_adj <- p.adjust(p_vals, method = "BH")
+
 
 ################################################################################
 # ANALYSIS 4: CODON USAGE BIAS COMPARISONS
@@ -342,7 +353,6 @@ genes_all_lineages <- relax_focal_filtered %>%
   group_by(SOG) %>%
   filter(n_distinct(Pair) == 4) %>%
   ungroup()
-
 
 # Classify consistency patterns
 gene_consistency <- genes_all_lineages %>%

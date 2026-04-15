@@ -37,7 +37,7 @@ make_volcano <- function(pair_name, df, colors) {
   n_sig <- sum(dat$Result != "Not Significant", na.rm = TRUE)
 
   ggplot(dat, aes(x = ln_K, y = neg_log10_padj, color = Result)) +
-    geom_point(alpha = 0.6, size = 1.2) +
+    geom_point(alpha = 0.6, size = 2.5) +
     geom_vline(xintercept = 0, linetype = "dashed", color = "gray40", linewidth = 0.6) +
     geom_hline(yintercept = -log10(0.05), linetype = "dashed",
                color = "gray40", linewidth = 0.6) +
@@ -65,8 +65,8 @@ fig4_with_legend <- (p_coc | p_sym) / (p_tre | p_ast) +
   plot_layout(guides = "collect") +
   plot_annotation(tag_levels = "A") &
   theme(legend.position = "bottom",
-        legend.title = element_text(size = 10, face = "bold"),
-        legend.text = element_text(size = 9))
+        legend.title = element_text(size = 12, face = "bold"),
+        legend.text = element_text(size = 12))
 
 fig4_with_legend
 
