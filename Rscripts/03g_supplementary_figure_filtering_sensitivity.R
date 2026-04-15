@@ -21,14 +21,14 @@ library(ggplot2)
 library(purrr)
 
 # Set working directory (adjust as needed)
-setwd("~/Desktop/Claude")
+setwd("~/Desktop/Algae-Comparative-Genomics/")
 
 ################################################################################
 # 1. LOAD DATA
 ################################################################################
 
 # Load prepared data
-load("Rscripts:Data/prepared_data.RData")
+load("Rscripts/prepared_data.RData")
 
 # Duplicate Myrmecia bisecta rows for both comparisons
 myrmecia_rows <- M4_codeml %>% 
@@ -183,28 +183,32 @@ response_labels <- c("dN" = "\u0394dN",
 taxonpair_labels <- c("Asterochloris_vs_Myrmecia" = "Asterochloris",
                       "Trebouxia_vs_Myrmecia"     = "Trebouxia")
 
-forest_plot <- ggplot(sensitivity_results, 
-                      aes(x = estimate, 
-                          y = filter_combo, 
-                          xmin = estimate - 1.96 * SE, 
+forest_plot <- ggplot(sensitivity_results,
+                      aes(x = estimate,
+                          y = filter_combo,
+                          xmin = estimate - 1.96 * SE,
                           xmax = estimate + 1.96 * SE,
                           color = ds_label,
-                          linetype = dn_label,
-                          shape = is_reported)) +
+                          linetype = dn_label)) +
   # Zero line
   geom_vline(xintercept = 0, linetype = "dashed", color = "grey50", linewidth = 0.4) +
-  # Point + CI
-  geom_pointrange(aes(size = is_reported), linewidth = 0.7) +
-  scale_size_manual(values = c("FALSE" = 0.5, "TRUE" = 1), guide = "none") +
+  # CI bars
+  geom_errorbarh(height = 0.3, linewidth = 0.7) +
+  # Alternative thresholds: open circles
+  geom_point(
+    data  = filter(sensitivity_results, !is_reported),
+    shape = 21, size = 2.5, stroke = 1.0,
+    fill  = "white"
+  ) +
+  # Reported threshold: filled circle
+  geom_point(
+    data  = filter(sensitivity_results, is_reported),
+    shape = 16, size = 3.2
+  ) +
   # Significance stars
-  geom_text(aes(x = estimate + 1.96 * SE, label = sig), 
+  geom_text(aes(x = estimate + 1.96 * SE, label = sig),
             hjust = -0.3, size = 3.5, show.legend = FALSE) +
   # Scales
-  scale_shape_manual(
-    values = c("FALSE" = 16, "TRUE" = 18),
-    labels = c("Alternative threshold", "Reported (dS \u2264 3, no dN filter)"),
-    name   = NULL
-  ) +
   scale_color_manual(
     values = c("dS \u2264 2"            = "#E69F00", 
                "dS \u2264 3"            = "#D55E00",
@@ -243,5 +247,3 @@ ggsave("figures/FigureS3_sensitivity_forest_plot.pdf", forest_plot,
        width = 13, height = 10, dpi = 300)
 ggsave("figures/FigureS3_sensitivity_forest_plot.png", forest_plot, 
        width = 13, height = 10, dpi = 300)
-
-cat("\nPlots saved to output/\n")

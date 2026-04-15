@@ -32,7 +32,7 @@ library(emmeans)
 library(ggplot2)
 library(patchwork)
 
-setwd("~/Desktop/Claude")
+setwd("~/Desktop/Algae-Comparative-Genomics/")
 
 ################################################################################
 # 1. GENOME METADATA LOOKUP
@@ -195,12 +195,9 @@ all_results <- mapply(
   bind_rows()
 
 # Verify contrast direction (should be "Lichen-forming - Free-living")
-cat("\nContrast labels in emmeans output:\n")
 print(unique(all_results$contrast))
-cat("Positive estimate = higher in lichen-forming.\n\n")
 
 # Gene retention per genome
-cat("SOGs retained per genome:\n")
 print(
   all_results %>%
     distinct(genome_id, n_genes) %>%
@@ -279,8 +276,9 @@ forest_plot <- ggplot(
   # Significance stars (right of CI upper bound)
   geom_text(
     aes(x = ci_hi, label = sig),
-    hjust = -0.3, vjust = 0.5,
+    vjust = 1.5,
     size  = 3.5, color = "black",
+    angle = 90,
     show.legend = FALSE
   ) +
   scale_color_manual(
@@ -292,8 +290,7 @@ forest_plot <- ggplot(
   facet_grid(
     genus ~ response_label,
     scales = "free",
-    space  = "free_y",
-    switch = "y"
+    space  = "free_y"
   ) +
   labs(
     x = "Estimated difference (Lichen-forming \u2212 Free-living)",
@@ -304,8 +301,7 @@ forest_plot <- ggplot(
     # Facet strips
     strip.background   = element_rect(fill = "grey94", color = "grey70"),
     strip.text.x       = element_text(face = "bold",        size = 11),
-    strip.text.y.left  = element_text(face = "bold.italic", size = 9, angle = 90),
-    strip.placement    = "outside",
+    strip.text.y.right = element_text(face = "bold.italic", size = 9, angle = 270),
     # Grid
     panel.grid.minor   = element_blank(),
     panel.grid.major.y = element_blank(),
@@ -323,8 +319,6 @@ print(forest_plot)
 # 7. SAVE OUTPUT
 ################################################################################
 
-dir.create("figures", showWarnings = FALSE)
-
 ggsave(
   "figures/FigureS4_genome_sensitivity.pdf",
   forest_plot,
@@ -341,6 +335,3 @@ ggsave(
   dpi    = 300
 )
 
-cat("\nDone. Figure saved to:\n")
-cat("  figures/Supp_Fig_genome_sensitivity.pdf\n")
-cat("  figures/Supp_Fig_genome_sensitivity.png\n")
