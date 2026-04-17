@@ -207,7 +207,11 @@ forest_plot <- ggplot(sensitivity_results,
   ) +
   # Significance stars
   geom_text(aes(x = estimate + 1.96 * SE, label = sig),
-            hjust = -0.3, size = 3.5, show.legend = FALSE) +
+            vjust = 1.5,
+            size = 3.5, color = "black",
+            angle = 90,
+            show.legend = FALSE
+  ) +
   # Scales
   scale_color_manual(
     values = c("dS \u2264 2"            = "#E69F00", 
@@ -247,3 +251,4 @@ ggsave("figures/FigureS3_sensitivity_forest_plot.pdf", forest_plot,
        width = 13, height = 10, dpi = 300)
 ggsave("figures/FigureS3_sensitivity_forest_plot.png", forest_plot, 
        width = 13, height = 10, dpi = 300)
+
