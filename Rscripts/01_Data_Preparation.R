@@ -7,6 +7,7 @@ library(dplyr)
 library(tidyr)
 library(stringr)
 library(readr)
+library(ape)
 
 # Set working directory (adjust as needed)
 setwd("~/Desktop/Algae-Comparative-Genomics/")
@@ -114,6 +115,10 @@ M4_codeml_filter$Condition <- factor(
   M4_codeml_filter$Condition,
   levels = c("Lichen-forming", "Free-living")
 )
+
+# Load phylogenetic tree
+tree <- read.tree("data/consensus_tree.newick.txt")
+print(tree$tip.label)
 
 ################################################################################
 # 4. LOAD AND PREPARE CODON BIAS DATA
@@ -355,6 +360,7 @@ names(gene2GO_list) <- allGenes$SOG
 save(
   M4_codeml,
   M4_codeml_filter,
+  tree,
   codon,
   codon_myrmecia_dup,
   relax_all,
