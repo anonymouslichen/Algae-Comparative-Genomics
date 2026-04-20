@@ -11,22 +11,16 @@ library(emmeans)
 library(broom)
 library(purrr)
 library(ggResidpanel)
+library(ape)
 
 # Load prepared data
 load("/Users/Abigail/Desktop/Algae-Comparative-Genomics/Rscripts/prepared_data.RData")
-
-# Load phylogenetic tree
-library(ape)
-
-tree <- read.tree("/Users/Abigail/Desktop/Algae-Comparative-Genomics/data/consensus_tree.newick.txt")
-print(tree$tip.label)
-
 
 ################################################################################
 # ANALYSIS 1: ABSOLUTE RATES (dN and dS)
 ################################################################################
 
-# Summary statistics for absolute rates
+# Summary statistics for rates of molecular evolution
 absolute_rates_summary <- M4_codeml_filter %>%
   group_by(TaxonPair, Condition, Taxa) %>%
   summarise(
@@ -44,17 +38,15 @@ absolute_rates_summary <- M4_codeml_filter %>%
 
 print(absolute_rates_summary)
 
-# Models for absolute dN
+### Models for absolute dN
 model_dN <- lmer(dN ~ Condition * TaxonPair + (1 | SOG), 
                  data = M4_codeml_filter)
 
 resid_panel(model_dN)
-
-print(anova(model_dN))
+anova(model_dN)
 
 emm_dN <- emmeans(model_dN, ~ Condition | TaxonPair)
-contrasts_dN <- contrast(emm_dN, method = "pairwise")
-contrasts_dN <- rbind(contrasts_dN, adjust = "bonferroni")
+contrasts_dN <- contrast(emm_dN, method = "pairwise", adjust = "bonferroni")
 print(contrasts_dN)
 
 # Models for absolute dS
@@ -62,13 +54,10 @@ model_dS <- lmer(dS ~ Condition * TaxonPair + (1 | SOG),
                  data = M4_codeml_filter)
 
 resid_panel(model_dS)
-
-print(anova(model_dS))
+anova(model_dS)
 
 emm_dS <- emmeans(model_dS, ~ Condition | TaxonPair)
-contrasts_dS <- contrast(emm_dS, method = "pairwise")
-contrasts_dS <- rbind(contrasts_dS, adjust = "bonferroni")
-
+contrasts_dS <- contrast(emm_dS, method = "pairwise", adjust = "bonferroni")
 print(contrasts_dS)
 
 # Save results
@@ -77,39 +66,9 @@ absolute_rates_results <- bind_rows(
   as.data.frame(contrasts_dS) %>% mutate(Metric = "dS")
 )
 
-write.csv(absolute_rates_results, "/Users/Abigail/Desktop/Claude/analysis_results/absolute_rates_contrasts.csv", 
+write.csv(absolute_rates_results, "analysis_results/absolute_rates_contrasts.csv", 
           row.names = FALSE)
 
-# Calculate effect sizes and percent changes
-# First, get mean rates by pair and condition (not by individual taxa)
-rates_by_pair_condition <- M4_codeml_filter %>%
-  group_by(TaxonPair, Condition) %>%
-  summarise(
-    mean_dN = mean(dN, na.rm = TRUE),
-    mean_dS = mean(dS, na.rm = TRUE),
-    median_dN = median(dN, na.rm = TRUE),
-    median_dS = median(dS, na.rm = TRUE),
-    n_obs = n(),
-    .groups = "drop"
-  )
-
-effect_sizes_absolute <- rates_by_pair_condition %>%
-  dplyr::select(TaxonPair, Condition, mean_dN, mean_dS) %>%
-  pivot_wider(
-    names_from = Condition, 
-    values_from = c(mean_dN, mean_dS),
-    names_sep = "_"
-  ) %>%
-  mutate(
-    delta_dN = `mean_dN_Lichen-forming` - `mean_dN_Free-living`,
-    pct_change_dN = 100 * delta_dN / `mean_dN_Free-living`,
-    delta_dS = `mean_dS_Lichen-forming` - `mean_dS_Free-living`,
-    pct_change_dS = 100 * delta_dS / `mean_dS_Free-living`
-  )
-
-print(effect_sizes_absolute)
-write.csv(effect_sizes_absolute, "/Users/Abigail/Desktop/Claude/analysis_results/absolute_rates_effect_sizes.csv", 
-          row.names = FALSE)
 
 ################################################################################
 # ANALYSIS 1B: PHYLOGENETIC DISTANCE vs dS CORRELATION
@@ -165,45 +124,68 @@ phydist_vs_dS <- pair_comparisons %>%
 
 print(phydist_vs_dS)
 
-write.csv(phydist_vs_dS, "/Users/Abigail/Desktop/Claude/analysis_results/phydist_vs_dS.csv", row.names = FALSE)
+write.csv(phydist_vs_dS, "analysis_results/phydist_vs_dS.csv", row.names = FALSE)
 
 ################################################################################
 # ANALYSIS 2: dN/dS COMPARISONS
 ################################################################################
 
-# Linear mixed-effects model with SOG as random effect
-model_omega <- lmer(omega ~ Condition * TaxonPair + (1 | SOG), 
-                    data = M4_codeml_filter)
+# -----------------------------------------------------------------------------
+# Model 1: Pooled main effect of Condition across taxon pairs
+# TaxonPair as random intercept to account for non-independence of SOGs
+# within pairs; answers "is there an overall lifestyle effect?"
+# -----------------------------------------------------------------------------
+model_omega_pooled <- lmer(omega ~ Condition + (1 | SOG) + (1 | TaxonPair),
+                           data = M4_codeml_filter)
+summary(model_omega_pooled)
+resid_panel(model_omega_pooled)
 
-resid_panel(model_omega)
+# F-test on the pooled Condition effect
+anova(model_omega_pooled)
 
-print(summary(model_omega))
+# Pooled marginal means and contrast (for Supplementary Fig. 2A-style reporting)
+emm_omega_pooled <- emmeans(model_omega_pooled, ~ Condition)
+print(emm_omega_pooled)
+contrast_omega_pooled <- contrast(emm_omega_pooled, method = "pairwise")
+print(contrast_omega_pooled)
 
-# ANOVA to test main effects and interaction
-anova_omega <- anova(model_omega)
 
-print(anova_omega)
+# -----------------------------------------------------------------------------
+# Model 2: Condition x TaxonPair interaction
+# TaxonPair as fixed effect (only 4 levels -- too few for a random slope);
+# answers "does the lifestyle effect differ across pairs?" and gives per-pair
+# contrasts for Table 2 / Fig. 2D
+# -----------------------------------------------------------------------------
+model_omega_interaction <- lmer(omega ~ Condition * TaxonPair + (1 | SOG),
+                                data = M4_codeml_filter)
+summary(model_omega_interaction)
+resid_panel(model_omega_interaction)
 
-# Estimated marginal means by condition and pair
-emm_omega <- emmeans(model_omega, ~ Condition | TaxonPair)
-print(emm_omega)
+# F-tests on interaction
+anova(model_omega_interaction)
 
-# Pairwise contrasts within each pair
-contrasts_omega <- contrast(emm_omega, method = "pairwise")
-contrasts_omega <- rbind(contrasts_omega, adjust = "bonferroni")
-print(contrasts_omega)
+# Per-pair marginal means
+emm_omega_bypair <- emmeans(model_omega_interaction, ~ Condition | TaxonPair)
+print(emm_omega_bypair)
 
-# Convert to data frame for saving
-dnds_results <- as.data.frame(contrasts_omega) %>%
+# Per-pair pairwise contrasts (lichen vs. free-living within each pair)
+contrasts_omega_bypair <- contrast(emm_omega_bypair, method = "pairwise",
+                                   adjust = "bonferroni")
+print(contrasts_omega_bypair)
+
+# Save results for Table 2
+dnds_results <- as.data.frame(contrasts_omega_bypair) %>%
   mutate(
     Metric = "dN/dS",
     Direction = ifelse(estimate > 0, "Higher in lichen", "Lower in lichen"),
     Significant = ifelse(p.value < 0.001, "***",
-                         ifelse(p.value < 0.01, "**",
-                                ifelse(p.value < 0.05, "*", "ns")))
+                         ifelse(p.value < 0.01,  "**",
+                                ifelse(p.value < 0.05,  "*", "ns")))
   )
 
-write.csv(dnds_results, "/Users/Abigail/Desktop/Claude/analysis_results/dnds_contrasts.csv", row.names = FALSE)
+write.csv(dnds_results,
+          "analysis_results/dnds_contrasts.csv",
+          row.names = FALSE)
 
 ################################################################################
 # ANALYSIS 3: RELAX K PARAMETER ANALYSIS
@@ -224,10 +206,9 @@ relax_summary <- relax_focal_filtered %>%
   )
 
 print(relax_summary)
-write.csv(relax_summary, "/Users/Abigail/Desktop/Claude/analysis_results/relax_summary.csv", row.names = FALSE)
+write.csv(relax_summary, "analysis_results/relax_summary.csv", row.names = FALSE)
 
 # Fishers exact test on intensified/relaxed contingency table
-
 p_vals <- nrow(relax_summary)
 for (i in 1:nrow(relax_summary)) {
   p_vals[i] <- binom.test(relax_summary$n_intensified[i], 
@@ -240,62 +221,116 @@ relax_summary$binom_p_adj <- p.adjust(p_vals, method = "BH")
 
 ################################################################################
 # ANALYSIS 4: CODON USAGE BIAS COMPARISONS
+#
+# Model 1: Pooled main effect of Condition across taxon pairs
+# TaxonPair as random intercept to account for non-independence of SOGs
+# within pairs; answers "is there an overall lifestyle effect?"
+#
+# Model 2: Condition x TaxonPair interaction
+# TaxonPair as fixed effect  answers "does the lifestyle effect differ across 
+# pairs?" Gives per pair contrasts for Table 3
+#
 ################################################################################
 
-# --- ENC' (ENC prime) ---
-model_ENCprime <- lmer(ENC_prime ~ Condition * TaxonPair + (1 | SOG),
-                       data = codon_myrmecia_dup)
+# --------- ENC Prime -------------
 
-resid_panel(model_ENCprime)
+# Model 1: Pooled main effect of Condition across taxon pairs
+model_ENC_pooled <- lmer(ENC_prime ~ Condition + (1 | SOG) + (1 | TaxonPair),
+                           data = codon_myrmecia_dup)
+summary(model_ENC_pooled)
+resid_panel(model_ENC_pooled)
 
-print(anova(model_ENCprime))
+# F-test on the pooled Condition effect
+anova(model_ENC_pooled)
 
-emm_ENCprime <- emmeans(model_ENCprime, ~ Condition | TaxonPair)
-print(emm_ENCprime)
+# Pooled marginal means and contrast
+emm_ENC_pooled <- emmeans(model_ENC_pooled, ~ Condition)
+print(emm_ENC_pooled)
+contrast_ENC_pooled <- contrast(emm_ENC_pooled, method = "pairwise")
+print(contrast_ENC_pooled)
 
-contrasts_ENCprime <- contrast(emm_ENCprime, method = "pairwise")
-contrasts_ENCprime <- rbind(contrasts_ENCprime, adjust = "bonferroni")
-print(contrasts_ENCprime)
+# Model 2: Condition x TaxonPair interaction
+model_ENC_interaction <- lmer(ENC_prime ~ Condition * TaxonPair + (1 | SOG),
+                                data = codon_myrmecia_dup)
+summary(model_ENC_interaction)
+resid_panel(model_ENC_interaction)
 
-# --- GC3 ---
-model_GC3 <- lmer(GC3 ~ Condition * TaxonPair + (1 | SOG),
-                  data = codon_myrmecia_dup)
+# F-tests
+anova(model_ENC_interaction)
 
-resid_panel(model_GC3)
+# Per-pair marginal means
+emm_ENC_bypair <- emmeans(model_ENC_interaction, ~ Condition | TaxonPair)
+print(emm_ENC_bypair)
 
-print(anova(model_GC3))
-
-emm_GC3 <- emmeans(model_GC3, ~ Condition | TaxonPair)
-print(emm_GC3)
-
-contrasts_GC3 <- contrast(emm_GC3, method = "pairwise")
-contrasts_GC3 <- rbind(contrasts_GC3, adjust = "bonferroni")
-print(contrasts_GC3)
+# Per-pair pairwise contrasts (lichen vs. free-living within each pair)
+contrasts_ENC_bypair <- contrast(emm_ENC_bypair, method = "pairwise",
+                                   adjust = "bonferroni")
+print(contrasts_ENC_bypair)
 
 
-# --- GC12 ---
+# --------- GC3 -------------
+
+# Model 1: Pooled main effect of Condition across taxon pairs
+model_GC3_pooled <- lmer(GC3 ~ Condition + (1 | SOG) + (1 | TaxonPair),
+                         data = codon_myrmecia_dup)
+summary(model_GC3_pooled)
+resid_panel(model_GC3_pooled)
+
+# F-test on the pooled Condition effect
+anova(model_GC3_pooled)
+
+# Pooled marginal means and contrast
+emm_GC3_pooled <- emmeans(model_GC3_pooled, ~ Condition)
+print(emm_GC3_pooled)
+contrast_GC3_pooled <- contrast(emm_GC3_pooled, method = "pairwise")
+print(contrast_GC3_pooled)
+
+# Model 2: Condition x TaxonPair interaction
+model_GC3_interaction <- lmer(GC3 ~ Condition * TaxonPair + (1 | SOG),
+                              data = codon_myrmecia_dup)
+summary(model_GC3_interaction)
+resid_panel(model_GC3_interaction)
+
+# F-tests
+anova(model_GC3_interaction)
+
+# Per-pair marginal means
+emm_GC3_bypair <- emmeans(model_GC3_interaction, ~ Condition | TaxonPair)
+print(emm_GC3_bypair)
+
+# Per-pair pairwise contrasts (lichen vs. free-living within each pair)
+contrasts_GC3_bypair <- contrast(emm_GC3_bypair, method = "pairwise",
+                                 adjust = "bonferroni")
+print(contrasts_GC3_bypair)
+
+# --------- GC12 -------------
+
+# Model 2: Condition x TaxonPair interaction
 model_GC12 <- lmer(GC12 ~ Condition * TaxonPair + (1 | SOG),
                    data = codon_myrmecia_dup)
-
+summary(model_GC12)
 resid_panel(model_GC12)
 
-print(anova(model_GC12))
+# F-tests
+anova(model_GC12)
 
+# Per-pair marginal means
 emm_GC12 <- emmeans(model_GC12, ~ Condition | TaxonPair)
 print(emm_GC12)
 
-contrasts_GC12 <- contrast(emm_GC12, method = "pairwise")
-contrasts_GC12 <- rbind(contrasts_GC12, adjust = "bonferroni")
-print(contrasts_GC12)
+# Per-pair pairwise contrasts (lichen vs. free-living within each pair)
+contrasts_GC12_bypair <- contrast(emm_GC12, method = "pairwise",
+                           adjust = "bonferroni")
+print(contrasts_GC12_bypair)
 
 
-# Save pairwise contrast results
-enc_results <- as.data.frame(contrasts_ENCprime) %>% mutate(Metric = "ENC_prime")
-gc3_results <- as.data.frame(contrasts_GC3) %>% mutate(Metric = "GC3")
-gc12_results <- as.data.frame(contrasts_GC12) %>% mutate(Metric = "GC12")
+# Save pairwise contrast results (Table 3)
+enc_results <- as.data.frame(contrasts_ENC_bypair) %>% mutate(Metric = "ENC_prime")
+gc3_results <- as.data.frame(contrasts_GC3_bypair) %>% mutate(Metric = "GC3")
+gc12_results <- as.data.frame(contrasts_GC12_bypair) %>% mutate(Metric = "GC12")
 
 codon_results <- bind_rows(enc_results, gc3_results, gc12_results)
-write.csv(codon_results, "/Users/Abigail/Desktop/Claude/analysis_results/codon_bias_contrasts.csv",
+write.csv(codon_results, "analysis_results/codon_bias_contrasts.csv",
           row.names = FALSE)
 
 ################################################################################
@@ -342,7 +377,7 @@ mk_summary <- data.frame(
   wilcox_p = wilcox_mk$p.value
 )
 
-write.csv(mk_summary, "/Users/Abigail/Desktop/Claude/analysis_results/mk_summary.csv", row.names = FALSE)
+write.csv(mk_summary, "analysis_results/mk_summary.csv", row.names = FALSE)
 
 ################################################################################
 # ANALYSIS 7: GENE CONSISTENCY ACROSS LINEAGES
@@ -410,7 +445,7 @@ intensified_table <- intensified %>%
 
 print(intensified_table)
 write.csv(intensified_table,
-          "/Users/Abigail/Desktop/Algae-Comparative-Genomics/analysis_results/intensified_genes_GO_table.csv",
+          "analysis_results/intensified_genes_GO_table.csv",
           row.names = FALSE)
 
 # ── GO annotation table for relaxed genes ──────────
@@ -435,7 +470,7 @@ relaxed_table <- relaxed %>%
 
 print(relaxed_table)
 write.csv(relaxed_table,
-          "/Users/Abigail/Desktop/Algae-Comparative-Genomics/analysis_results/relaxed_genes_GO_table.csv",
+          "analysis_results/relaxed_genes_GO_table.csv",
           row.names = FALSE)
 
 ################################################################################
@@ -467,12 +502,16 @@ save(
   mk_summary,
   gene_consistency,
   consistency_summary,
-  model_ENCprime,
-  model_GC3,
+  model_ENC_pooled,
+  model_ENC_interaction,
+  model_GC3_pooled,
+  model_GC3_interaction,
   model_GC12,
-  emm_ENCprime,
-  emm_GC3,
+  emm_ENC_pooled,
+  emm_ENC_bypair,
+  emm_GC3_pooled,
+  emm_GC3_bypair,
   emm_GC12,
-  file = "/Users/Abigail/Desktop/Claude/Rscripts/analysis_complete.RData"
+  file = "Rscripts/analysis_complete.RData"
 )
 
