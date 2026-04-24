@@ -149,7 +149,6 @@ print(emm_omega_pooled)
 contrast_omega_pooled <- contrast(emm_omega_pooled, method = "pairwise")
 print(contrast_omega_pooled)
 
-
 # -----------------------------------------------------------------------------
 # Model 2: Condition x TaxonPair interaction
 # TaxonPair as fixed effect (only 4 levels -- too few for a random slope);
@@ -208,16 +207,20 @@ relax_summary <- relax_focal_filtered %>%
 print(relax_summary)
 write.csv(relax_summary, "analysis_results/relax_summary.csv", row.names = FALSE)
 
-# Fishers exact test on intensified/relaxed contingency table
-p_vals <- nrow(relax_summary)
+# Binomial test on intensified/relaxed contingency table
+p_vals <- numeric(nrow(relax_summary))
+
 for (i in 1:nrow(relax_summary)) {
-  p_vals[i] <- binom.test(relax_summary$n_intensified[i], 
-                          relax_summary$n_intensified[i] + relax_summary$n_relaxed[i])$p.value
+  p_vals[i] <- binom.test(
+    x = relax_summary$n_intensified[i],
+    n = relax_summary$n_intensified[i] + relax_summary$n_relaxed[i],
+    p = 0.5
+  )$p.value
 }
 
 relax_summary$binom_p <- p_vals
-relax_summary$binom_p_adj <- p.adjust(p_vals, method = "BH")
-
+relax_summary$binom_p_adj <- p.adjust(p_vals, method = "bonferroni")
+relax_summary
 
 ################################################################################
 # ANALYSIS 4: CODON USAGE BIAS COMPARISONS

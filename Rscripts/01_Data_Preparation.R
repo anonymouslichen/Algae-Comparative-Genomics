@@ -73,6 +73,8 @@ M4_codeml <- codeml %>%
 
 n_distinct(M4_codeml$SOG)
 
+# paml_SOGs <- unique(M4_codeml$SOG)
+
 # Apply filtering criteria (modified: dS > 3 instead of > 2)
 failing_SOGs <- M4_codeml %>%
   filter(dS <= 0.01 | dS > 3 | omega >= 10) %>%
@@ -115,6 +117,7 @@ M4_codeml_filter$Condition <- factor(
   M4_codeml_filter$Condition,
   levels = c("Lichen-forming", "Free-living")
 )
+M4_codeml_filter$TaxonPair <- factor(M4_codeml_filter$TaxonPair)
 
 # Load phylogenetic tree
 tree <- read.tree("data/consensus_tree.newick.txt")
@@ -128,6 +131,8 @@ codon <- read.csv("data/codon_bias_gc_enc.csv")
 
 # Rename first column
 colnames(codon)[1] <- "SOG"
+
+missing_SOGs <- setdiff(codon_SOGs, paml_SOGs)
 
 # Add metadata
 codon <- codon %>%
@@ -370,6 +375,6 @@ save(
   annotations,
   gene2GO_list,
   taxa_order,
-  file = "~/Desktop/Algae-Comparative-Genomics//Rscripts/prepared_data.RData"
+  file = "Rscripts/prepared_data.RData"
 )
 
