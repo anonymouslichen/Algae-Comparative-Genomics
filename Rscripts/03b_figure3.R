@@ -3,7 +3,7 @@ library(dplyr)
 library(tidyr)
 library(patchwork)
 
-setwd("~/Desktop/Claude")
+setwd("~/Desktop/Algae-Comparative-Genomics/")
 load("Rscripts/analysis_complete.RData")
 load("Rscripts/prepared_data.RData")
 
@@ -55,17 +55,21 @@ stats_ENCprime <- make_stats_codon("ENC_prime")
 # PANEL A: ENC' boxplots by taxon pair (figure 2 style, no jitter)
 ################################################################################
 
-y_upper_enc <- quantile(codon_pairs$ENC_prime, 0.995, na.rm = TRUE) * 1.2
+y_upper_enc <- quantile(codon_pairs$ENC_prime, 0.995, na.rm = TRUE) * 1.05
 
 p3a <- ggplot(codon_pairs,
               aes(x = PairLabel, y = ENC_prime, fill = Condition)) +
   geom_boxplot(width = 0.35, outlier.shape = NA,
                position = position_dodge(0.8),
                linewidth = 0.4, alpha = 0.6, color = "gray30") +
+  geom_point(alpha = 0.1, size = 0.5,
+             position = position_jitterdodge(jitter.width = 0.2,
+                                             dodge.width = 0.8)) +
   geom_text(data = stats_ENCprime,
             aes(x = PairLabel, y = y_upper_enc, label = annotation),
             inherit.aes = FALSE, size = 4, fontface = "bold",
             color = "gray20") +
+  
   scale_fill_manual(values = color_condition, name = "Lifestyle") +
   scale_y_continuous(limits = c(NA, y_upper_enc * 1.05), expand = c(0, 0)) +
   labs(title = "Effective Number of Codons (ENC')", x = NULL, y = "ENC'") +
@@ -74,16 +78,21 @@ p3a <- ggplot(codon_pairs,
     legend.position    = "none",
     panel.grid.minor   = element_blank(),
     panel.grid.major.x = element_blank(),
-    axis.text.x        = element_text(face = "italic", size = 11),
-    plot.title         = element_text(size = 13, face = "bold"),
+    axis.text.x        = element_text(face = "italic", size = 16),
+    axis.text.y      = element_text(size = 12),
+    axis.title.x     = element_text(size = 15),
+    axis.title.y     = element_text(size = 15),
+    plot.title         = element_text(size = 16, face = "bold"),
     plot.margin        = margin(5, 8, 2, 5)
   )
+
+p3a
 
 ################################################################################
 # PANEL B: Centroid neutrality plot – emmeans ± 95 % CI from LME
 ################################################################################
 
-emm_GC3_df  <- as.data.frame(emm_GC3)
+emm_GC3_df  <- as.data.frame(emm_GC3_bypair)
 emm_GC12_df <- as.data.frame(emm_GC12)
 
 centroids_lme <- emm_GC3_df %>%
@@ -121,14 +130,20 @@ p3b <- ggplot(centroids_lme,
     x     = "GC3",
     y     = "GC12"
   ) +
-  theme_minimal(base_size = 11) +
+  theme_minimal(base_size = 12) +
   theme(
     legend.position  = "bottom",
     panel.grid.minor = element_blank(),
-    strip.text       = element_text(face = "italic", size = 10),
-    plot.title       = element_text(size = 12, face = "bold"),
+    strip.text       = element_text(face = "italic", size = 16),
+    axis.text.x      = element_text(size = 12),
+    axis.text.y      = element_text(size = 12),
+    axis.title.x     = element_text(size = 15),
+    axis.title.y     = element_text(size = 15),
+    plot.title       = element_text(size = 16, face = "bold"),
     plot.margin      = margin(5, 8, 5, 5)
   )
+
+p3b
 
 ################################################################################
 # Combine into Figure 3
@@ -136,12 +151,17 @@ p3b <- ggplot(centroids_lme,
 
 fig3 <- (p3a | p3b) +
   plot_layout(guides = "collect") &
-  theme(legend.position = "bottom")
+  theme(
+    legend.position = "bottom",
+    legend.text  = element_text(size = 14),
+    legend.title = element_text(size = 14, face = "bold"),
+    legend.key.size = unit(1, "cm")
+  )
 
-fig3 <- fig3 + plot_annotation(tag_levels = "A")
+fig3 <- fig3 + plot_annotation(tag_levels = "A", theme = theme(plot.tag = element_text(size = 25, face = "bold")))
 
 ggsave("figures/Figure3_new.png", fig3,
-       width = 14, height = 7, dpi = 600)
+       width = 15, height = 9, dpi = 600)
 ggsave("figures/Figure3_new.pdf", fig3,
-       width = 14, height = 7)
+       width = 15, height = 9)
 
