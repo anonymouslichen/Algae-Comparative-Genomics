@@ -19,7 +19,38 @@ setwd("/Users/Abigail/Desktop/Algae-Comparative-Genomics")
 load("Rscripts/prepared_data.RData")
 
 ################################################################################
-# ANALYSIS 1: ABSOLUTE RATES (dN and dS)
+# ANALYSIS 1: dN/dS COMPARISONS
+# Model with fixed Condition*TaxonPair interaction. 
+# Provides interaction F-test, per-pair contrasts (Table 2),
+# and pooled marginal means
+################################################################################
+
+model_omega_interaction <- lmer(omega ~ Condition * TaxonPair + (1 | SOG),
+                                data = M4_codeml_filter)
+summary(model_omega_interaction)
+resid_panel(model_omega_interaction)
+
+# F-tests on main effects and interaction
+anova(model_omega_interaction)
+
+# ---- Per-pair effects (Table 2 / Fig. 2D) ----
+emm_omega_bypair <- emmeans(model_omega_interaction, ~ Condition | TaxonPair)
+print(emm_omega_bypair)
+
+contrasts_omega_bypair <- contrast(emm_omega_bypair, method = "pairwise",
+                                   adjust = "bonferroni")
+print(contrasts_omega_bypair)
+
+# ---- Pooled effect across pairs (Supplementary Fig. 2A) ----
+# Marginal means averaging over TaxonPair levels with equal weights
+emm_omega_pooled <- emmeans(model_omega_interaction, ~ Condition)
+print(emm_omega_pooled)
+contrast_omega_pooled <- contrast(emm_omega_pooled, method = "pairwise")
+print(contrast_omega_pooled)
+
+
+################################################################################
+# ANALYSIS 2: ABSOLUTE RATES (dN and dS)
 ################################################################################
 
 # Summary statistics for rates of molecular evolution
@@ -63,9 +94,19 @@ contrasts_dS <- contrast(emm_dS, method = "pairwise", adjust = "bonferroni")
 print(contrasts_dS)
 
 
+# Save results
+dnds_results <- bind_rows(
+  as.data.frame(contrasts_dN) %>% mutate(Metric = "dN"),
+  as.data.frame(contrasts_dS) %>% mutate(Metric = "dS"),
+  as.data.frame(contrasts_omega_bypair) %>% mutate(Metric = "omega")
+)
+
+write.csv(dnds_results,
+          "analysis_results/dnds_contrasts.csv",
+          row.names = FALSE)
 
 ################################################################################
-# ANALYSIS 1B: PHYLOGENETIC DISTANCE vs dS CORRELATION
+# ANALYSIS 2B: PHYLOGENETIC DISTANCE vs dS CORRELATION
 ################################################################################
 
 # Extract pairwise phylogenetic distances
@@ -107,10 +148,10 @@ pair_comparisons <- pair_comparisons %>%
 print(pair_comparisons)
 
 # Get delta dS for each pair
-delta_dS_by_pair <- absolute_rates_results %>%
+delta_dS_by_pair <- dnds_results %>%
   filter(Metric == "dS") %>%
   dplyr::select(Pair = TaxonPair, delta_dS = estimate)
-  
+
 # Join with phylogenetic distances
 phydist_vs_dS <- pair_comparisons %>%
   dplyr::select(Pair, PhyDist) %>%
@@ -120,46 +161,6 @@ print(phydist_vs_dS)
 
 write.csv(phydist_vs_dS, "analysis_results/phydist_vs_dS.csv", row.names = FALSE)
 
-################################################################################
-# ANALYSIS 2: dN/dS COMPARISONS
-# Model with fixed Condition*TaxonPair interaction. 
-# Provides interaction F-test, per-pair contrasts (Table 2),
-# and pooled marginal means
-################################################################################
-
-model_omega_interaction <- lmer(omega ~ Condition * TaxonPair + (1 | SOG),
-                                data = M4_codeml_filter)
-summary(model_omega_interaction)
-resid_panel(model_omega_interaction)
-
-# F-tests on main effects and interaction
-anova(model_omega_interaction)
-
-# ---- Per-pair effects (Table 2 / Fig. 2D) ----
-emm_omega_bypair <- emmeans(model_omega_interaction, ~ Condition | TaxonPair)
-print(emm_omega_bypair)
-
-contrasts_omega_bypair <- contrast(emm_omega_bypair, method = "pairwise",
-                                   adjust = "bonferroni")
-print(contrasts_omega_bypair)
-
-# ---- Pooled effect across pairs (Supplementary Fig. 2A) ----
-# Marginal means averaging over TaxonPair levels with equal weights
-emm_omega_pooled <- emmeans(model_omega_interaction, ~ Condition)
-print(emm_omega_pooled)
-contrast_omega_pooled <- contrast(emm_omega_pooled, method = "pairwise")
-print(contrast_omega_pooled)
-
-# Save results
-dnds_results <- bind_rows(
-  as.data.frame(contrasts_dN) %>% mutate(Metric = "dN"),
-  as.data.frame(contrasts_dS) %>% mutate(Metric = "dS"),
-  as.data.frame(contrasts_omega_bypair) %>% mutate(Metric = "omega")
-)
-
-write.csv(dnds_results,
-          "analysis_results/dnds_contrasts.csv",
-          row.names = FALSE)
 
 ################################################################################
 # ANALYSIS 3: RELAX K PARAMETER ANALYSIS
