@@ -29,10 +29,11 @@ plot_data_M4 <- M4_codeml_filter %>%
   mutate(Condition = factor(Condition, levels = c("Lichen-forming", "Free-living")))
 
 # Model to test for overall condition effect
-model_M4 <- lmer(omega ~ Condition + (1 | TaxonPair) + (1|SOG), data = M4_codeml_filter)
-anova(model_M4)
+model_M4 <- lmer(omega ~ Condition + TaxonPair + (1|SOG), data = M4_codeml_filter)
+anova_M4 <- anova(model_M4)
+anova_M4
 
-p_val <- summary(model_M4)$coefficients["ConditionFree-living", "Pr(>|t|)"]
+p_val <- anova_M4["Condition", "Pr(>F)"]
 
 M4_annot <- dplyr::case_when(
   p_val < 0.001 ~ "***",
@@ -54,13 +55,13 @@ p_A <- ggplot(plot_data_M4, aes(x = Condition, y = omega, fill = Condition)) +
            color = "gray50", linewidth = 0.4) +
   annotate("text",
            x = 1.5, y = y_upper_M4,
-           label = "ns",
+           label = M4_annot,
            size = 5, fontface = "bold", color = "gray20") +
   scale_fill_manual(values = color_condition, name = "Lifestyle") +
   scale_y_continuous(limits = c(0, y_upper_M4 * 1.05), expand = c(0, 0)) +
   labs(
     title = expression(bold("Free-ratio model (M4)")),
-    subtitle = paste0("\u03c9 ~ Condition + (1 | TaxonPair) + (1 | SOG), p = ", signif(p_val, 3)),
+    subtitle = paste0("\u03c9 ~ Condition + TaxonPair + (1 | SOG), p = ", signif(p_val, 3)),
     x = NULL,
     y = expression(dN/dS ~ (omega))
   ) +
@@ -115,11 +116,12 @@ M2_gene_omega <- M2_tips_filter %>%
   dplyr::select(SOG, Condition, omega) %>%
   distinct(SOG, Condition, .keep_all = TRUE)
 
-# Paired Wilcoxon: foreground (lichen) vs background (free-living) per gene
+# Model to test for condition effect
 model_M2 <- lmer(omega ~ Condition  + (1 | SOG), data = M2_gene_omega)
-anova(model_M2)
+anova_M2 <- anova(model_M2)
+print(anova_M2)
 
-p_val <- summary(model_M2)$coefficients["ConditionLichen-forming", "Pr(>|t|)"]
+p_val <- anova_M2["Condition", "Pr(>F)"]
 
 M2_annot <- dplyr::case_when(
   p_val < 0.001 ~ "***",
