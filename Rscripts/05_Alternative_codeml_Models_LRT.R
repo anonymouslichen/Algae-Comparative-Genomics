@@ -8,8 +8,8 @@ library(tidyr)
 library(stringr)
 library(readr)
 
-# Set working directory (adjust as needed)
-setwd("~/Desktop/Claude")
+# Set working directory
+setwd("~/Desktop/Algae-Comparative-Genomics/")
 
 ################################################################################
 # 1. LOAD AND PREPARE CODEML DATA
@@ -65,8 +65,8 @@ results <- model_lnL %>%
 
 # Create a function to calculate the percentage of genes with p-value < 0.01
 calculate_percentage <- function(data) {
-  # Filter genes with p-value < 0.01
-  significant_genes <- subset(data, p_value < 0.01)
+  # Filter genes with p-value < 0.05
+  significant_genes <- subset(data, p_value < 0.05)
   
   # Calculate percentage
   percentage <- (nrow(significant_genes) / nrow(data)) * 100
