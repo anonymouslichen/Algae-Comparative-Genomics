@@ -47,9 +47,14 @@ make_volcano <- function(pair_name, df, colors) {
       x = "ln(K)",
       y = expression(-log[10](p[adj]))
     ) +
-    theme_minimal(base_size = 11) +
+    theme_minimal(base_size = 12) +
     theme(
-      plot.title = element_text(size = 11, face = "bold.italic"),
+      legend.position  = "bottom",
+      plot.title = element_text(face = "bold.italic", size = 16),
+      axis.text.x      = element_text(size = 12),
+      axis.text.y      = element_text(size = 12),
+      axis.title.x     = element_text(size = 15),
+      axis.title.y     = element_text(size = 15),
       panel.grid.minor = element_blank(),
       plot.margin = margin(5, 8, 5, 5)
     )
@@ -61,17 +66,21 @@ p_tre <- make_volcano("Trebouxia",     relax_focal_filtered, color_result)
 p_ast <- make_volcano("Asterochloris", relax_focal_filtered, color_result)
 
 # Combine into 2x2 grid with shared legend
-fig4_with_legend <- (p_coc | p_sym) / (p_tre | p_ast) +
-  plot_layout(guides = "collect") +
-  plot_annotation(tag_levels = "A") &
-  theme(legend.position = "bottom",
-        legend.title = element_text(size = 12, face = "bold"),
-        legend.text = element_text(size = 12))
+fig4 <- (p_coc | p_sym) / (p_tre | p_ast) +
+  plot_layout(guides = "collect")  &
+  theme(
+    legend.position = "bottom",
+    legend.text  = element_text(size = 14),
+    legend.title = element_text(size = 14, face = "bold"),
+    legend.key.size = unit(1, "cm")
+  )
 
-fig4_with_legend
+fig4 <- fig4 + plot_annotation(tag_levels = "A", theme = theme(plot.tag = element_text(size = 25, face = "bold")))
 
-ggsave("figures/Figure4_new.png", fig4_with_legend,
-       width = 14, height = 10, dpi = 600)
-ggsave("figures/Figure4_new.pdf", fig4_with_legend,
-       width = 14, height = 10)
+fig4
+
+ggsave("figures/Figure4_new.png", fig4,
+       width = 15, height =10, dpi = 600)
+ggsave("figures/Figure4_new.pdf", fig4,
+       width = 15, height = 10)
 
