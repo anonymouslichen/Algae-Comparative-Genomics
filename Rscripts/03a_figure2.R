@@ -145,7 +145,8 @@ make_rate_panel <- function(df, yvar, stats_df, title, ylab) {
       panel.grid.minor = element_blank(),
       panel.grid.major.x = element_blank(),
       axis.text.x = element_text(face = "italic", size = 16),
-      axis.text.y = element_text(size = 15),
+      axis.text.y      = element_text(size = 12),
+      axis.title.y     = element_text(size = 15),
       plot.title = element_text(size = 16, face = "bold"),
       plot.margin = margin(5, 8, 2, 5)
     )
@@ -189,6 +190,6 @@ fig2
 ggsave("figures/Figure2_new.png", fig2,
        width = 15, height = 13, dpi = 300)
 ggsave("figures/Figure2_new.pdf", fig2,
-       width = 15, height = 11)
+       width = 15, height = 13)
 
 

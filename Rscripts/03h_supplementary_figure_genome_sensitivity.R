@@ -297,7 +297,7 @@ forest_plot <- ggplot(
     x = "Estimated difference (Lichen-forming \u2212 Free-living)",
     y = NULL
   ) +
-  theme_bw(base_size = 11) +
+  theme_bw(base_size = 12) +
   theme(
     strip.background   = element_rect(fill = "grey94", color = "grey70"),
     strip.text.x       = element_text(face = "bold",        size = 11),

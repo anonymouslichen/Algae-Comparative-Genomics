@@ -241,14 +241,14 @@ forest_plot <- ggplot(sensitivity_results,
     legend.box         = "vertical",
     panel.grid.minor   = element_blank(),
     panel.grid.major.y = element_blank(),
-    plot.title         = element_text(face = "bold", size = 14)
+    plot.title         = element_text(face = "bold", size = 16)
   )
 
 print(forest_plot)
 
 # Save plot
 ggsave("figures/FigureS3_sensitivity_forest_plot.pdf", forest_plot, 
-       width = 13, height = 10, dpi = 300)
+       width = 15, height = 10, dpi = 300)
 ggsave("figures/FigureS3_sensitivity_forest_plot.png", forest_plot, 
-       width = 13, height = 10, dpi = 300)
+       width = 15, height = 10, dpi = 300)
 
