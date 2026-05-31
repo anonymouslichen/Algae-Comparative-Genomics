@@ -126,9 +126,9 @@ p3b <- ggplot(centroids_lme,
   scale_color_manual(values = color_condition, name = "Lifestyle") +
   facet_wrap(~ PairLabel, nrow = 2, scales = "free") +
   labs(
-    title = "Neutrality Plot: GC12 vs GC3",
-    x     = "GC3",
-    y     = "GC12"
+    title = "Neutrality Plot: \u0394GC12 vs \u0394GC3",
+    x     = "\u0394GC3",
+    y     = "\u0394GC12"
   ) +
   theme_minimal(base_size = 12) +
   theme(
