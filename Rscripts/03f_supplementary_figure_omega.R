@@ -70,10 +70,13 @@ p_A <- ggplot(plot_data_M4, aes(x = Condition, y = omega, fill = Condition)) +
     legend.position = "none",
     panel.grid.minor = element_blank(),
     panel.grid.major.x = element_blank(),
-    axis.text.x = element_text(size = 11),
-    plot.title = element_text(size = 13, face = "bold"),
-    plot.subtitle = element_text(size = 10, color = "gray40"),
-    plot.margin = margin(5, 15, 2, 5)
+    axis.text.x = element_text(size = 16, face = "bold"),
+    axis.text.y      = element_text(size = 12),
+    axis.title.x     = element_text(size = 15),
+    axis.title.y     = element_text(size = 15),
+    plot.title         = element_text(size = 16, face = "bold"),
+    plot.subtitle = element_text(size = 13, color = "gray30"),
+    plot.margin = margin(5, 8, 2, 5)
   )
 p_A
 
@@ -161,10 +164,13 @@ p_B <- ggplot(plot_data_M2, aes(x = Condition, y = omega, fill = Condition)) +
     legend.position = "bottom",
     panel.grid.minor = element_blank(),
     panel.grid.major.x = element_blank(),
-    axis.text.x = element_text(size = 11),
-    plot.title = element_text(size = 13, face = "bold"),
-    plot.subtitle = element_text(size = 10, color = "gray40"),
-    plot.margin = margin(5, 15, 2, 5)
+    axis.text.x = element_text(size = 16, face = "bold"),
+    axis.text.y      = element_text(size = 12),
+    axis.title.x     = element_text(size = 15),
+    axis.title.y     = element_text(size = 15),
+    plot.title         = element_text(size = 16, face = "bold"),
+    plot.subtitle = element_text(size = 13, color = "gray30"),
+    plot.margin = margin(5, 8, 2, 5)
   )
 
 p_B
@@ -175,20 +181,24 @@ p_B
 
 fig_supp <- (p_A | p_B) +
   plot_layout(guides = "collect") &
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom",
+        legend.text  = element_text(size = 14),
+        legend.title = element_text(size = 14, face = "bold"),
+        legend.key.size = unit(1, "cm")
+        )
 
 fig_supp <- fig_supp +
   plot_annotation(
     tag_levels = "A",
     title = "Effect of lifestyle on \u03c9 under M4 and M2 models",
-    theme = theme(plot.tag = element_text(size = 18, face = "bold"),
-                  plot.title = element_text(face = "bold"))
+    theme = theme(plot.tag = element_text(size = 25, face = "bold"),
+                  plot.title = element_text(size = 20, face = "bold"))
   )
 
 fig_supp
 
 ggsave("figures/FigureS2_omega_models.png", fig_supp,
-       width = 10, height = 6, dpi = 600)
+       width = 15, height = 9, dpi = 300)
 ggsave("figures/FigureS2_omega_models.pdf", fig_supp,
-       width = 10, height = 6)
+       width = 15, height = 9)
 

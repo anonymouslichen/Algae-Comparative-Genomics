@@ -117,7 +117,7 @@ M4_codeml_filter$Condition <- factor(
   M4_codeml_filter$Condition,
   levels = c("Lichen-forming", "Free-living")
 )
-M4_codeml_filter$TaxonPair <- factor(M4_codeml_filter$TaxonPair)
+M4_codeml_filter$TaxonPair <- as.character(M4_codeml_filter$TaxonPair)
 
 # Load phylogenetic tree
 tree <- read.tree("data/consensus_tree.newick.txt")

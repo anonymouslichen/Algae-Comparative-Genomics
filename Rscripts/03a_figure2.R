@@ -27,7 +27,7 @@ pair_order <- c("Coccomyxa", "Symbiochloris",
 plot_data <- M4_codeml_filter %>%
   filter(TaxonPair %in% pair_order) %>%
   mutate(
-    PairLabel = factor(pair_labels[TaxonPair], levels = pair_labels[pair_order]),
+    PairLabel = factor(pair_labels[as.character(TaxonPair)], levels = pair_labels[pair_order]),
     Condition = factor(Condition, levels = c("Lichen-forming", "Free-living"))
   )
 
@@ -36,18 +36,13 @@ plot_data <- M4_codeml_filter %>%
 ################################################################################
 
 # Read pre-computed contrasts from linear model / emmeans
-contrasts_rates <- read.csv("analysis_results/absolute_rates_contrasts.csv")
 contrasts_dnds  <- read.csv("analysis_results/dnds_contrasts.csv")
-contrasts_all   <- rbind(
-  contrasts_rates[, c("TaxonPair", "estimate", "p.value", "Metric")],
-  contrasts_dnds[, c("TaxonPair", "estimate", "p.value", "Metric")]
-)
 
 make_stats <- function(contrasts_df, metric_name, digits = 4) {
   contrasts_df %>%
     filter(Metric == metric_name) %>%
     mutate(
-      PairLabel = factor(pair_labels[TaxonPair], levels = pair_labels[pair_order]),
+      PairLabel = factor(pair_labels[as.character(TaxonPair)], levels = pair_labels[pair_order]),
       sig_label = case_when(
         p.value < 0.001 ~ "***",
         p.value < 0.01  ~ "**",
@@ -58,9 +53,9 @@ make_stats <- function(contrasts_df, metric_name, digits = 4) {
     )
 }
 
-stats_dN    <- make_stats(contrasts_all, "dN", digits = 4)
-stats_dS    <- make_stats(contrasts_all, "dS", digits = 4)
-stats_omega <- make_stats(contrasts_all, "omega", digits = 4)
+stats_dN    <- make_stats(contrasts_dnds, "dN", digits = 4)
+stats_dS    <- make_stats(contrasts_dnds, "dS", digits = 4)
+stats_omega <- make_stats(contrasts_dnds, "omega", digits = 4)
 
 ################################################################################
 #  PANEL A: Phylogeny 
@@ -158,12 +153,15 @@ make_rate_panel <- function(df, yvar, stats_df, title, ylab) {
 p2b <- make_rate_panel(plot_data, "omega", stats_omega,
                        expression(bold("dN/dS ("*omega*")")),
                        expression(dN/dS~(omega)))
+p2b
 
 p2c <- make_rate_panel(plot_data, "dN", stats_dN,
                        "Nonsynonymous Rate (dN)", "dN")
+p2c
 
 p2d <- make_rate_panel(plot_data, "dS", stats_dS,
                        "Synonymous Rate (dS)", "dS")
+p2d
 
 
 ################################################################################
