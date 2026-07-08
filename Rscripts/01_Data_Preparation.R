@@ -120,7 +120,7 @@ M4_codeml_filter$Condition <- factor(
 M4_codeml_filter$TaxonPair <- as.character(M4_codeml_filter$TaxonPair)
 
 # Load phylogenetic tree
-tree <- read.tree("data/consensus_tree.newick.txt")
+tree <- read.tree("data/consensus_tree.txt")
 print(tree$tip.label)
 
 ################################################################################

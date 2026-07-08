@@ -48,6 +48,41 @@ print(emm_omega_pooled)
 contrast_omega_pooled <- contrast(emm_omega_pooled, method = "pairwise")
 print(contrast_omega_pooled)
 
+# ---- Wilcoxon signed-rank test: standard paired approach (vs. mixed model) ----
+# Non-parametric paired comparison of lichen vs. free-living omega within each
+# TaxonPair, matched by gene (SOG). Complements the lmer interaction model above.
+
+# Check the exact Condition labels first; adjust the names below to match your data.
+# print(unique(M4_codeml_filter$Condition))
+
+wilcox_omega_bypair <- M4_codeml_filter %>%
+  dplyr::select(SOG, TaxonPair, Condition, omega) %>%
+  # average any duplicate SOG x Condition rows so pivot gives one value per cell
+  group_by(TaxonPair, SOG, Condition) %>%
+  pivot_wider(names_from = Condition, values_from = omega) %>%
+  drop_na() %>%                       # keep only genes present in BOTH conditions
+  group_by(TaxonPair) %>%
+  summarise(
+    n_pairs = n(),
+    median_Lichen = median(`Lichen-forming`),
+    median_Free   = median(`Free-living`),
+    median_diff   = median(`Lichen-forming` - `Free-living`),
+    test = list(wilcox.test(`Lichen-forming`, `Free-living`, paired = TRUE)),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    V_statistic = map_dbl(test, "statistic"),
+    p_value     = map_dbl(test, "p.value"),
+    p_adj       = p.adjust(p_value, method = "bonferroni")
+  ) %>%
+  dplyr::select(-test)
+
+print(wilcox_omega_bypair)
+
+write.csv(wilcox_omega_bypair,
+          "analysis_results/wilcoxon_omega_bypair.csv",
+          row.names = FALSE)
+
 
 ################################################################################
 # ANALYSIS 2: ABSOLUTE RATES (dN and dS)
@@ -104,6 +139,43 @@ dnds_results <- bind_rows(
 write.csv(dnds_results,
           "analysis_results/dnds_contrasts.csv",
           row.names = FALSE)
+
+# ---- Wilcoxon signed-rank test: standard paired approach (vs. mixed model) ----
+# Non-parametric paired comparison of lichen vs. free-living omega within each
+# TaxonPair, matched by gene (SOG). Complements the lmer interaction model above.
+
+# Check the exact Condition labels first; adjust the names below to match your data.
+# print(unique(M4_codeml_filter$Condition))
+
+wilcox_dS_bypair <- M4_codeml_filter %>%
+  dplyr::select(SOG, TaxonPair, Condition, dS) %>%
+  # average any duplicate SOG x Condition rows so pivot gives one value per cell
+  group_by(TaxonPair, SOG, Condition) %>%
+  pivot_wider(names_from = Condition, values_from = dS) %>%
+  drop_na() %>%                       # keep only genes present in BOTH conditions
+  group_by(TaxonPair) %>%
+  summarise(
+    n_pairs = n(),
+    median_Lichen = median(`Lichen-forming`),
+    median_Free   = median(`Free-living`),
+    median_diff   = median(`Lichen-forming` - `Free-living`),
+    test = list(wilcox.test(`Lichen-forming`, `Free-living`, paired = TRUE)),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    V_statistic = map_dbl(test, "statistic"),
+    p_value     = map_dbl(test, "p.value"),
+    p_adj       = p.adjust(p_value, method = "bonferroni")
+  ) %>%
+  dplyr::select(-test)
+
+print(wilcox_dS_bypair)
+
+write.csv(wilcox_omega_bypair,
+          "analysis_results/wilcoxon_omega_bypair.csv",
+          row.names = FALSE)
+
+
 
 ################################################################################
 # ANALYSIS 2B: PHYLOGENETIC DISTANCE vs dS CORRELATION

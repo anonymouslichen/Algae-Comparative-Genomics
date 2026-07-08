@@ -123,12 +123,14 @@ p3b <- ggplot(centroids_lme,
   geom_errorbarh(aes(xmin = GC3_lo, xmax = GC3_hi),
                  height = 0.003, linewidth = 0.7) +
   geom_point(size = 4, shape = 21, fill = "white", stroke = 1.8) +
+  scale_x_continuous(limits = c(0.58, 0.80)) +
+  scale_y_continuous(limits = c(0.48, 0.54)) +
   scale_color_manual(values = color_condition, name = "Lifestyle") +
   facet_wrap(~ PairLabel, nrow = 2, scales = "free") +
   labs(
-    title = "Neutrality Plot: \u0394GC12 vs \u0394GC3",
-    x     = "\u0394GC3",
-    y     = "\u0394GC12"
+    title = "Neutrality Plot: GC12 vs GC3",
+    x     = "GC3",
+    y     = "GC12"
   ) +
   theme_minimal(base_size = 12) +
   theme(
@@ -164,4 +166,10 @@ ggsave("figures/Figure3_new.png", fig3,
        width = 15, height = 9, dpi = 600)
 ggsave("figures/Figure3_new.pdf", fig3,
        width = 15, height = 9)
+
+ggsave("/Users/Abigail/Desktop/FigureENC.png", p3a,
+       width = 9, height = 9, dpi = 600)
+ggsave("/Users/Abigail/Desktop/FigureGC3.png", p3b,
+       width = 9, height = 9, dpi = 600)
+
 

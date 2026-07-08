@@ -61,7 +61,7 @@ stats_omega <- make_stats(contrasts_dnds, "omega", digits = 4)
 #  PANEL A: Phylogeny 
 ################################################################################
 
-tree_text <- readLines("data/consensus_tree.newick.txt", warn = FALSE)
+tree_text <- readLines("data/consensus_tree.txt", warn = FALSE)
 tree_text_std <- gsub("):(\\d+\\.\\d+)\\[(\\d+\\.\\d+)\\]", ")\\2:\\1", tree_text)
 tree <- read.tree(text = tree_text_std)
 
@@ -92,7 +92,7 @@ p2a <- ggtree(tree_grouped, aes(color = group), size = 1.4,
               size = 6.5, offset = 0.02, align = TRUE, color = "black",
               linetype = "dashed", linesize = 0.3, linecolour = "gray70") +
   geom_nodelab(aes(label = ifelse(!is.na(label) & label != "",
-                                   paste0(round(as.numeric(label) * 100), "%"), "")),
+                                   paste0(round(as.numeric(label)), "%"), "")),
                size = 5, hjust = 1.1, vjust = -0.4, color = "gray40") +
   scale_color_manual(
     values = c("Lichen-forming" = col_lichen, "Free-living" = col_free),

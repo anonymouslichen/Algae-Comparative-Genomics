@@ -64,6 +64,7 @@ p_coc <- make_volcano("Coccomyxa",     relax_focal_filtered, color_result)
 p_sym <- make_volcano("Symbiochloris", relax_focal_filtered, color_result)
 p_tre <- make_volcano("Trebouxia",     relax_focal_filtered, color_result)
 p_ast <- make_volcano("Asterochloris", relax_focal_filtered, color_result)
+p_coc
 
 # Combine into 2x2 grid with shared legend
 fig4 <- (p_coc | p_sym) / (p_tre | p_ast) +
@@ -84,3 +85,5 @@ ggsave("figures/Figure4_new.png", fig4,
 ggsave("figures/Figure4_new.pdf", fig4,
        width = 15, height = 10)
 
+ggsave("/Users/Abigail/Desktop/RELAX.png", fig4,
+       width = 9, height = 9, dpi = 600)

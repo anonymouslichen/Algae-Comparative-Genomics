@@ -1,0 +1,8 @@
+"Taxa","Condition","n_genes","mean_dS","median_dS","sd_dS","q25_dS","q75_dS"
+"Symbiochloris reticulata","Lichen-forming",185,1.3215,1.2548,0.4619,0.9628,1.5957
+"Coccomyxa viridis","Lichen-forming",185,1.0324,0.9137,0.4675,0.7303,1.2195
+"Asterochloris erici","Lichen-forming",185,1.2997,1.1881,0.4881,0.9311,1.5617
+"Trebouxia sp.C0010","Lichen-forming",185,1.778,1.701,0.5035,1.4129,2.1054
+"Symbiochloris irregularis","Free-living",185,1.1456,1.0037,0.5349,0.7938,1.3763
+"Coccomyxa subellipsoidea","Free-living",185,1.1508,1.0074,0.5429,0.7898,1.3832
+"Myrmecia bisecta","Free-living",185,1.3469,1.2448,0.542,0.9744,1.6508
