@@ -171,8 +171,8 @@ wilcox_dS_bypair <- M4_codeml_filter %>%
 
 print(wilcox_dS_bypair)
 
-write.csv(wilcox_omega_bypair,
-          "analysis_results/wilcoxon_omega_bypair.csv",
+write.csv(wilcox_dS_bypair,
+          "analysis_results/wilcoxon_dS_bypair.csv",
           row.names = FALSE)
 
 
