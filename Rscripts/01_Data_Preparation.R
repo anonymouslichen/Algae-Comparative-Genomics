@@ -313,14 +313,9 @@ relax_focal$Pair <- factor(
 relax_focal_filtered <- relax_focal %>%
   filter(is.finite(ln_K), abs(ln_K) < 10)
 
-################################################################################
-# 6. LOAD MCDONALD-KREITMAN DATA
-################################################################################
-
-MK_results <- read.csv("data/mk_results.csv")
 
 ################################################################################
-# 7. LOAD GO ANNOTATIONS
+# 6. LOAD GO ANNOTATIONS
 ################################################################################
 
 annotations <- read_tsv("data/SOGs_annotated.tsv", col_names = FALSE)
@@ -357,7 +352,7 @@ names(gene2GO_list) <- allGenes$SOG
 
 
 ################################################################################
-# 8. SAVE PREPARED DATA
+# 7. SAVE PREPARED DATA
 ################################################################################
 
 save(
@@ -369,10 +364,8 @@ save(
   relax_all,
   relax_focal,
   relax_focal_filtered,
-  MK_results,
   annotations,
   gene2GO_list,
   taxa_order,
   file = "Rscripts/prepared_data.RData"
 )
-
