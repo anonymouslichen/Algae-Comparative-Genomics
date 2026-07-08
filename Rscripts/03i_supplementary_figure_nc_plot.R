@@ -3,7 +3,7 @@ library(dplyr)
 library(patchwork)
 
 setwd("~/Desktop/Algae-Comparative-Genomics/")
-load("Rscripts:Data/prepared_data.RData")
+load("Rscripts/prepared_data.RData")
 
 col_lichen <- "#1bbc9b"
 col_free   <- "#dca81b"
