@@ -2,7 +2,7 @@ library(ggplot2)
 library(dplyr)
 library(patchwork)
 
-setwd("~/Desktop/Claude")
+setwd("~/Desktop/Algae-Comparative-Genomics/")
 load("Rscripts:Data/prepared_data.RData")
 
 col_lichen <- "#1bbc9b"
