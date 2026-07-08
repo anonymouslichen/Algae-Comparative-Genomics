@@ -132,8 +132,6 @@ codon <- read.csv("data/codon_bias_gc_enc.csv")
 # Rename first column
 colnames(codon)[1] <- "SOG"
 
-missing_SOGs <- setdiff(codon_SOGs, paml_SOGs)
-
 # Add metadata
 codon <- codon %>%
   mutate(
