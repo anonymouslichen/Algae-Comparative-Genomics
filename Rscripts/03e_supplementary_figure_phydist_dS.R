@@ -7,7 +7,7 @@ library(ggplot2)
 library(dplyr)
 library(ggrepel)
 
-setwd("~/Desktop/Claude")
+setwd("~/Desktop/Algae-Comparative-Genomics/")
 dir.create("figures", showWarnings = FALSE)
 
 # Pair labels (consistent with other figures)
