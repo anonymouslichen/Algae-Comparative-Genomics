@@ -465,7 +465,6 @@ save(
   relax_all,
   relax_focal,
   relax_focal_filtered,
-  MK_results,
   annotations,
   gene2GO_list,
   taxa_order,
