@@ -3,20 +3,19 @@
 ################################################################################
 
 # Load required libraries
-library(dplyr) 
+library(dplyr)
 library(tidyr)
 library(stringr)
 library(readr)
 library(ape)
+library(here)
 
-# Set working directory (adjust as needed)
-setwd("~/Desktop/Algae-Comparative-Genomics/")
 
 ################################################################################
 # 1. LOAD AND PREPARE CODEML DATA
 ################################################################################
 
-codeml <- read.csv("data/compiled_results_pooled.csv")
+codeml <- read.csv(here("data", "compiled_results_pooled.csv"))
 
 # Add degrees of freedom based on model
 codeml <- codeml %>%
@@ -120,14 +119,14 @@ M4_codeml_filter$Condition <- factor(
 M4_codeml_filter$TaxonPair <- as.character(M4_codeml_filter$TaxonPair)
 
 # Load phylogenetic tree
-tree <- read.tree("data/consensus_tree.txt")
+tree <- read.tree(here("data", "consensus_tree.txt"))
 print(tree$tip.label)
 
 ################################################################################
 # 4. LOAD AND PREPARE CODON BIAS DATA
 ################################################################################
 
-codon <- read.csv("data/codon_bias_gc_enc.csv")
+codon <- read.csv(here("data", "codon_bias_gc_enc.csv"))
 
 # Rename first column
 colnames(codon)[1] <- "SOG"
@@ -261,22 +260,22 @@ load_relax_results <- function(filepath, lichen_species) {
 
 # Load all 4 RELAX analyses
 relax_coccomyxa <- load_relax_results(
-  "data/RELAX_analysis_output_paired_Coc.csv",
+  here("data", "RELAX_analysis_output_paired_Coc.csv"),
   "Coccomyxa viridis"
 )
 
 relax_symbiochloris <- load_relax_results(
-  "data/RELAX_analysis_output_paired_Sym.csv",
+  here("data", "RELAX_analysis_output_paired_Sym.csv"),
   "Symbiochloris reticulata"
 )
 
 relax_trebouxia <- load_relax_results(
-  "data/RELAX_analysis_output_paired_Tre.csv",
+  here("data", "RELAX_analysis_output_paired_Tre.csv"),
   "Trebouxia sp.C0010"
 )
 
 relax_asterochloris <- load_relax_results(
-  "data/RELAX_analysis_output_paired_Ast.csv",
+  here("data", "RELAX_analysis_output_paired_Ast.csv"),
   "Asterochloris erici"
 )
 
@@ -318,7 +317,7 @@ relax_focal_filtered <- relax_focal %>%
 # 6. LOAD GO ANNOTATIONS
 ################################################################################
 
-annotations <- read_tsv("data/SOGs_annotated.tsv", col_names = FALSE)
+annotations <- read_tsv(here("data", "SOGs_annotated.tsv"), col_names = FALSE)
 
 colnames(annotations) <- c(
   "SOG", "Protein_accession", "Seq_MD5_digest",
@@ -367,5 +366,6 @@ save(
   annotations,
   gene2GO_list,
   taxa_order,
-  file = "Rscripts/prepared_data.RData"
+  file = here("Rscripts", "prepared_data.RData")
 )
+

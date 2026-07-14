@@ -3,10 +3,11 @@ library(ggtree)
 library(ggplot2)
 library(dplyr)
 library(patchwork)
+library(here)
 
-setwd("~/Desktop/Algae-Comparative-Genomics/")
-dir.create("figures", showWarnings = FALSE)
-load("Rscripts/analysis_complete.RData")
+# Paths resolved relative to the project root via here::here()
+dir.create(here("figures"), showWarnings = FALSE)
+load(here("Rscripts", "analysis_complete.RData"))
 
 # Color scheme
 col_lichen <- "#1bbc9b"
@@ -36,7 +37,7 @@ plot_data <- M4_codeml_filter %>%
 ################################################################################
 
 # Read pre-computed contrasts from linear model / emmeans
-contrasts_dnds  <- read.csv("analysis_results/dnds_contrasts.csv")
+contrasts_dnds  <- read.csv(here("analysis_results", "dnds_contrasts.csv"))
 
 make_stats <- function(contrasts_df, metric_name, digits = 4) {
   contrasts_df %>%
@@ -61,7 +62,7 @@ stats_omega <- make_stats(contrasts_dnds, "omega", digits = 4)
 #  PANEL A: Phylogeny 
 ################################################################################
 
-tree_text <- readLines("data/consensus_tree.txt", warn = FALSE)
+tree_text <- readLines(here("data", "consensus_tree.txt"), warn = FALSE)
 tree_text_std <- gsub("):(\\d+\\.\\d+)\\[(\\d+\\.\\d+)\\]", ")\\2:\\1", tree_text)
 tree <- read.tree(text = tree_text_std)
 
@@ -147,7 +148,7 @@ make_rate_panel <- function(df, yvar, stats_df, title, ylab) {
     )
 }
 
-#################################################################################
+################################################################################
 # 3 PANELS: B, C, D 
 ################################################################################
 p2b <- make_rate_panel(plot_data, "omega", stats_omega,
@@ -185,9 +186,9 @@ fig2 <- fig2 +
 
 fig2
 
-ggsave("figures/Figure2_new.png", fig2,
+ggsave(here("figures", "Figure2_new.png"), fig2,
        width = 15, height = 13, dpi = 300)
-ggsave("figures/Figure2_new.pdf", fig2,
+ggsave(here("figures", "Figure2_new.pdf"), fig2,
        width = 15, height = 13)
 
 

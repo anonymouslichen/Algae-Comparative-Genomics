@@ -2,10 +2,12 @@ library(ggplot2)
 library(dplyr)
 library(tidyr)
 library(patchwork)
+library(here)
 
-setwd("~/Desktop/Algae-Comparative-Genomics/")
-load("Rscripts/analysis_complete.RData")
-load("Rscripts/prepared_data.RData")
+# Paths resolved relative to the project root via here::here()
+dir.create(here("figures"), showWarnings = FALSE)
+load(here("Rscripts", "analysis_complete.RData"))
+load(here("Rscripts", "prepared_data.RData"))
 
 # Colors and labels
 col_lichen <- "#1bbc9b"
@@ -33,7 +35,7 @@ codon_pairs <- codon_myrmecia_dup %>%
 # Significance annotations from LME contrasts (figure 2 style)
 ################################################################################
 
-codon_contrasts <- read.csv("analysis_results/codon_bias_contrasts.csv")
+codon_contrasts <- read.csv(here("analysis_results", "codon_bias_contrasts.csv"))
 
 make_stats_codon <- function(metric_name) {
   codon_contrasts %>%
@@ -162,14 +164,14 @@ fig3 <- (p3a | p3b) +
 
 fig3 <- fig3 + plot_annotation(tag_levels = "A", theme = theme(plot.tag = element_text(size = 25, face = "bold")))
 
-ggsave("figures/Figure3_new.png", fig3,
+ggsave(here("figures", "Figure3_new.png"), fig3,
        width = 15, height = 9, dpi = 600)
-ggsave("figures/Figure3_new.pdf", fig3,
+ggsave(here("figures", "Figure3_new.pdf"), fig3,
        width = 15, height = 9)
 
-ggsave("/Users/Abigail/Desktop/FigureENC.png", p3a,
+ggsave(here("figures", "FigureENC.png"), p3a,
        width = 9, height = 9, dpi = 600)
-ggsave("/Users/Abigail/Desktop/FigureGC3.png", p3b,
+ggsave(here("figures", "FigureGC3.png"), p3b,
        width = 9, height = 9, dpi = 600)
 
 

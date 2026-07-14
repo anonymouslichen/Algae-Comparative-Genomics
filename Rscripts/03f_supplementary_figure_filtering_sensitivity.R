@@ -1,13 +1,5 @@
 ################################################################################
 # Sensitivity Analysis: Effect of dS filtering thresholds on lmer/emmeans results
-# 
-# Purpose: Test robustness of reported findings (dN, dS, omega contrasts) 
-#          across different dS upper-bound filtering thresholds.
-#          Fixed filters: dS <= 0.01 removed, omega >= 10 removed, dN > 2 removed
-#          Varied filter: dS upper bound (2, 3, 5, Inf)
-#
-# Reference: Villanueva-Cañas et al. 2013 (original recommendation dS > 2)
-# Reported analysis uses: dS <= 0.01 | dS > 3 | dN > 2 | omega >= 10
 ################################################################################
 
 # Load required libraries
@@ -19,16 +11,17 @@ library(lme4)
 library(emmeans)
 library(ggplot2)
 library(purrr)
+library(here)
 
-# Set working directory (adjust as needed)
-setwd("~/Desktop/Algae-Comparative-Genomics/")
+# Paths resolved relative to the project root via here::here()
+dir.create(here("figures"), showWarnings = FALSE)
 
 ################################################################################
 # 1. LOAD DATA
 ################################################################################
 
 # Load prepared data
-load("Rscripts/prepared_data.RData")
+load(here("Rscripts", "prepared_data.RData"))
 
 # Duplicate Myrmecia bisecta rows for both comparisons
 myrmecia_rows <- M4_codeml %>% 
@@ -174,12 +167,12 @@ combo_levels <- sensitivity_results %>%
 sensitivity_results <- sensitivity_results %>%
   mutate(filter_combo = factor(filter_combo, levels = combo_levels))
 
-# Nicer response labels for facets
+# Response labels for facets
 response_labels <- c("dN" = "\u0394dN",
                      "dS" = "\u0394dS",
                      "omega" = "\u0394\u03c9 (dN/dS)")
 
-# Nicer TaxonPair labels for facet rows
+# TaxonPair labels for facet rows
 taxonpair_labels <- c("Asterochloris_vs_Myrmecia" = "Asterochloris",
                       "Trebouxia_vs_Myrmecia"     = "Trebouxia")
 
@@ -247,8 +240,8 @@ forest_plot <- ggplot(sensitivity_results,
 print(forest_plot)
 
 # Save plot
-ggsave("figures/FigureS3_sensitivity_forest_plot.pdf", forest_plot, 
+ggsave(here("figures", "FigureS3_sensitivity_forest_plot.pdf"), forest_plot,
        width = 15, height = 10, dpi = 300)
-ggsave("figures/FigureS3_sensitivity_forest_plot.png", forest_plot, 
+ggsave(here("figures", "FigureS3_sensitivity_forest_plot.png"), forest_plot,
        width = 15, height = 10, dpi = 300)
 

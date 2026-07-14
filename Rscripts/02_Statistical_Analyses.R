@@ -12,11 +12,13 @@ library(broom)
 library(purrr)
 library(ggResidpanel)
 library(ape)
+library(here)
 
-setwd("/Users/Abigail/Desktop/Algae-Comparative-Genomics")
+# Ensure the output directory exists before writing results
+dir.create(here("analysis_results"), showWarnings = FALSE)
 
 # Load prepared data
-load("Rscripts/prepared_data.RData")
+load(here("Rscripts", "prepared_data.RData"))
 
 ################################################################################
 # ANALYSIS 1: dN/dS COMPARISONS
@@ -80,7 +82,7 @@ wilcox_omega_bypair <- M4_codeml_filter %>%
 print(wilcox_omega_bypair)
 
 write.csv(wilcox_omega_bypair,
-          "analysis_results/wilcoxon_omega_bypair.csv",
+          here("analysis_results", "wilcoxon_omega_bypair.csv"),
           row.names = FALSE)
 
 
@@ -137,7 +139,7 @@ dnds_results <- bind_rows(
 )
 
 write.csv(dnds_results,
-          "analysis_results/dnds_contrasts.csv",
+          here("analysis_results", "dnds_contrasts.csv"),
           row.names = FALSE)
 
 # ---- Wilcoxon signed-rank test: standard paired approach (vs. mixed model) ----
@@ -172,7 +174,7 @@ wilcox_dS_bypair <- M4_codeml_filter %>%
 print(wilcox_dS_bypair)
 
 write.csv(wilcox_dS_bypair,
-          "analysis_results/wilcoxon_dS_bypair.csv",
+          here("analysis_results", "wilcoxon_dS_bypair.csv"),
           row.names = FALSE)
 
 
@@ -231,7 +233,7 @@ phydist_vs_dS <- pair_comparisons %>%
 
 print(phydist_vs_dS)
 
-write.csv(phydist_vs_dS, "analysis_results/phydist_vs_dS.csv", row.names = FALSE)
+write.csv(phydist_vs_dS, here("analysis_results", "phydist_vs_dS.csv"), row.names = FALSE)
 
 
 ################################################################################
@@ -253,7 +255,7 @@ relax_summary <- relax_focal_filtered %>%
   )
 
 print(relax_summary)
-write.csv(relax_summary, "analysis_results/relax_summary.csv", row.names = FALSE)
+write.csv(relax_summary, here("analysis_results", "relax_summary.csv"), row.names = FALSE)
 
 # Binomial test on intensified/relaxed contingency table
 p_vals <- numeric(nrow(relax_summary))
@@ -355,7 +357,7 @@ gc3_results <- as.data.frame(contrasts_GC3_bypair) %>% mutate(Metric = "GC3")
 gc12_results <- as.data.frame(contrasts_GC12_bypair) %>% mutate(Metric = "GC12")
 
 codon_results <- bind_rows(enc_results, gc3_results, gc12_results)
-write.csv(codon_results, "analysis_results/codon_bias_contrasts.csv",
+write.csv(codon_results, here("analysis_results", "codon_bias_contrasts.csv"),
           row.names = FALSE)
 
 
@@ -425,7 +427,7 @@ intensified_table <- intensified %>%
 
 print(intensified_table)
 write.csv(intensified_table,
-          "analysis_results/intensified_genes_GO_table.csv",
+          here("analysis_results", "intensified_genes_GO_table.csv"),
           row.names = FALSE)
 
 # ── GO annotation table for relaxed genes ──────────
@@ -450,7 +452,7 @@ relaxed_table <- relaxed %>%
 
 print(relaxed_table)
 write.csv(relaxed_table,
-          "analysis_results/relaxed_genes_GO_table.csv",
+          here("analysis_results", "relaxed_genes_GO_table.csv"),
           row.names = FALSE)
 
 ################################################################################
@@ -485,6 +487,6 @@ save(
   emm_GC3_pooled,
   emm_GC3_bypair,
   emm_GC12,
-  file = "Rscripts/analysis_complete.RData"
+  file = here("Rscripts", "analysis_complete.RData")
 )
 

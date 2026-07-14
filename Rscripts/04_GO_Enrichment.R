@@ -1,8 +1,6 @@
-# ============================================================
+#################################################################################
 # GO ENRICHMENT ANALYSIS
-# topGO enrichment for intensified and relaxed gene sets
-# across 4 algal lineages (8 analyses total)
-# ============================================================
+#################################################################################
 
 library(dplyr)
 library(tidyr)
@@ -10,20 +8,17 @@ library(ggplot2)
 library(topGO)
 library(GO.db)
 library(stringr)
+library(here)
+
+# Paths resolved relative to the project root via here::here()
+dir.create(here("analysis_results"), showWarnings = FALSE)
 
 # Load prepared data
-load("/Users/Abigail/Desktop/Algae-Comparative-Genomics/Rscripts/prepared_data.RData")
+load(here("Rscripts", "prepared_data.RData"))
 
-# ============================================================
-# GENE-GO MAPPING
-# ============================================================
-
-# gene2GO_list is already prepared in prepared_data.RData
-# (named list: SOG -> vector of GO terms)
-
-# ============================================================
+################################################################################
 # topGO ENRICHMENT FUNCTION
-# ============================================================
+################################################################################
 
 run_topGO <- function(relax_data, lineage, condition, gene2GO,
                       ontology = "BP", node_size = 5, min_sig_genes = 5) {
@@ -90,10 +85,9 @@ run_topGO <- function(relax_data, lineage, condition, gene2GO,
   })
 }
 
-# ============================================================
-# RUN ALL 8 ANALYSES (4 lineages x 2 conditions)
-# across 3 ontologies each
-# ============================================================
+################################################################################
+# RUN ALL 8 ANALYSES (4 lineages x 2 conditions) across 3 ontologies each
+################################################################################
 
 lineages   <- c("Coccomyxa", "Symbiochloris", "Trebouxia", "Asterochloris")
 conditions <- c("Intensified", "Relaxed")
@@ -125,21 +119,19 @@ for (i in seq_len(nrow(analyses))) {
 
 enrichment_all <- bind_rows(all_results)
 
-# ============================================================
+################################################################################
 # SAVE OUTPUTS
-# ============================================================
+################################################################################
 
 # Full results table
 write.csv(enrichment_all,
-          "/Users/Abigail/Desktop/Algae-Comparative-Genomics/analysis_results/GO_enrichment_topGO_all.csv",
+          here("analysis_results", "GO_enrichment_topGO_all.csv"),
           row.names = FALSE)
 
 # Significant results only (padj < 0.05)
 enrichment_sig <- enrichment_all %>% filter(padj < 0.05)
 
 write.csv(enrichment_sig,
-          "/Users/Abigail/Desktop/Algae-Comparative-Genomics/analysis_results/GO_enrichment_topGO_significant.csv",
+          here("analysis_results", "GO_enrichment_topGO_significant.csv"),
           row.names = FALSE)
 
-message(sprintf("Done. %d significant GO terms (padj < 0.05) across all 8 analyses.",
-                nrow(enrichment_sig)))

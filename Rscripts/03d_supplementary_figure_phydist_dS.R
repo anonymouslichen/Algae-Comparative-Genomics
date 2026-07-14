@@ -6,11 +6,12 @@
 library(ggplot2)
 library(dplyr)
 library(ggrepel)
+library(here)
 
-setwd("~/Desktop/Algae-Comparative-Genomics/")
-dir.create("figures", showWarnings = FALSE)
+# Paths resolved relative to the project root via here::here()
+dir.create(here("figures"), showWarnings = FALSE)
 
-# Pair labels (consistent with other figures)
+# Pair labels
 pair_labels <- c(
   "Coccomyxa"                 = "Coccomyxa",
   "Symbiochloris"             = "Symbiochloris",
@@ -23,10 +24,10 @@ pair_labels <- c(
 ################################################################################
 
 # Phylogenetic distances (tree-derived) and emmeans delta dS per pair
-phydist_data <- read.csv("analysis_results/phydist_vs_dS.csv")
+phydist_data <- read.csv(here("analysis_results", "phydist_vs_dS.csv"))
 
 # Emmeans contrasts for dS — provides SE for error bars and significance
-dS_contrasts <- read.csv("analysis_results/dnds_contrasts.csv") %>%
+dS_contrasts <- read.csv(here("analysis_results", "dnds_contrasts.csv")) %>%
   filter(Metric == "dS") %>%
   dplyr::select(TaxonPair, SE, p.value) %>%
   rename(Pair = TaxonPair)
@@ -120,7 +121,7 @@ fig_phydist
 # Save
 ################################################################################
 
-ggsave("figures/FigureS1_phydist_dS.png", fig_phydist,
+ggsave(here("figures", "FigureS1_phydist_dS.png"), fig_phydist,
        width = 7, height = 6, dpi = 600)
-ggsave("figures/FigureS1_phydist_dS.pdf", fig_phydist,
+ggsave(here("figures", "FigureS1_phydist_dS.pdf"), fig_phydist,
        width = 7, height = 6)

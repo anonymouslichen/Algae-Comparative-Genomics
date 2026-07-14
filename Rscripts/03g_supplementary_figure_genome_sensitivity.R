@@ -1,26 +1,5 @@
 ################################################################################
 # Supplementary Figure: Alternative Genome Choice Sensitivity Analysis
-#
-# Purpose: Forest plot showing robustness of dN, dS, and omega contrasts
-#          (lichen-forming vs. free-living) across alternative genome choices
-#          for Asterochloris and Trebouxia.
-#
-# For each alternative genome, the pipeline:
-#   1. Filters to M4 model, tip branches 1–7
-#   2. Adds Condition (Lichen-forming / Free-living) and TaxonPair metadata
-#   3. Removes SOGs where ANY branch has dS <= 0.01, dS > 3, dN > 2, omega >= 10
-#   4. Duplicates Myrmecia bisecta rows for both TaxonPair comparisons
-#   5. Fits lmer(response ~ Condition * TaxonPair + (1 | SOG))
-#   6. Extracts pairwise emmeans contrast (Lichen-forming − Free-living)
-#      for the focal TaxonPair only
-#
-# Primary genomes in the main analysis (visually distinguished):
-#   Asterochloris: Ast_eri  (A. erici)
-#   Trebouxia:     Tre_spC0010 (T. sp. C0010)
-#
-# Output:
-#   figures/Supp_Fig_genome_sensitivity.pdf  (~7 x 5 inches)
-#   figures/Supp_Fig_genome_sensitivity.png
 ################################################################################
 
 library(dplyr)
@@ -31,8 +10,10 @@ library(lmerTest)
 library(emmeans)
 library(ggplot2)
 library(patchwork)
+library(here)
 
-setwd("~/Desktop/Algae-Comparative-Genomics/")
+# Paths resolved relative to the project root via here::here()
+dir.create(here("figures"), showWarnings = FALSE)
 
 ################################################################################
 # 1. GENOME METADATA LOOKUP
@@ -59,13 +40,13 @@ genome_meta <- tibble(
 )
 
 genome_files <- c(
-  "Ast_eri"       = "data/compiled_results_Ast_eri.csv",
-  "Ast_glo"       = "data/compiled_results_Ast_glo.csv",
-  "Tre_spC0010"   = "data/compiled_results_Tre_spC0010.csv",
-  "Tre_spA1-2"    = "data/compiled_results_Tre_spA1-2.csv",
-  "Tre_spC0006"   = "data/compiled_results_Tre_spC0006.csv",
-  "Tre_lyn"       = "data/compiled_results_Tre_lyn.csv",
-  "Tre_spTZW2008" = "data/compiled_results_Tre_spTZW2008.csv"
+  "Ast_eri"       = here("data", "compiled_results_Ast_eri.csv"),
+  "Ast_glo"       = here("data", "compiled_results_Ast_glo.csv"),
+  "Tre_spC0010"   = here("data", "compiled_results_Tre_spC0010.csv"),
+  "Tre_spA1-2"    = here("data", "compiled_results_Tre_spA1-2.csv"),
+  "Tre_spC0006"   = here("data", "compiled_results_Tre_spC0006.csv"),
+  "Tre_lyn"       = here("data", "compiled_results_Tre_lyn.csv"),
+  "Tre_spTZW2008" = here("data", "compiled_results_Tre_spTZW2008.csv")
 )
 
 ################################################################################
@@ -229,10 +210,10 @@ plot_data <- all_results %>%
 # Y-axis factor: levels ordered bottom-to-top within each genus group
 # Primary genome sits at the top of each group
 y_levels <- c(
-  # Trebouxia group (bottom, read bottom-to-top)
+  # Trebouxia group
   "T. sp. TZW2008", "T. lynnae", "T. sp. C0006",
   "T. sp. A1-2",    "T. sp. C0010",
-  # Asterochloris group (top, read bottom-to-top)
+  # Asterochloris group
   "A. glomerata",   "A. erici"
 )
 
@@ -318,7 +299,7 @@ print(forest_plot)
 ################################################################################
 
 ggsave(
-  "figures/FigureS4_genome_sensitivity.pdf",
+  here("figures", "FigureS4_genome_sensitivity.pdf"),
   forest_plot,
   width  = 10,
   height = 5,
@@ -326,7 +307,7 @@ ggsave(
 )
 
 ggsave(
-  "figures/FigureS4_genome_sensitivity.png",
+  here("figures", "FigureS4_genome_sensitivity.png"),
   forest_plot,
   width  = 10,
   height = 5,

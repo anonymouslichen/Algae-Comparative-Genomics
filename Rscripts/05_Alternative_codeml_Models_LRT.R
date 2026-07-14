@@ -7,15 +7,15 @@ library(dplyr)
 library(tidyr)
 library(stringr)
 library(readr)
+library(here)
 
-# Set working directory
-setwd("~/Desktop/Algae-Comparative-Genomics/")
+# Paths resolved relative to the project root via here::here()
 
 ################################################################################
 # 1. LOAD AND PREPARE CODEML DATA
 ################################################################################
 
-codeml <- read.csv("data/compiled_results_pooled.csv")
+codeml <- read.csv(here("data", "compiled_results_pooled.csv"))
 
 # Add degrees of freedom based on model
 codeml <- codeml %>%

@@ -10,12 +10,13 @@ library(lmerTest)
 library(dplyr)
 library(tidyr)
 library(patchwork)
+library(here)
 
-setwd("~/Desktop/Algae-Comparative-Genomics/")
-dir.create("figures", showWarnings = FALSE)
-load("Rscripts/analysis_complete.RData")
+# Paths resolved relative to the project root via here::here()
+dir.create(here("figures"), showWarnings = FALSE)
+load(here("Rscripts", "analysis_complete.RData"))
 
-# Color scheme (matches Figure 2)
+# Color scheme
 col_lichen <- "#1bbc9b"
 col_free   <- "#dca81b"
 color_condition <- c("Lichen-forming" = col_lichen, "Free-living" = col_free)
@@ -24,7 +25,7 @@ color_condition <- c("Lichen-forming" = col_lichen, "Free-living" = col_free)
 # PANEL A: M4 free-ratio model — pooled omega comparison
 ################################################################################
 
-# Use the filtered M4 data already in the RData file
+# Use the filtered M4 data in the RData file
 plot_data_M4 <- M4_codeml_filter %>%
   mutate(Condition = factor(Condition, levels = c("Lichen-forming", "Free-living")))
 
@@ -81,11 +82,12 @@ p_A <- ggplot(plot_data_M4, aes(x = Condition, y = omega, fill = Condition)) +
 p_A
 
 ################################################################################
-# PANEL B: M2 two-ratio model — global foreground vs background omega
+# PANEL B: M2 two-ratio model — global foreground for lichen-forming taxa 
+# vs background free-living taxa
 ################################################################################
 
 # Load raw codeml data to extract M2 results
-codeml_raw <- read.csv("data/compiled_results_pooled.csv")
+codeml_raw <- read.csv(here("data", "compiled_results_pooled.csv"))
 
 codeml_raw <- codeml_raw %>%
   tidyr::separate(branch, into = c("Node", "Tip"), sep = "\\.\\.",
@@ -197,8 +199,8 @@ fig_supp <- fig_supp +
 
 fig_supp
 
-ggsave("figures/FigureS2_omega_models.png", fig_supp,
+ggsave(here("figures", "FigureS2_omega_models.png"), fig_supp,
        width = 15, height = 9, dpi = 300)
-ggsave("figures/FigureS2_omega_models.pdf", fig_supp,
+ggsave(here("figures", "FigureS2_omega_models.pdf"), fig_supp,
        width = 15, height = 9)
 
