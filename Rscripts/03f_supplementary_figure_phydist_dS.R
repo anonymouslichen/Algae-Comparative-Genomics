@@ -121,7 +121,7 @@ fig_phydist
 # Save
 ################################################################################
 
-ggsave(here("figures", "FigureS1_phydist_dS.png"), fig_phydist,
+ggsave(here("figures", "FigureS3_phydist_dS.png"), fig_phydist,
        width = 7, height = 6, dpi = 600)
-ggsave(here("figures", "FigureS1_phydist_dS.pdf"), fig_phydist,
+ggsave(here("figures", "FigureS3_phydist_dS.pdf"), fig_phydist,
        width = 7, height = 6)

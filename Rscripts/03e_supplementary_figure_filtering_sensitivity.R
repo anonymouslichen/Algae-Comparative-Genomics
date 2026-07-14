@@ -240,8 +240,8 @@ forest_plot <- ggplot(sensitivity_results,
 print(forest_plot)
 
 # Save plot
-ggsave(here("figures", "FigureS3_sensitivity_forest_plot.pdf"), forest_plot,
+ggsave(here("figures", "FigureS2_sensitivity_forest_plot.pdf"), forest_plot,
        width = 15, height = 10, dpi = 300)
-ggsave(here("figures", "FigureS3_sensitivity_forest_plot.png"), forest_plot,
+ggsave(here("figures", "FigureS2_sensitivity_forest_plot.png"), forest_plot,
        width = 15, height = 10, dpi = 300)
 

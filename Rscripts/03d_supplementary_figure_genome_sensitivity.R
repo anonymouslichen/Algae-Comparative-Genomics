@@ -299,7 +299,7 @@ print(forest_plot)
 ################################################################################
 
 ggsave(
-  here("figures", "FigureS4_genome_sensitivity.pdf"),
+  here("figures", "FigureS1_genome_sensitivity.pdf"),
   forest_plot,
   width  = 10,
   height = 5,
@@ -307,7 +307,7 @@ ggsave(
 )
 
 ggsave(
-  here("figures", "FigureS4_genome_sensitivity.png"),
+  here("figures", "FigureS1_genome_sensitivity.png"),
   forest_plot,
   width  = 10,
   height = 5,

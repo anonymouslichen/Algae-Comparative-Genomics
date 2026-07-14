@@ -199,8 +199,8 @@ fig_supp <- fig_supp +
 
 fig_supp
 
-ggsave(here("figures", "FigureS2_omega_models.png"), fig_supp,
+ggsave(here("figures", "FigureS4_omega_models.png"), fig_supp,
        width = 15, height = 9, dpi = 300)
-ggsave(here("figures", "FigureS2_omega_models.pdf"), fig_supp,
+ggsave(here("figures", "FigureS4_omega_models.pdf"), fig_supp,
        width = 15, height = 9)
 
