@@ -261,22 +261,22 @@ load_relax_results <- function(filepath, lichen_species) {
 
 # Load all 4 RELAX analyses
 relax_coccomyxa <- load_relax_results(
-  "data/RELAX_analysis_output_paired_Coc2.csv",
+  "data/RELAX_analysis_output_paired_Coc.csv",
   "Coccomyxa viridis"
 )
 
 relax_symbiochloris <- load_relax_results(
-  "data/RELAX_analysis_output_paired_Sym2.csv",
+  "data/RELAX_analysis_output_paired_Sym.csv",
   "Symbiochloris reticulata"
 )
 
 relax_trebouxia <- load_relax_results(
-  "data/RELAX_analysis_output_paired_Tre2.csv",
+  "data/RELAX_analysis_output_paired_Tre.csv",
   "Trebouxia sp.C0010"
 )
 
 relax_asterochloris <- load_relax_results(
-  "data/RELAX_analysis_output_paired_Ast2.csv",
+  "data/RELAX_analysis_output_paired_Ast.csv",
   "Asterochloris erici"
 )
 
