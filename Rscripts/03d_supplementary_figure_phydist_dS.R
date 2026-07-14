@@ -26,7 +26,7 @@ pair_labels <- c(
 phydist_data <- read.csv("analysis_results/phydist_vs_dS.csv")
 
 # Emmeans contrasts for dS — provides SE for error bars and significance
-dS_contrasts <- read.csv("analysis_results/absolute_rates_contrasts.csv") %>%
+dS_contrasts <- read.csv("analysis_results/dnds_contrasts.csv") %>%
   filter(Metric == "dS") %>%
   dplyr::select(TaxonPair, SE, p.value) %>%
   rename(Pair = TaxonPair)
