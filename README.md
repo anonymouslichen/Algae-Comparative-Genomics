@@ -169,3 +169,8 @@ Raw genome assemblies are available from the public accessions below.
 
 Abigail R. Meyer — Department of Ecology, Evolution and Behavior, University of
 Minnesota.
+
+---
+
+*This README was drafted by Claude (Anthropic, Opus 4.8) from the contents of
+this repository, then reviewed, edited, and verified for accuracy by a human.*
