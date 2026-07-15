@@ -186,9 +186,9 @@ fig2 <- fig2 +
 
 fig2
 
-ggsave(here("figures", "Figure2_new.png"), fig2,
+ggsave(here("figures", "Figure2.png"), fig2,
        width = 15, height = 13, dpi = 300)
-ggsave(here("figures", "Figure2_new.pdf"), fig2,
+ggsave(here("figures", "Figure2.pdf"), fig2,
        width = 15, height = 13)
 
 

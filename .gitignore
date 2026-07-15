@@ -1,6 +1,7 @@
 # Large data files
 *.fastq*
 *.fasta*
+!data/hhpred_query.fasta
 *.fa
 *.bam
 *.sam

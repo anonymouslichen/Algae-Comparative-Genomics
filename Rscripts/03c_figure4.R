@@ -82,10 +82,7 @@ fig4 <- fig4 + plot_annotation(tag_levels = "A", theme = theme(plot.tag = elemen
 
 fig4
 
-ggsave(here("figures", "Figure4_new.png"), fig4,
+ggsave(here("figures", "Figure4.png"), fig4,
        width = 15, height =10, dpi = 600)
-ggsave(here("figures", "Figure4_new.pdf"), fig4,
+ggsave(here("figures", "Figure4.pdf"), fig4,
        width = 15, height = 10)
-
-ggsave(here("figures", "RELAX.png"), fig4,
-       width = 9, height = 9, dpi = 600)
