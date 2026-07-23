@@ -10,7 +10,7 @@ library(GO.db)
 library(stringr)
 library(here)
 
-# Paths resolved relative to the project root via here::here()
+# Path relative to the project root via here::here()
 dir.create(here("analysis_results"), showWarnings = FALSE)
 
 # Load prepared data
