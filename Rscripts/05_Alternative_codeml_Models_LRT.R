@@ -9,8 +9,6 @@ library(stringr)
 library(readr)
 library(here)
 
-# Paths resolved relative to the project root via here::here()
-
 ################################################################################
 # 1. LOAD AND PREPARE CODEML DATA
 ################################################################################
