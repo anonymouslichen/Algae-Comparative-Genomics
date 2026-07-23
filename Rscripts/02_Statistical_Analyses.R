@@ -22,9 +22,6 @@ load(here("Rscripts", "prepared_data.RData"))
 
 ################################################################################
 # ANALYSIS 1: dN/dS COMPARISONS
-# Model with fixed Condition*TaxonPair interaction. 
-# Provides interaction F-test, per-pair contrasts (Table 2),
-# and pooled marginal means
 ################################################################################
 
 model_omega_interaction <- lmer(omega ~ Condition * TaxonPair + (1 | SOG),
@@ -53,9 +50,6 @@ print(contrast_omega_pooled)
 # ---- Wilcoxon signed-rank test: standard paired approach (vs. mixed model) ----
 # Non-parametric paired comparison of lichen vs. free-living omega within each
 # TaxonPair, matched by gene (SOG). Complements the lmer interaction model above.
-
-# Check the exact Condition labels first; adjust the names below to match your data.
-# print(unique(M4_codeml_filter$Condition))
 
 wilcox_omega_bypair <- M4_codeml_filter %>%
   dplyr::select(SOG, TaxonPair, Condition, omega) %>%
@@ -142,12 +136,7 @@ write.csv(dnds_results,
           here("analysis_results", "dnds_contrasts.csv"),
           row.names = FALSE)
 
-# ---- Wilcoxon signed-rank test: standard paired approach (vs. mixed model) ----
-# Non-parametric paired comparison of lichen vs. free-living omega within each
-# TaxonPair, matched by gene (SOG). Complements the lmer interaction model above.
-
-# Check the exact Condition labels first; adjust the names below to match your data.
-# print(unique(M4_codeml_filter$Condition))
+# ---- Wilcoxon signed-rank test: standard paired approach (vs. mixed model) dS ----.
 
 wilcox_dS_bypair <- M4_codeml_filter %>%
   dplyr::select(SOG, TaxonPair, Condition, dS) %>%
@@ -274,11 +263,6 @@ relax_summary
 
 ################################################################################
 # ANALYSIS 4: CODON USAGE BIAS COMPARISONS
-#
-# Model per metric (ENC_prime, GC3, GC12) with fixed Condition*TaxonPair
-# interaction. Provides interaction F-test, per-pair contrasts (Table 3),
-# and pooled marginal means.
-#
 ################################################################################
 
 # --------- ENC Prime -------------
