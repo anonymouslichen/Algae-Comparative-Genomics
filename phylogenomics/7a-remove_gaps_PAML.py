@@ -1,6 +1,11 @@
 import os
 import subprocess
 
+# Define your input and output directories 
+PROJECT_DIR = os.environ.get("PROJECT_DIR", ".")
+input_dir = os.path.join(PROJECT_DIR, "CDS/pal2nal_dir")
+output_dir = os.path.join(PROJECT_DIR, "CDS/trimmed_alignments_PAML")
+
 def run_trimal(input_dir, output_dir, trimal_path="trimal", params="-gappyout -phylip_paml_m10"):
     """
     Run trimAl on all alignment files in the input directory.
@@ -29,11 +34,6 @@ def run_trimal(input_dir, output_dir, trimal_path="trimal", params="-gappyout -p
             except subprocess.CalledProcessError as e:
                 print(f"Error while processing {input_file}: {e}")
 
-
-# Define your input and output directories 
-PROJECT_DIR = os.environ.get("PROJECT_DIR", ".")
-input_dir = os.path.join(PROJECT_DIR, "CDS/pal2nal_dir")
-output_dir = os.path.join(PROJECT_DIR, "CDS/trimmed_alignments_PAML")
     
 # Run trimAl on the alignments
 run_trimal(input_dir, output_dir)
