@@ -1,6 +1,12 @@
 import os
 from Bio import SeqIO
 
+# Set the directories (PROJECT_DIR = your data root; defaults to current directory)
+PROJECT_DIR = os.environ.get("PROJECT_DIR", ".")
+input_directory = os.path.join(PROJECT_DIR, "CDS/Protein_dir")
+output_directory = os.path.join(PROJECT_DIR, "CDS/CDS_dir")
+braker_base_directory = os.path.join(PROJECT_DIR, "Braker_min_length")
+
 def load_cds_index(codingseq_file):
     """Index all records in a braker.codingseq file by their ID."""
     return SeqIO.to_dict(SeqIO.parse(codingseq_file, "fasta"))
@@ -40,11 +46,5 @@ def convert_protein_to_cds(input_dir, output_dir, braker_base_dir):
                     out_fh.write(f">{header}\n{seq}\n")
                 else:
                     print(f"No CDS found for header: {header}")
-
-# Set the directories (PROJECT_DIR = your data root; defaults to current directory)
-PROJECT_DIR = os.environ.get("PROJECT_DIR", ".")
-input_directory = os.path.join(PROJECT_DIR, "CDS/Protein_dir")
-output_directory = os.path.join(PROJECT_DIR, "CDS/CDS_dir")
-braker_base_directory = os.path.join(PROJECT_DIR, "Braker_min_length")
 
 convert_protein_to_cds(input_directory, output_directory, braker_base_directory)
