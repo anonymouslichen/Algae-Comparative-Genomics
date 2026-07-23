@@ -13,7 +13,7 @@ directory_path = os.path.join(PROJECT_DIR, "PAML/output")
 # Output CSV file
 output_csv_path = os.path.join(PROJECT_DIR, "PAML/output/compiled_results.csv")
 
-# Function to extract specific information from a results dictionary
+# Function to extract lnL, dN, dS and omega
 def extract_info(results_dict):
     extracted_info = {
         'lnL': None,
