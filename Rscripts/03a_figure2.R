@@ -5,7 +5,7 @@ library(dplyr)
 library(patchwork)
 library(here)
 
-# Paths resolved relative to the project root via here::here()
+# Path relative to the project root via here::here()
 dir.create(here("figures"), showWarnings = FALSE)
 load(here("Rscripts", "analysis_complete.RData"))
 
