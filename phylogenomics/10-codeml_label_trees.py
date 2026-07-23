@@ -9,7 +9,6 @@ taxa_numbers = {
 
 # Foreground labeling schemes: taxon -> branch label.
 # "M0" is empty = no labels (used by BOTH the null and free-ratio models).
-# Add one entry per labeling you ran — this is where your "three times" lives.
 schemes = {
     "M0": {},
     "M2": {         # two-ratio: mark lichen lineages as foreground
