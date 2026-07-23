@@ -4,6 +4,8 @@ import codonbias as cb
 from Bio import SeqIO
 
 # Set the directories 
+# PROJECT_DIR = your data root; defaults to current directory
+PROJECT_DIR = os.environ.get("PROJECT_DIR", ".")
 input_dir = os.path.join(PROJECT_DIR, "CDS/CDS_dir") #unaligned CDS directory
 output_file = "codon_bias_gc_enc.csv"
 
