@@ -13,7 +13,7 @@ library(ggplot2)
 library(purrr)
 library(here)
 
-# Paths resolved relative to the project root via here::here()
+# Path relative to the project root via here::here()
 dir.create(here("figures"), showWarnings = FALSE)
 
 ################################################################################
