@@ -176,4 +176,4 @@ Minnesota.
 ---
 
 *This README was drafted by Claude (Anthropic, Opus 4.8) from the contents of
-this repository, then reviewed, edited, and verified for accuracy by a human.*
+this repository, then reviewed, edited, and verified for accuracy by A. Meyer.*
