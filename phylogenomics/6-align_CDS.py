@@ -1,6 +1,17 @@
 import os
 import subprocess
 
+# Directories (PROJECT_DIR = your data root; defaults to current directory)
+PROJECT_DIR = os.environ.get("PROJECT_DIR", ".")
+protein_dir = os.path.join(PROJECT_DIR, "CDS/Protein_dir")
+cds_dir = os.path.join(PROJECT_DIR, "CDS/CDS_dir")
+muscle_alignment_dir = os.path.join(PROJECT_DIR, "CDS/muscle_alignment_dir")
+output_dir = os.path.join(PROJECT_DIR, "CDS/pal2nal_dir")
+
+# Ensure the output directories exist
+os.makedirs(muscle_alignment_dir, exist_ok=True)
+os.makedirs(output_dir, exist_ok=True)
+
 # Function to run MUSCLE alignment on protein sequences
 def run_muscle(input_file, output_file):
     try:
@@ -52,17 +63,6 @@ def run_pal2nal(protein_file, nucleotide_file, output_file):
         print(f"pal2nal alignment created: {output_file}")
     except subprocess.CalledProcessError as e:
         print(f"Error running pal2nal on {protein_file} and {nucleotide_file}: {e}")
-
-# Directories (PROJECT_DIR = your data root; defaults to current directory)
-PROJECT_DIR = os.environ.get("PROJECT_DIR", ".")
-protein_dir = os.path.join(PROJECT_DIR, "CDS/Protein_dir")
-cds_dir = os.path.join(PROJECT_DIR, "CDS/CDS_dir")
-muscle_alignment_dir = os.path.join(PROJECT_DIR, "CDS/muscle_alignment_dir")
-output_dir = os.path.join(PROJECT_DIR, "CDS/pal2nal_dir")
-
-# Ensure the output directories exist
-os.makedirs(muscle_alignment_dir, exist_ok=True)
-os.makedirs(output_dir, exist_ok=True)
 
 # List all protein files
 protein_files = [f for f in os.listdir(protein_dir) if f.endswith(".fa") or f.endswith(".fasta")]
