@@ -1,6 +1,11 @@
 import os
 import subprocess
 
+# Define your input and output directories 
+PROJECT_DIR = os.environ.get("PROJECT_DIR", ".")
+input_dir = os.path.join(PROJECT_DIR, "CDS/pal2nal_dir")
+output_dir = os.path.join(PROJECT_DIR, "CDS/trimmed_alignments_HYPHY")
+
 def clean_fasta_headers(input_path, cleaned_path):
     """
     Remove everything after and including '|' in FASTA headers.
@@ -38,11 +43,6 @@ def run_trimal(input_dir, output_dir, trimal_path="trimal", params="-gappyout -f
 
             # Remove the cleaned file after trimAl
             os.remove(cleaned_file)
-
-# Define your input and output directories 
-PROJECT_DIR = os.environ.get("PROJECT_DIR", ".")
-input_dir = os.path.join(PROJECT_DIR, "CDS/pal2nal_dir")
-output_dir = os.path.join(PROJECT_DIR, "CDS/trimmed_alignments_HYPHY")
     
 # Run trimAl on the alignments
 run_trimal(input_dir, output_dir)
