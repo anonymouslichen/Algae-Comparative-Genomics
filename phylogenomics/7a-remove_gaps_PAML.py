@@ -9,12 +9,6 @@ output_dir = os.path.join(PROJECT_DIR, "CDS/trimmed_alignments_PAML")
 def run_trimal(input_dir, output_dir, trimal_path="trimal", params="-gappyout -phylip_paml_m10"):
     """
     Run trimAl on all alignment files in the input directory.
-    
-    Parameters:
-    - input_dir: Path to the directory containing alignment files.
-    - output_dir: Path to the directory to save trimmed alignment files.
-    - trimal_path: Path to the trimAl executable (default: 'trimal').
-    - params: Additional parameters to pass to trimAl (default: '-gappyout -phylip_paml').
     """
     # Ensure the output directory exists
     os.makedirs(output_dir, exist_ok=True)
