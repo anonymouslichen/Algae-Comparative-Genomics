@@ -13,7 +13,7 @@ def load_cds_index(codingseq_file):
 
 def convert_protein_to_cds(input_dir, output_dir, braker_base_dir):
     os.makedirs(output_dir, exist_ok=True)
-    cds_cache = {}  # cache indexes per species to avoid re-parsing
+    cds_cache = {}  
 
     for protein_file in os.listdir(input_dir):
         if not protein_file.endswith(".fa"):
@@ -26,7 +26,7 @@ def convert_protein_to_cds(input_dir, output_dir, braker_base_dir):
 
         with open(protein_path) as prot_fh, open(output_file, "w") as out_fh:
             for record in SeqIO.parse(prot_fh, "fasta"):
-                header = record.description  # full header, e.g. "species|gene"
+                header = record.description  
                 species, gene_info = header.split("|")
                 gene_info = gene_info.strip()
 
