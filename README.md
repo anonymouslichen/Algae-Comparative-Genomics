@@ -66,7 +66,7 @@ conda). Versions are as reported in the manuscript Methods.
 ## Phylogenomics pipeline (`phylogenomics/`)
 
 Scripts are numbered in execution order. Steps 1–9 build the SOG alignment/tree
-dataset; steps 10–15 are the parallel downstream analyses that consume it.
+dataset; steps 10–15 are the parallel downstream analyses that generate the data.
 
 | # | Script | Tool | Purpose |
 |---|---|---|---|
