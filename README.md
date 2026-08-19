@@ -140,21 +140,15 @@ Intermediate tables output by the pipeline and consumed by the R scripts.
 
 ## Reproducibility notes
 
-This repository documents the full analytical pipeline for transparency. It is
-**not** a turnkey clone-and-run workflow: the shell/Python pipeline scripts read
-and write under a `PROJECT_DIR` root you set yourself
-(`export PROJECT_DIR=/path/to/data`), but still contain institution-specific
-SLURM directives and `module load` / conda environment names, and they depend on
-genome assemblies, reference databases, and HPC modules not bundled here. The R
-scripts, by contrast,
-run against the provided `data/` and `.RData` files and regenerate the tables and
+This repository documents the full analytical pipeline for transparency, but it is not a reproducible workflow:
+the shell/Python pipeline scripts read and write under a `PROJECT_DIR` root you set yourself and still contain 
+UMN MSI specific SLURM directives and `module load` / conda environment names. They also depend on
+genome assemblies, reference databases, and HPC modules not tracked here. The R
+scripts, by contrast, run against the provided `data/` and `.RData` files and regenerate the tables and
 figures. They locate all paths relative to the repository root with the `here`
-package (no `setwd()` and no absolute paths), so after cloning you can run them
-from RStudio or via `Rscript` from anywhere — no path editing required. Output
-directories (`figures/`, `analysis_results/`) are created automatically if absent.
-The intermediate `.RData` objects and the `analysis_results/` CSVs are tracked so
-the figure scripts (`03*`) can be run standalone, without re-executing `01`/`02`.
-Raw genome assemblies are available from the public accessions below.
+package (no `setwd()` and no absolute paths). The intermediate `.RData` objects and the 
+`analysis_results/` CSVs are tracked so the figure scripts (`03*`) can be run standalone, 
+without re-executing `01`/`02`. Raw genome assemblies are available from the public accessions below.
 
 ## Data availability
 
